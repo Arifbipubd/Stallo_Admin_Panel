@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
+    <!-- Core Css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Pending orders</title>
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
+  </head>
+  <body>
+    <div class="toast toast-onload align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true"></div>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img src="./assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+    </div>
+    <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div>
+        <!-- ---------------------------------- -->
+        <!-- Start Vertical Layout Sidebar -->
+        <!-- ---------------------------------- -->
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./index.html" class="text-nowrap logo-img">
+          <img src="./assets/images/logos/logo.svg" class="dark-logo w-85" alt="Logo-Dark" />
+          <img src="./assets/images/logos/dark-logo.png" class="light-logo w-85" alt="Logo-light" />
+          </a>
+          <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
+          <i class="ti ti-x"></i>
+          </a>
+        </div>
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+          <ul id="sidebarnav">
+            <!-- ---------------------------------- -->
+            <!-- Home -->
+            <!-- ---------------------------------- -->
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Dashboard -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href=" " id="get-url"  aria-expanded="false">
+              <span>
+              <i class="ti ti-aperture"></i>
+              </span>
+              <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Order page -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+              <span class="d-flex">
+              <i class="ti ti-layout-grid"></i>
+              </span>
+              <span class="hide-menu">Orders</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="./all-orders.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">All Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Pending Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="./processing-orders.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Processing Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="./cancelled-orders.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Cancelled Orders</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="./delivered-orders.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Delivered Orders</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Food -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+              <span class="d-flex">
+              <i class="ti ti-eggs"></i>
+              </span>
+              <span class="hide-menu">Food</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="./food-category.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Category</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="./food-placement-category.html" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Placement Category</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="./all-foods" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">All Foods</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Add Food</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Employee -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+              <span class="d-flex">
+              <i class="ti ti-users"></i>
+              </span>
+              <span class="hide-menu">Employee</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">All Employees</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Add Employee</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Customer -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+              <span class="d-flex">
+              <i class="ti ti-user"></i>
+              </span>
+              <span class="hide-menu">Customer</span>
+              </a>
+              <ul aria-expanded="false" class="collapse first-level">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">All Customers</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link">
+                    <div class="round-16 d-flex align-items-center justify-content-center">
+                      <i class="ti ti-circle"></i>
+                    </div>
+                    <span class="hide-menu">Single Customer</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded mt-3">
+          <div class="hstack gap-3">
+            <div class="john-img">
+              <img src="./assets/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+            </div>
+            <div class="john-title">
+              <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
+              <span class="fs-2">Designer</span>
+            </div>
+            <button class="border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button" aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
+            <i class="ti ti-power fs-6"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ---------------------------------- -->
+        <!-- Start Vertical Layout Sidebar -->
+        <!-- ---------------------------------- -->
+      </div>
+    </aside>
+    <!--  Sidebar End -->
+    <div class="page-wrapper">
+      <!--  Header Start -->
+      <header class="topbar">
+        <div class="with-vertical">
+          <!-- ---------------------------------- -->
+          <!-- Start Vertical Layout Header -->
+          <!-- ---------------------------------- -->
+          <nav class="navbar navbar-expand-lg p-0">
+            <ul class="navbar-nav">
+              <li class="nav-item nav-icon-hover-bg rounded-circle ms-n2">
+                <a class="nav-link sidebartoggler" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="d-block d-lg-none py-4" style="max-width: 10.875rem;">
+              <a href="./index.html" class="text-nowrap logo-img">
+              <img src="./assets/images/logos/dark-logo.png" class="light-logo img-fluid" alt="Logo-Dark" />
+              <img src="./assets/images/logos/logo.svg" class="dark-logo img-fluid" alt="Logo-light" />
+              </a>
+            </div>
+            <a class="navbar-toggler nav-icon-hover-bg rounded-circle p-0 mx-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ti ti-dots fs-7"></i>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <div class="d-flex align-items-center justify-content-between">
+                <a href="javascript:void(0)" class="nav-link nav-icon-hover-bg rounded-circle mx-0 ms-n1 d-flex d-lg-none align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar" aria-controls="offcanvasWithBothOptions">
+                <i class="ti ti-align-justified fs-7"></i>
+                </a>
+                <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+                  <!-- ------------------------------- -->
+                  <!-- start language Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item nav-icon-hover-bg rounded-circle">
+                    <a class="nav-link moon dark-layout" href="javascript:void(0)">
+                    <i class="ti ti-moon moon"></i>
+                    </a>
+                    <a class="nav-link sun light-layout" href="javascript:void(0)">
+                    <i class="ti ti-sun sun"></i>
+                    </a>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- start notification Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item nav-icon-hover-bg rounded-circle dropdown">
+                    <a class="nav-link position-relative" href="javascript:void(0)" id="drop2" aria-expanded="false">
+                      <i class="ti ti-bell-ringing"></i>
+                      <div class="notification bg-primary rounded-circle"></div>
+                    </a>
+                    <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                      <div class="d-flex align-items-center justify-content-between py-3 px-7">
+                        <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
+                        <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+                      </div>
+                      <div class="message-body" data-simplebar>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-2.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
+                            <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-3.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">New message</h6>
+                            <span class="fs-2 d-block text-body-secondary">Salma sent you new message</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-4.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Bianca sent payment</h6>
+                            <span class="fs-2 d-block text-body-secondary">Check your earnings</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-5.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Jolly completed tasks</h6>
+                            <span class="fs-2 d-block text-body-secondary">Assign her new tasks</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-6.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">John received payment</h6>
+                            <span class="fs-2 d-block text-body-secondary">$230 deducted from account</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-7.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
+                            <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="py-6 px-7 mb-1">
+                        <button class="btn btn-outline-primary w-100">See All Notifications</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- end notification Dropdown -->
+                  <!-- ------------------------------- -->
+                  <!-- ------------------------------- -->
+                  <!-- start profile Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link pe-0" href="javascript:void(0)" id="drop1" aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <div class="user-profile-img">
+                          <img src="./assets/images/profile/user-1.jpg" class="rounded-circle" width="35" height="35" alt="modernize-img" />
+                        </div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop1">
+                      <div class="profile-dropdown position-relative" data-simplebar>
+                        <div class="py-3 px-7 pb-0">
+                          <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
+                        </div>
+                        <div class="d-flex align-items-center py-9 mx-7 border-bottom">
+                          <img src="./assets/images/profile/user-1.jpg" class="rounded-circle" width="80" height="80" alt="modernize-img" />
+                          <div class="ms-3">
+                            <h5 class="mb-1 fs-3">Mathew Anderson</h5>
+                            <span class="mb-1 d-block">Designer</span>
+                            <p class="mb-0 d-flex align-items-center gap-2">
+                              <i class="ti ti-mail fs-4"></i> info@modernize.com
+                            </p>
+                          </div>
+                        </div>
+                        <div class="message-body">
+                          <a href="#" class="py-8 px-7 mt-8 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-account.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Profile</h6>
+                              <span class="fs-2 d-block text-body-secondary">Account Settings</span>
+                            </div>
+                          </a>
+                          <a href="#" class="py-8 px-7 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-inbox.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Inbox</h6>
+                              <span class="fs-2 d-block text-body-secondary">Messages & Emails</span>
+                            </div>
+                          </a>
+                          <a href="#" class="py-8 px-7 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-tasks.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Task</h6>
+                              <span class="fs-2 d-block text-body-secondary">To-do and Daily Tasks</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="d-grid py-4 px-7 pt-8">
+                          <div class="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 p-4 mb-9">
+                            <div class="row">
+                              <div class="col-6">
+                                <h5 class="fs-4 mb-3 fw-semibold">Unlimited Access</h5>
+                                <button class="btn btn-primary">Upgrade</button>
+                              </div>
+                              <div class="col-6">
+                                <div class="m-n4 unlimited-img">
+                                  <img src="./assets/images/backgrounds/unlimited-bg.png" alt="modernize-img" class="w-100" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="./login.html" class="btn btn-outline-primary">Log Out</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- end profile Dropdown -->
+                  <!-- ------------------------------- -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- ---------------------------------- -->
+          <!-- End Vertical Layout Header -->
+          <!-- ---------------------------------- -->
+          <!-- ------------------------------- -->
+          <!-- apps Dropdown in Small screen -->
+          <!-- ------------------------------- -->
+          <!--  Mobilenavbar -->
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="mobilenavbar" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <nav class="sidebar-nav scroll-sidebar">
+              <div class="offcanvas-header justify-content-between">
+                <img src="./assets/images/logos/favicon.ico" alt="modernize-img" class="img-fluid" />
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body h-n80" data-simplebar="" data-simplebar>
+                <ul id="sidebarnav">
+                  <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                    <span>
+                    <i class="ti ti-apps"></i>
+                    </span>
+                    <span class="hide-menu">Apps</span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level my-3">
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-chat.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Chat Application</h6>
+                            <span class="fs-2 d-block text-muted">New messages arrived</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-invoice.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Invoice App</h6>
+                            <span class="fs-2 d-block text-muted">Get latest invoice</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-mobile.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Contact Application</h6>
+                            <span class="fs-2 d-block text-muted">2 Unsaved Contacts</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-message-box.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Email App</h6>
+                            <span class="fs-2 d-block text-muted">Get new emails</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-cart.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">User Profile</h6>
+                            <span class="fs-2 d-block text-muted">learn more information</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-date.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Calendar App</h6>
+                            <span class="fs-2 d-block text-muted">Get dates</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-lifebuoy.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Contact List Table</h6>
+                            <span class="fs-2 d-block text-muted">Add new contact</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-application.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Notes Application</h6>
+                            <span class="fs-2 d-block text-muted">To-do and Daily tasks</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="app-header with-horizontal">
+          <nav class="navbar navbar-expand-xl container-fluid p-0">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item nav-icon-hover-bg rounded-circle d-flex d-xl-none ms-n2">
+                <a class="nav-link sidebartoggler" id="sidebarCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+                </a>
+              </li>
+              <li class="nav-item d-none d-xl-block">
+                <a href="./index.html" class="text-nowrap nav-link">
+                <img src="./assets/images/logos/logo.svg" class="dark-logo" width="180" alt="modernize-img" />
+                <img src="./assets/images/logos/dark-logo.png" class="light-logo" width="180" alt="modernize-img" />
+                </a>
+              </li>
+            </ul>
+            <div class="d-block d-xl-none">
+              <a href="./index.html" class="text-nowrap nav-link">
+              <img src="./assets/images/logos/dark-logo.svg" width="180" alt="modernize-img" />
+              </a>
+            </div>
+            <a class="navbar-toggler nav-icon-hover-bg rounded-circle p-0 mx-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="p-2">
+            <i class="ti ti-dots fs-7"></i>
+            </span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <div class="d-flex align-items-center justify-content-between px-0 px-xl-8">
+                <a href="javascript:void(0)" class="nav-link round-40 p-1 ps-0 d-flex d-xl-none align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar" aria-controls="offcanvasWithBothOptions">
+                <i class="ti ti-align-justified fs-7"></i>
+                </a>
+                <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+                  <!-- ------------------------------- -->
+                  <!-- start language Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item nav-icon-hover-bg rounded-circle">
+                    <a class="nav-link moon dark-layout" href="javascript:void(0)">
+                    <i class="ti ti-moon moon"></i>
+                    </a>
+                    <a class="nav-link sun light-layout" href="javascript:void(0)">
+                    <i class="ti ti-sun sun"></i>
+                    </a>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- start notification Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item nav-icon-hover-bg rounded-circle dropdown">
+                    <a class="nav-link position-relative" href="javascript:void(0)" id="drop2" aria-expanded="false">
+                      <i class="ti ti-bell-ringing"></i>
+                      <div class="notification bg-primary rounded-circle"></div>
+                    </a>
+                    <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                      <div class="d-flex align-items-center justify-content-between py-3 px-7">
+                        <h5 class="mb-0 fs-5 fw-semibold">Notifications</h5>
+                        <span class="badge text-bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+                      </div>
+                      <div class="message-body" data-simplebar>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-2.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
+                            <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-3.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">New message</h6>
+                            <span class="fs-2 d-block text-body-secondary">Salma sent you new message</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-4.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Bianca sent payment</h6>
+                            <span class="fs-2 d-block text-body-secondary">Check your earnings</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-5.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Jolly completed tasks</h6>
+                            <span class="fs-2 d-block text-body-secondary">Assign her new tasks</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-6.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">John received payment</h6>
+                            <span class="fs-2 d-block text-body-secondary">$230 deducted from account</span>
+                          </div>
+                        </a>
+                        <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
+                          <span class="me-3">
+                          <img src="./assets/images/profile/user-7.jpg" alt="user" class="rounded-circle" width="48" height="48" />
+                          </span>
+                          <div class="w-100">
+                            <h6 class="mb-1 fw-semibold lh-base">Roman Joined the Team!</h6>
+                            <span class="fs-2 d-block text-body-secondary">Congratulate him</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="py-6 px-7 mb-1">
+                        <button class="btn btn-outline-primary w-100">See All Notifications</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- end notification Dropdown -->
+                  <!-- ------------------------------- -->
+                  <!-- ------------------------------- -->
+                  <!-- start profile Dropdown -->
+                  <!-- ------------------------------- -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link pe-0" href="javascript:void(0)" id="drop1" aria-expanded="false">
+                      <div class="d-flex align-items-center">
+                        <div class="user-profile-img">
+                          <img src="./assets/images/profile/user-1.jpg" class="rounded-circle" width="35" height="35" alt="modernize-img" />
+                        </div>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop1">
+                      <div class="profile-dropdown position-relative" data-simplebar>
+                        <div class="py-3 px-7 pb-0">
+                          <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
+                        </div>
+                        <div class="d-flex align-items-center py-9 mx-7 border-bottom">
+                          <img src="./assets/images/profile/user-1.jpg" class="rounded-circle" width="80" height="80" alt="modernize-img" />
+                          <div class="ms-3">
+                            <h5 class="mb-1 fs-3">Mathew Anderson</h5>
+                            <span class="mb-1 d-block">Designer</span>
+                            <p class="mb-0 d-flex align-items-center gap-2">
+                              <i class="ti ti-mail fs-4"></i> info@modernize.com
+                            </p>
+                          </div>
+                        </div>
+                        <div class="message-body">
+                          <a href="#" class="py-8 px-7 mt-8 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-account.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Profile</h6>
+                              <span class="fs-2 d-block text-body-secondary">Account Settings</span>
+                            </div>
+                          </a>
+                          <a href="#" class="py-8 px-7 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-inbox.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Inbox</h6>
+                              <span class="fs-2 d-block text-body-secondary">Messages & Emails</span>
+                            </div>
+                          </a>
+                          <a href="#" class="py-8 px-7 d-flex align-items-center">
+                            <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
+                            <img src="./assets/images/svgs/icon-tasks.svg" alt="modernize-img" width="24" height="24" />
+                            </span>
+                            <div class="w-100 ps-3">
+                              <h6 class="mb-1 fs-3 fw-semibold lh-base">My Task</h6>
+                              <span class="fs-2 d-block text-body-secondary">To-do and Daily Tasks</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="d-grid py-4 px-7 pt-8">
+                          <div class="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 p-4 mb-9">
+                            <div class="row">
+                              <div class="col-6">
+                                <h5 class="fs-4 mb-3 fw-semibold">Unlimited Access</h5>
+                                <button class="btn btn-primary">Upgrade</button>
+                              </div>
+                              <div class="col-6">
+                                <div class="m-n4 unlimited-img">
+                                  <img src="./assets/images/backgrounds/unlimited-bg.png" alt="modernize-img" class="w-100" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="./login.html" class="btn btn-outline-primary">Log Out</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- ------------------------------- -->
+                  <!-- end profile Dropdown -->
+                  <!-- ------------------------------- -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--  Header End -->
+      <!------------------------------->
+      <!------MAIN Content-->
+      <!------------------------------->
+      <div class="body-wrapper">
+        <div class="container-fluid">
+          <!-- start pending orders -->
+          <h4 class="mb-3">Pending Orders</h4>
+          <div class="table-responsive pt-2 pb-5">
+            <table id="multi_col_order" class="table table-striped table-bordered display text-nowrap">
+              <thead>
+                <tr>
+                  <th>SL</th>
+                  <th>Order ID</th>
+                  <th>Order Date</th>
+                  <th>Customer Info</th>
+                  <th>Branch</th>
+                  <th>Total Price</th>
+                  <th>Status</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ORD42840</td>
+                  <td>2025-04-11</td>
+                  <td>Marie Lee<br><a href="mailto:duarteadam@arroyo-douglas.com">duarteadam@arroyo-douglas.com</a></td>
+                  <td>Houston</td>
+                  <td>$338.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>ORD32687</td>
+                  <td>2025-04-02</td>
+                  <td>Cathy Ross<br><a href="mailto:carterkendra@yahoo.com">carterkendra@yahoo.com</a></td>
+                  <td>Miami</td>
+                  <td>$174.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>ORD36279</td>
+                  <td>2025-04-17</td>
+                  <td>Michael Rodgers<br><a href="mailto:johnsonjocelyn@hotmail.com">johnsonjocelyn@hotmail.com</a></td>
+                  <td>Miami</td>
+                  <td>$322.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>ORD68471</td>
+                  <td>2025-04-01</td>
+                  <td>Heidi Baldwin<br><a href="mailto:christianmueller@gmail.com">christianmueller@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$829.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>ORD87253</td>
+                  <td>2025-04-28</td>
+                  <td>Christopher Norman<br><a href="mailto:kathleen14@yahoo.com">kathleen14@yahoo.com</a></td>
+                  <td>Chicago</td>
+                  <td>$732.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>ORD18933</td>
+                  <td>2025-04-05</td>
+                  <td>Amy Hancock<br><a href="mailto:burgesscarl@gmail.com">burgesscarl@gmail.com</a></td>
+                  <td>Dallas</td>
+                  <td>$570.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>ORD19920</td>
+                  <td>2025-03-09</td>
+                  <td>Walter Tyler<br><a href="mailto:bradleymay@hotmail.com">bradleymay@hotmail.com</a></td>
+                  <td>Houston</td>
+                  <td>$571.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>ORD26524</td>
+                  <td>2025-04-24</td>
+                  <td>Nina Smith<br><a href="mailto:lopezmarc@gmail.com">lopezmarc@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$394.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>ORD82842</td>
+                  <td>2025-03-14</td>
+                  <td>Diana Thornton<br><a href="mailto:haleybell@gmail.com">haleybell@gmail.com</a></td>
+                  <td>Dallas</td>
+                  <td>$792.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>ORD97320</td>
+                  <td>2025-04-18</td>
+                  <td>Mariah Carey<br><a href="mailto:hayneschelsey@hotmail.com">hayneschelsey@hotmail.com</a></td>
+                  <td>New York</td>
+                  <td>$636.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>ORD21235</td>
+                  <td>2025-04-05</td>
+                  <td>Cynthia Hartman<br><a href="mailto:wcooper@gmail.com">wcooper@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$589.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>ORD15676</td>
+                  <td>2025-03-15</td>
+                  <td>Connor Martin<br><a href="mailto:david32@williams.biz">david32@williams.biz</a></td>
+                  <td>Houston</td>
+                  <td>$299.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>ORD79440</td>
+                  <td>2025-04-29</td>
+                  <td>Jennifer West<br><a href="mailto:rachel19@gmail.com">rachel19@gmail.com</a></td>
+                  <td>Miami</td>
+                  <td>$464.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>ORD61797</td>
+                  <td>2025-04-05</td>
+                  <td>Jamie Woods<br><a href="mailto:justinperkins@yahoo.com">justinperkins@yahoo.com</a></td>
+                  <td>Miami</td>
+                  <td>$103.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>ORD88563</td>
+                  <td>2025-04-25</td>
+                  <td>Dakota Castro<br><a href="mailto:olsonemily@wilson.org">olsonemily@wilson.org</a></td>
+                  <td>Chicago</td>
+                  <td>$155.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>ORD46560</td>
+                  <td>2025-04-28</td>
+                  <td>Vincent Reed<br><a href="example.email@gmail.com">ann80@gmail.com</a></td>
+                  <td>Dallas</td>
+                  <td>$416.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>ORD66428</td>
+                  <td>2025-03-10</td>
+                  <td>Benjamin Bond<br><a href="example.email@gmail.com">bsmith@marshall-holt.com</a></td>
+                  <td>New York</td>
+                  <td>$506.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>ORD98212</td>
+                  <td>2025-03-24</td>
+                  <td>Rebecca Owens<br><a href="example.email@gmail.com">qtaylor@mejia.com</a></td>
+                  <td>Chicago</td>
+                  <td>$593.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>ORD40365</td>
+                  <td>2025-03-07</td>
+                  <td>Wanda Landry<br><a href="example.email@gmail.com">davistracy@hotmail.com</a></td>
+                  <td>Los Angeles</td>
+                  <td>$384.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>ORD55082</td>
+                  <td>2025-04-23</td>
+                  <td>Ian Costa<br><a href="example.email@gmail.com">pvalencia@rowe.com</a></td>
+                  <td>Miami</td>
+                  <td>$898.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>ORD67098</td>
+                  <td>2025-03-13</td>
+                  <td>Whitney Cochran<br><a href="example.email@gmail.com">craig38@lee-roberts.info</a></td>
+                  <td>Miami</td>
+                  <td>$540.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>ORD74036</td>
+                  <td>2025-03-09</td>
+                  <td>Justin Perez<br><a href="example.email@gmail.com">gordonann@gardner.com</a></td>
+                  <td>Miami</td>
+                  <td>$244.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>ORD82132</td>
+                  <td>2025-04-11</td>
+                  <td>Wendy Taylor<br><a href="example.email@gmail.com">kaitlynrodgers@hotmail.com</a></td>
+                  <td>Los Angeles</td>
+                  <td>$313.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>ORD53143</td>
+                  <td>2025-03-02</td>
+                  <td>Ms. Heather Weiss<br><a href="example.email@gmail.com">bradleynelson@hotmail.com</a></td>
+                  <td>Dallas</td>
+                  <td>$674.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>ORD89195</td>
+                  <td>2025-04-04</td>
+                  <td>Yvonne Gutierrez<br><a href="example.email@gmail.com">pamela24@yahoo.com</a></td>
+                  <td>Miami</td>
+                  <td>$397.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>ORD58611</td>
+                  <td>2025-04-29</td>
+                  <td>Richard Snyder<br><a href="example.email@gmail.com">ktaylor@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$424.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td>ORD98712</td>
+                  <td>2025-04-29</td>
+                  <td>Brandy Miller<br><a href="example.email@gmail.com">joserivera@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$432.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>ORD27148</td>
+                  <td>2025-03-12</td>
+                  <td>Pamela Brady<br><a href="example.email@gmail.com">thomasaaron@hodges-harris.com</a></td>
+                  <td>Chicago</td>
+                  <td>$264.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>29</td>
+                  <td>ORD82271</td>
+                  <td>2025-03-30</td>
+                  <td>Jennifer Everett<br><a href="example.email@gmail.com">karinaabbott@gmail.com</a></td>
+                  <td>Houston</td>
+                  <td>$334.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>ORD51814</td>
+                  <td>2025-03-30</td>
+                  <td>Molly Cline<br><a href="example.email@gmail.com">troyrichardson@wilson.biz</a></td>
+                  <td>New York</td>
+                  <td>$184.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td>ORD69817</td>
+                  <td>2025-03-17</td>
+                  <td>Sarah Lang<br><a href="example.email@gmail.com">kathymartin@white.info</a></td>
+                  <td>Miami</td>
+                  <td>$621.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>ORD81534</td>
+                  <td>2025-03-29</td>
+                  <td>Tracy Reed<br><a href="example.email@gmail.com">jeffgay@yahoo.com</a></td>
+                  <td>Dallas</td>
+                  <td>$310.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>33</td>
+                  <td>ORD21935</td>
+                  <td>2025-04-21</td>
+                  <td>Deborah Berry<br><a href="example.email@gmail.com">duffyandrew@shields.com</a></td>
+                  <td>New York</td>
+                  <td>$258.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td>ORD46491</td>
+                  <td>2025-04-24</td>
+                  <td>Martin Martin<br><a href="example.email@gmail.com">joseleon@yahoo.com</a></td>
+                  <td>New York</td>
+                  <td>$310.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>35</td>
+                  <td>ORD52811</td>
+                  <td>2025-04-14</td>
+                  <td>Elizabeth Watson<br><a href="example.email@gmail.com">ritavasquez@powell.com</a></td>
+                  <td>Houston</td>
+                  <td>$216.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td>ORD41232</td>
+                  <td>2025-03-24</td>
+                  <td>Michelle Alvarado<br><a href="example.email@gmail.com">oballard@perkins.info</a></td>
+                  <td>Miami</td>
+                  <td>$489.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>37</td>
+                  <td>ORD39536</td>
+                  <td>2025-03-13</td>
+                  <td>Richard Gallegos<br><a href="example.email@gmail.com">williamswilliam@carpenter-hall.com</a></td>
+                  <td>Dallas</td>
+                  <td>$566.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>38</td>
+                  <td>ORD90998</td>
+                  <td>2025-04-09</td>
+                  <td>Michael Adams<br><a href="example.email@gmail.com">sarah67@jones.info</a></td>
+                  <td>Chicago</td>
+                  <td>$494.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>39</td>
+                  <td>ORD92636</td>
+                  <td>2025-04-19</td>
+                  <td>Jeffrey Mcbride<br><a href="example.email@gmail.com">michelle21@gmail.com</a></td>
+                  <td>New York</td>
+                  <td>$931.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>40</td>
+                  <td>ORD58898</td>
+                  <td>2025-04-05</td>
+                  <td>Wesley Davis<br><a href="example.email@gmail.com">katie33@ford.com</a></td>
+                  <td>Los Angeles</td>
+                  <td>$408.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>41</td>
+                  <td>ORD49701</td>
+                  <td>2025-03-16</td>
+                  <td>Danielle Brown<br><a href="example.email@gmail.com">brandi56@yahoo.com</a></td>
+                  <td>Chicago</td>
+                  <td>$164.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>42</td>
+                  <td>ORD49065</td>
+                  <td>2025-04-28</td>
+                  <td>Amber Marsh<br><a href="example.email@gmail.com">manntanya@ali-brown.com</a></td>
+                  <td>Chicago</td>
+                  <td>$73.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>43</td>
+                  <td>ORD51998</td>
+                  <td>2025-04-26</td>
+                  <td>Benjamin Burns<br><a href="example.email@gmail.com">gainesjames@gmail.com</a></td>
+                  <td>Miami</td>
+                  <td>$125.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td>ORD25193</td>
+                  <td>2025-04-04</td>
+                  <td>Jenna Hurley<br><a href="example.email@gmail.com">vcastillo@hotmail.com</a></td>
+                  <td>Houston</td>
+                  <td>$337.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>45</td>
+                  <td>ORD89130</td>
+                  <td>2025-03-06</td>
+                  <td>Richard Young DDS<br><a href="example.email@gmail.com">michael69@yahoo.com</a></td>
+                  <td>Los Angeles</td>
+                  <td>$409.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>46</td>
+                  <td>ORD19660</td>
+                  <td>2025-03-02</td>
+                  <td>Christopher Brown<br><a href="example.email@gmail.com">uclay@gmail.com</a></td>
+                  <td>Chicago</td>
+                  <td>$531.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>47</td>
+                  <td>ORD90524</td>
+                  <td>2025-03-08</td>
+                  <td>Jessica Cooper<br><a href="example.email@gmail.com">garrettjohnson@drake.org</a></td>
+                  <td>Los Angeles</td>
+                  <td>$446.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>48</td>
+                  <td>ORD48448</td>
+                  <td>2025-03-06</td>
+                  <td>Thomas Smith<br><a href="example.email@gmail.com">angelabrowning@jacobs-hanna.info</a></td>
+                  <td>New York</td>
+                  <td>$731.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>49</td>
+                  <td>ORD97616</td>
+                  <td>2025-03-15</td>
+                  <td>Erica Rivera<br><a href="example.email@gmail.com">christopherking@galloway-mclean.info</a></td>
+                  <td>Los Angeles</td>
+                  <td>$889.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>50</td>
+                  <td>ORD22491</td>
+                  <td>2025-04-17</td>
+                  <td>Raymond Wagner<br><a href="example.email@gmail.com">ericapatel@yahoo.com</a></td>
+                  <td>Chicago</td>
+                  <td>$514.00</td>
+                  <td>
+                    <p class="pending mb-0">Pending</p>
+                  </td>
+                  <td class="text-center d-flex align-item-center gap-2">
+                    <a href="./single-order.html">
+                      <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-eye"></i>
+                      </button>
+                    </a>
+                    <a href="#">
+                      <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
+                        <i class="ti ti-printer"></i>
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end Multi-column ordering -->
+        </div>
+      </div>
+      <script>
+        function handleColorTheme(e) {
+          document.documentElement.setAttribute("data-color-theme", e);
+        }
+      </script>
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <script src="./assets/js/vendor.min.js"></script>
+    <!-- Import Js Files -->
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="./assets/js/theme/app.init.js"></script>
+    <script src="./assets/js/theme/theme.js"></script>
+    <script src="./assets/js/theme/app.min.js"></script>
+    <script src="./assets/js/theme/sidebarmenu.js"></script>
+    <!-- solar icons -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="./assets/js/datatable/datatable-basic.init.js"></script>
+  </body>
+</html>

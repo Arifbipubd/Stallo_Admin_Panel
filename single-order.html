@@ -9,21 +9,11 @@
     <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Stallo Admin</title>
+    <title>Single order</title>
     <!-- Owl Carousel  -->
     <link rel="stylesheet" href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
   </head>
   <body>
-    <div class="toast toast-onload align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-body hstack align-items-start gap-6">
-        <i class="ti ti-alert-circle fs-6"></i>
-        <div>
-          <h5 class="text-white fs-3 mb-1">Welcome to</h5>
-          <h4 class="mb-0 text-white">Stallo Admin</h4>
-        </div>
-        <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-    </div>
     <!-- Preloader -->
     <div class="preloader">
       <img src="./assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
@@ -425,22 +415,6 @@
                             </div>
                           </a>
                         </div>
-                        <div class="d-grid py-4 px-7 pt-8">
-                          <div class="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 p-4 mb-9">
-                            <div class="row">
-                              <div class="col-6">
-                                <h5 class="fs-4 mb-3 fw-semibold">Unlimited Access</h5>
-                                <button class="btn btn-primary">Upgrade</button>
-                              </div>
-                              <div class="col-6">
-                                <div class="m-n4 unlimited-img">
-                                  <img src="./assets/images/backgrounds/unlimited-bg.png" alt="modernize-img" class="w-100" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <a href="./login.html" class="btn btn-outline-primary">Log Out</a>
-                        </div>
                       </div>
                     </div>
                   </li>
@@ -488,22 +462,44 @@
                       <li class="sidebar-item py-2">
                         <a href="#" class="d-flex align-items-center">
                           <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                            <img src="./assets/images/svgs/icon-dd-cart.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                            <img src="./assets/images/svgs/icon-dd-invoice.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
                           </div>
                           <div>
-                            <h6 class="mb-1 bg-hover-primary">User Profile</h6>
-                            <span class="fs-2 d-block text-muted">learn more information</span>
+                            <h6 class="mb-1 bg-hover-primary">Invoice App</h6>
+                            <span class="fs-2 d-block text-muted">Get latest invoice</span>
                           </div>
                         </a>
                       </li>
                       <li class="sidebar-item py-2">
                         <a href="#" class="d-flex align-items-center">
                           <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                            <img src="./assets/images/svgs/icon-dd-date.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                            <img src="./assets/images/svgs/icon-dd-mobile.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
                           </div>
                           <div>
-                            <h6 class="mb-1 bg-hover-primary">Calendar App</h6>
-                            <span class="fs-2 d-block text-muted">Get dates</span>
+                            <h6 class="mb-1 bg-hover-primary">Contact Application</h6>
+                            <span class="fs-2 d-block text-muted">2 Unsaved Contacts</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-message-box.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">Email App</h6>
+                            <span class="fs-2 d-block text-muted">Get new emails</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="sidebar-item py-2">
+                        <a href="#" class="d-flex align-items-center">
+                          <div class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
+                            <img src="./assets/images/svgs/icon-dd-cart.svg" alt="modernize-img" class="img-fluid" width="24" height="24" />
+                          </div>
+                          <div>
+                            <h6 class="mb-1 bg-hover-primary">User Profile</h6>
+                            <span class="fs-2 d-block text-muted">learn more information</span>
                           </div>
                         </a>
                       </li>
@@ -529,6 +525,7 @@
                           </div>
                         </a>
                       </li>
+                      
                     </ul>
                   </li>
                   <li class="sidebar-item">
@@ -540,7 +537,7 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="" aria-expanded="false">
                     <span>
                     <i class="ti ti-calendar"></i>
                     </span>
@@ -764,160 +761,337 @@
       </header>
       <!--  Header End -->
       <div class="body-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-8 d-flex align-items-stretch">
-              <div class="card w-100 bg-primary-subtle overflow-hidden shadow-none">
-                <div class="card-body position-relative">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="d-flex align-items-center mb-7">
-                        <div class="rounded-circle overflow-hidden me-6">
-                          <img src="./assets/images/profile/user-1.jpg" alt="modernize-img" width="40" height="40">
-                        </div>
-                        <h5 class="fw-semibold mb-0 fs-5">Welcome back Mathew Anderson!</h5>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <div class="border-end pe-4 border-muted border-opacity-10">
-                          <h3 class="mb-1 fw-semibold fs-8 d-flex align-content-center">$2,340<i class="ti ti-arrow-up-right fs-5 lh-base text-success"></i>
-                          </h3>
-                          <p class="mb-0 text-dark">Today’s Sales</p>
-                        </div>
-                        <div class="ps-4">
-                          <h3 class="mb-1 fw-semibold fs-8 d-flex align-content-center">35%<i class="ti ti-arrow-up-right fs-5 lh-base text-success"></i>
-                          </h3>
-                          <p class="mb-0 text-dark">Overall Performance</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-5">
-                      <div class="welcome-bg-img mb-n7 text-end">
-                        <img src="./assets/images/backgrounds/welcome-bg.svg" alt="modernize-img" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="container-fluid pt-3 pb-5">
+          <div class="row justify-content-between align-items-center g-3 mb-3">
+            <div class="col-auto">
+              <h4 class="">Order Details</h4>
             </div>
-            <div class="col-sm-6 col-lg-2 d-flex align-items-stretch">
-              <div class="card w-100">
-                <div class="card-body p-4">
-                  <h4 class="fw-semibold">$10,230</h4>
-                  <p class="mb-2 fs-3">Expense</p>
-                  <div id="expense"></div>
-                </div>
-              </div>
+            <div class="col-auto">
+              <button class="btn bg-info-subtle rounded-circle round d-inline-flex justify-content-center align-items-center me-2">
+                <i class="ti ti-chevron-left"></i>
+              </button>
+              <button class="btn bg-info-subtle rounded-circle round d-inline-flex justify-content-center align-items-center">
+                <i class="ti ti-chevron-right"></i>
+              </button>
             </div>
-            <div class="col-sm-6 col-lg-2 d-flex align-items-stretch">
-              <div class="card w-100">
-                <div class="card-body p-4">
-                  <h4 class="fw-semibold">$65,432</h4>
-                  <p class="mb-1 fs-3">Sales</p>
-                  <div id="sales" class="sales-chart mx-n2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card w-100">
-                <div class="card-body">
-                  <h4 class="card-title fw-semibold">Revenue Updates</h4>
-                  <p class="card-subtitle mb-4">Overview of Profit</p>
-                  <div class="d-flex align-items-center">
-                    <div class="me-4">
-                      <span class="round-8 text-bg-primary rounded-circle me-2 d-inline-block"></span>
-                      <span class="fs-2">Footware</span>
-                    </div>
-                    <div>
-                      <span class="round-8 text-bg-secondary rounded-circle me-2 d-inline-block"></span>
-                      <span class="fs-2">Fashionware</span>
-                    </div>
-                  </div>
-                  <div id="revenue-chart" class="revenue-chart mx-n3"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-              <div class="card w-100">
-                <div class="card-body">
-                  <h4 class="card-title fw-semibold">Sales Overview</h4>
-                  <p class="card-subtitle mb-2">Every Month</p>
-                  <div id="sales-overview" class="mb-4"></div>
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <div class="bg-primary-subtle text-primary rounded-2 me-8 p-8 d-flex align-items-center justify-content-center">
-                        <i class="ti ti-grid-dots fs-6"></i>
-                      </div>
-                      <div>
-                        <h6 class="fw-semibold text-dark fs-4 mb-0">$23,450</h6>
-                        <p class="fs-3 mb-0 fw-normal">Profit</p>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <div class="bg-secondary-subtle text-secondary rounded-2 me-8 p-8 d-flex align-items-center justify-content-center">
-                        <i class="ti ti-grid-dots fs-6"></i>
-                      </div>
-                      <div>
-                        <h6 class="fw-semibold text-dark fs-4 mb-0">$23,450</h6>
-                        <p class="fs-3 mb-0 fw-normal">Expance</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="row">
-                <div class="col-sm-6 d-flex align-items-stretch">
-                  <div class="card w-100">
-                    <div class="card-body">
-                      <div class="p-2 bg-primary-subtle rounded-2 d-inline-block mb-3">
-                        <img src="./assets/images/svgs/icon-cart.svg" alt="modernize-img" class="img-fluid" width="24" height="24">
-                      </div>
-                      <div id="sales-two" class="mb-3 mx-n4"></div>
-                      <h4 class="mb-1 fw-semibold d-flex align-content-center">$16.5k<i class="ti ti-arrow-up-right fs-5 text-success"></i>
-                      </h4>
-                      <p class="mb-0">Sales</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 d-flex align-items-stretch">
-                  <div class="card w-100">
-                    <div class="card-body">
-                      <div class="p-2 bg-info-subtle rounded-2 d-inline-block mb-3">
-                        <img src="./assets/images/svgs/icon-bar.svg" alt="modernize-img" class="img-fluid" width="24" height="24">
-                      </div>
-                      <div id="growth" class="mb-3"></div>
-                      <h4 class="mb-1 fw-semibold d-flex align-content-center">24%<i class="ti ti-arrow-up-right fs-5 text-success"></i>
-                      </h4>
-                      <p class="mb-0">Growth</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-12 col-xl-8">
               <div class="card">
                 <div class="card-body">
-                  <div class="row alig n-items-start">
-                    <div class="col-8">
-                      <h4 class="card-title mb-9 fw-semibold"> Monthly Earnings </h4>
-                      <div class="d-flex align-items-center mb-3">
-                        <h4 class="fw-semibold mb-0 me-8">$6,820</h4>
-                        <div class="d-flex align-items-center">
-                          <span class="me-2 rounded-circle bg-success-subtle text-success round-20 d-flex align-items-center justify-content-center">
-                          <i class="ti ti-arrow-up-left"></i>
-                          </span>
-                          <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                  <div class="row align-items-center justify-content-between g-2 mb-3">
+                    <div class="col-auto">
+                      <h5>
+                        Order Id: 
+                        <span class="ms-sm-2 text-nowrap">#ORD-20250502-781</span>
+                      </h5>
+                      <p class="fs-2 mb-0">Placed Ordered date:
+                        <span class="text-black fw-bold">01/05/2025 10:15am</span>
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <button class="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2 me-3 mb-3 mb-sm-0">
+                        <i class="ti ti-pencil"></i>
+                        Edit Order
+                      </button>
+                      <button class="btn btn-secondary d-inline-flex align-items-center justify-content-center gap-2 mb-3 mb-sm-0">
+                        <i class="ti ti-printer"></i>
+                        Print Invoice
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row g-3 mb-5">
+                    <div class="col-md-6">
+                      <p class="mb-2">
+                        Shop:
+                        <span class="text-black fw-bold">BBQ Chicken, Dhaka</span>
+                      </p>
+                      <button class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2">
+                        <i class="ti ti-map-pin"></i>
+                        Show on map
+                      </button>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-md-end">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th style="min-width: 10rem;">
+                            </th>
+                            <th style="min-width: 6rem;">
+                            </th>
+                          </tr>
+                          <tr>
+                            <td class="pb-1">Order Type:</td>
+                            <td class="text-end pb-1">Processing</td>
+                          </tr>
+                          <tr>
+                            <td class="pb-1">status:</td>
+                            <td class="text-end pb-1">
+                              <span class="badge bg-success-subtle text-black ms-2">Pending</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="pb-1">
+                              Order Method:
+                            </td>
+                            <td class="text-end pb-1 text-nowrap">
+                              Cash On Delivery
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="pb-1">Payment Status:</td>
+                            <td class="text-end pb-1"><span class="ms-2 text-danger">Pending</span></td>
+                          </tr>
+                          <tr>
+                            <td class="">Coupon:</td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-success d-inline-flex align-items-center">
+                                <i class="ti ti-pencil-plus"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="table-responsive mb-3">
+                    <table class="table display">
+                      <thead class="bg-primary-subtle">
+                        <th style="min-width: 5rem;">SL No</th>
+                        <th style="min-width: 12rem;">Item Details</th>
+                        <th style="min-width: 8rem;">Addons</th>
+                        <th style="min-width: 8rem">Price</th>
+                        <th class="text-end" style="min-width: 8rem;">Discount</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="pt-3">1</td>
+                          <td class="d-flex align-items-center gap-2 pt-3">
+                            <img 
+                              src="./assets/images/products/s2.jpg" 
+                              alt="product" 
+                              class="object-fit-cover round-75 rounded-2"
+                            >
+                            <div class="fs-2">
+                              <p class="mb-1 fw-bold text-black">Sushi</p>
+                              <p class="mb-1">
+                                <span class="text-black fw-bold">Size:</span>
+                                <span class="ms-1">Full platter</span>
+                              </p>
+                              <p class="mb-0">
+                                <span class="fw-bold text-black">Quantity:</span>
+                                <span class=" ms-1">1</span>
+                              </p>
+                            </div>
+                          </td>
+                          <td></td>
+                          <td>$25.00</td>
+                          <td class="text-end">$0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <table class="">
+                      <tbody>
+                        <tr>
+                          <th style="min-width: 8rem;"></th>
+                          <th style="min-width: 6rem;"></th>
+                        </tr>
+                        <tr>
+                          <td>Addon Price:</td>
+                          <td class="text-end fw-bold">$0.00</td>
+                        </tr>
+                        <tr>
+                          <td>SubTotal:</td>
+                          <td class="text-end fw-bold">$25.00</td>
+                        </tr>
+                        <tr>
+                          <td>Discount:</td>
+                          <td class="text-end fw-bold">$0.00</td>
+                        </tr>
+                        <tr>
+                          <td>Vat/tax:</td>
+                          <td class="text-end">+$1.70</td>
+                        </tr>
+                        <tr>
+                          <td>Delivery charge:</td>
+                          <td class="text-end">+$2.00</td>
+                        </tr>
+                        <tr class="border-bottom">
+                          <td class="pb-2">Coupon Discount:</td>
+                          <td class="text-end pb-2">$0.00</td>
+                        </tr>
+                        <tr>
+                          <td class="pt-2 fs-5 fw-bold">Total</td>
+                          <td class="pt-2 fs-5 fw-bolder text-end">$28.70</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4">
+              <div class="row g-3">
+                <div class="col-md-6 col-xl-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="mb-3">Customer Details</h5>
+                      <div class="row g-3 mb-3">
+                        <div class="col-auto">
+                          <img 
+                            src="./assets/images/profile/user-1.jpg" 
+                            alt="user" 
+                            class="img-fluid round-110 rounded-24"
+                          />
+                        </div>
+                        <div class="col-12 col-md-auto">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td class="ps-0 py-1">
+                                  <i class="ti ti-user me-1"></i>
+                                  Name
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">Jane Doe</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1">
+                                  <i class="ti ti-mail me-1"></i>
+                                  Email
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">jane*********.com</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1">
+                                  <i class="ti ti-phone me-1"></i>
+                                  Phone
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">+8801**********</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1">
+                                  <i class="ti ti-map-pin me-1"></i>
+                                  Address
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">**********</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
+                      <div>
+                        <h5>Delivery Info</h5>
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="py-1 ps-0">Address</td>
+                              <td class="py-1">:</td>
+                              <td class="py-1">********</td>
+                            </tr>
+                            <tr>
+                              <td class="py-1 ps-0">Road No.</td>
+                              <td class="py-1">:</td>
+                              <td class="py-1">****</td>
+                            </tr>
+                            <tr>
+                              <td class="py-1 ps-0">Building No.</td>
+                              <td class="py-1">:</td>
+                              <td class="py-1">****</td>
+                            </tr>
+                            <tr>
+                              <td class="py-1 ps-0">District</td>
+                              <td class="py-1">:</td>
+                              <td class="py-1">****</td>
+                            </tr>
+                            <tr>
+                              <td class="py-1 ps-0">Postal Code</td>
+                              <td class="py-1">:</td>
+                              <td class="py-1">****</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
-                    <div class="col-4">
-                      <div class="d-flex justify-content-end">
-                        <div class="p-2 bg-primary-subtle rounded-2 d-inline-block">
-                          <img src="./assets/images/svgs/icon-master-card-2.svg" alt="modernize-img" class="img-fluid" width="24" height="24">
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="order-status" class="form-label">Change Order status</label>
+                        <select id="order-status" class="form-select">
+                          <option value="">Select an option</option>
+                          <option value="processing">Processing</option>
+                          <option value="pending">Pending</option>
+                          <option value="shipped">Shipped</option>
+                          <option value="delivered">Delivered</option>
+                          <option value="cancelled">Cancelled</option>
+                        </select>
+                      </div>
+                      <button class="btn btn-info d-inline-flex justify-content-center align-items-center w-100">
+                        <i class="ti ti-location me-2"></i>
+                        Update
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="mb-3">Restaurant Info</h5>
+                      <div class="row g-3 mb-3">
+                        <div class="col-auto">
+                          <img 
+                            src="./assets/images/profile/user-5.jpg" 
+                            alt="user" 
+                            class="img-fluid round-54 rounded-circle"
+                          />
+                        </div>
+                        <div class="col-12 col-md-auto">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <td class="ps-0 py-1 text-nowrap">
+                                  <i class="ti ti-user me-1"></i>
+                                  Name
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">BBQ Chicken</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1 text-nowrap">
+                                  <i class="ti ti-mail me-1"></i>
+                                  Email
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">bbq*********.com</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1 text-nowrap">
+                                  <i class="ti ti-phone me-1"></i>
+                                  Phone
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">+8801**********</td>
+                              </tr>
+                              <tr>
+                                <td class="ps-0 py-1 text-nowrap">
+                                  <i class="ti ti-map-pin me-1"></i>
+                                  Address
+                                </td>
+                                <td class="py-1">:</td>
+                                <td class="py-1">**********</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="monthly-earning"></div>
                 </div>
               </div>
             </div>
@@ -941,7 +1115,5 @@
     <script src="./assets/js/theme/sidebarmenu.js"></script>
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="./assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="./assets/js/dashboards/dashboard2.js"></script>
   </body>
 </html>
