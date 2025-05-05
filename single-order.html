@@ -27,8 +27,8 @@
         <!-- ---------------------------------- -->
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.html" class="text-nowrap logo-img">
-          <img src="./assets/images/logos/logo.svg" class="dark-logo w-85" alt="Logo-Dark" />
-          <img src="./assets/images/logos/dark-logo.png" class="light-logo w-85" alt="Logo-light" />
+            <img src="./assets/images/logos/admin-logo.png" class="dark-logo" alt="Logo-Dark" />
+            <img src="./assets/images/logos/admin-logo-dark.png" class="light-logo" alt="Logo-light" />
           </a>
           <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
           <i class="ti ti-x"></i>
@@ -41,7 +41,7 @@
             <!-- ---------------------------------- -->
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
+              <span class="hide-menu">Menu</span>
             </li>
             <!-- ---------------------------------- -->
             <!-- Dashboard -->
@@ -49,7 +49,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="" id="get-url" aria-expanded="false">
               <span>
-              <i class="ti ti-aperture"></i>
+              <i class="ti ti-layout-grid"></i>
               </span>
               <span class="hide-menu">Dashboard</span>
               </a>
@@ -60,7 +60,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-layout-grid"></i>
+                <iconify-icon class="fs-6" icon="solar:file-text-broken"></iconify-icon>
               </span>
               <span class="hide-menu">Orders</span>
               </a>
@@ -113,7 +113,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-eggs"></i>
+                <iconify-icon class="fs-7" icon="la:hamburger"></iconify-icon>
               </span>
               <span class="hide-menu">Food</span>
               </a>
@@ -150,15 +150,29 @@
                     <span class="hide-menu">All Food</span>
                   </a>
                 </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">Add Food</span>
-                  </a>
-                </li>
               </ul>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Employee -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-users"></i>
+              </span>
+              <span class="hide-menu">Employee</span>
+              </a>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Customer -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" id="get-url" aria-expanded="false">
+              <span>
+                <iconify-icon class="fs-7" icon="carbon:customer"></iconify-icon>
+              </span>
+              <span class="hide-menu">Customer</span>
+              </a>
             </li>
             <!-- ---------------------------------- -->
             <!-- Employee -->
@@ -166,9 +180,9 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-users"></i>
+                <iconify-icon class="fs-7" icon="ix:support"></iconify-icon>
               </span>
-              <span class="hide-menu">Employee</span>
+              <span class="hide-menu">Help &amp; Support</span>
               </a>
               <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
@@ -176,7 +190,7 @@
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
-                    <span class="hide-menu">All Employees</span>
+                    <span class="hide-menu">Chat</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
@@ -184,36 +198,7 @@
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
-                    <span class="hide-menu">Add Employee</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!-- ---------------------------------- -->
-            <!-- Customer -->
-            <!-- ---------------------------------- -->
-            <li class="sidebar-item">
-              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-              <span class="d-flex">
-              <i class="ti ti-user"></i>
-              </span>
-              <span class="hide-menu">Customer</span>
-              </a>
-              <ul aria-expanded="false" class="collapse first-level">
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">All Customers</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">Single Customer</span>
+                    <span class="hide-menu">Contact Message</span>
                   </a>
                 </li>
               </ul>
@@ -790,10 +775,6 @@
                       </p>
                     </div>
                     <div class="col-auto">
-                      <button class="btn btn-outline-primary d-inline-flex align-items-center justify-content-center gap-2 me-3 mb-3 mb-sm-0">
-                        <i class="ti ti-pencil"></i>
-                        Edit Order
-                      </button>
                       <button class="btn btn-secondary d-inline-flex align-items-center justify-content-center gap-2 mb-3 mb-sm-0">
                         <i class="ti ti-printer"></i>
                         Print Invoice
@@ -806,10 +787,10 @@
                         Shop:
                         <span class="text-black fw-bold">BBQ Chicken, Dhaka</span>
                       </p>
-                      <button class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2">
+                      <!-- <button class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2">
                         <i class="ti ti-map-pin"></i>
                         Show on map
-                      </button>
+                      </button> -->
                     </div>
                     <div class="col-md-6 d-flex justify-content-md-end">
                       <table>
@@ -827,7 +808,7 @@
                           <tr>
                             <td class="pb-1">status:</td>
                             <td class="text-end pb-1">
-                              <span class="badge bg-success-subtle text-black ms-2">Pending</span>
+                              <span class="badge bg-success-subtle text-info ms-2">Pending</span>
                             </td>
                           </tr>
                           <tr>
@@ -840,7 +821,7 @@
                           </tr>
                           <tr>
                             <td class="pb-1">Payment Status:</td>
-                            <td class="text-end pb-1"><span class="ms-2 text-danger">Pending</span></td>
+                            <td class="text-end pb-1"><span class="ms-2 pending">Pending</span></td>
                           </tr>
                           <tr>
                             <td class="">Coupon:</td>
@@ -1040,7 +1021,7 @@
                       </button>
                     </div>
                   </div>
-                  <div class="card">
+                  <!-- <div class="card">
                     <div class="card-body">
                       <h5 class="mb-3">Restaurant Info</h5>
                       <div class="row g-3 mb-3">
@@ -1091,7 +1072,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

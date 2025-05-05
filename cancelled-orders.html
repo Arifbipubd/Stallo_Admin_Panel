@@ -29,8 +29,8 @@
         <!-- ---------------------------------- -->
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.html" class="text-nowrap logo-img">
-          <img src="./assets/images/logos/logo.svg" class="dark-logo w-85" alt="Logo-Dark" />
-          <img src="./assets/images/logos/dark-logo.png" class="light-logo w-85" alt="Logo-light" />
+          <img src="./assets/images/logos/admin-logo.png" class="dark-logo" alt="Logo-Dark" />
+          <img src="./assets/images/logos/admin-logo-dark.png" class="light-logo" alt="Logo-light" />
           </a>
           <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
           <i class="ti ti-x"></i>
@@ -43,15 +43,15 @@
             <!-- ---------------------------------- -->
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
+              <span class="hide-menu">Menu</span>
             </li>
             <!-- ---------------------------------- -->
             <!-- Dashboard -->
             <!-- ---------------------------------- -->
             <li class="sidebar-item">
-              <a class="sidebar-link" href=" " id="get-url"  aria-expanded="false">
+              <a class="sidebar-link" href="" id="get-url" aria-expanded="false">
               <span>
-              <i class="ti ti-aperture"></i>
+              <i class="ti ti-layout-grid"></i>
               </span>
               <span class="hide-menu">Dashboard</span>
               </a>
@@ -62,7 +62,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-layout-grid"></i>
+                <iconify-icon class="fs-6" icon="solar:file-text-broken"></iconify-icon>
               </span>
               <span class="hide-menu">Orders</span>
               </a>
@@ -115,13 +115,13 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-eggs"></i>
+                <iconify-icon class="fs-7" icon="la:hamburger"></iconify-icon>
               </span>
               <span class="hide-menu">Food</span>
               </a>
               <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
-                  <a href="./food-category" class="sidebar-link">
+                  <a href="#" class="sidebar-link">
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
@@ -129,7 +129,7 @@
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a href="./food-placement-category.html" class="sidebar-link">
+                  <a href="#" class="sidebar-link">
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
@@ -144,15 +144,29 @@
                     <span class="hide-menu">All Food</span>
                   </a>
                 </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">Add Food</span>
-                  </a>
-                </li>
               </ul>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Employee -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="ti ti-users"></i>
+              </span>
+              <span class="hide-menu">Employee</span>
+              </a>
+            </li>
+            <!-- ---------------------------------- -->
+            <!-- Customer -->
+            <!-- ---------------------------------- -->
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#" id="get-url" aria-expanded="false">
+              <span>
+                <iconify-icon class="fs-7" icon="carbon:customer"></iconify-icon>
+              </span>
+              <span class="hide-menu">Customer</span>
+              </a>
             </li>
             <!-- ---------------------------------- -->
             <!-- Employee -->
@@ -160,9 +174,9 @@
             <li class="sidebar-item">
               <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
-              <i class="ti ti-users"></i>
+                <iconify-icon class="fs-7" icon="ix:support"></iconify-icon>
               </span>
-              <span class="hide-menu">Employee</span>
+              <span class="hide-menu">Help &amp; Support</span>
               </a>
               <ul aria-expanded="false" class="collapse first-level">
                 <li class="sidebar-item">
@@ -170,7 +184,7 @@
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
-                    <span class="hide-menu">All Employees</span>
+                    <span class="hide-menu">Chat</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
@@ -178,36 +192,7 @@
                     <div class="round-16 d-flex align-items-center justify-content-center">
                       <i class="ti ti-circle"></i>
                     </div>
-                    <span class="hide-menu">Add Employee</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!-- ---------------------------------- -->
-            <!-- Customer -->
-            <!-- ---------------------------------- -->
-            <li class="sidebar-item">
-              <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-              <span class="d-flex">
-              <i class="ti ti-user"></i>
-              </span>
-              <span class="hide-menu">Customer</span>
-              </a>
-              <ul aria-expanded="false" class="collapse first-level">
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">All Customers</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a href="#" class="sidebar-link">
-                    <div class="round-16 d-flex align-items-center justify-content-center">
-                      <i class="ti ti-circle"></i>
-                    </div>
-                    <span class="hide-menu">Single Customer</span>
+                    <span class="hide-menu">Contact Message</span>
                   </a>
                 </li>
               </ul>
@@ -379,7 +364,7 @@
                           </div>
                         </div>
                         <div class="message-body">
-                          <a href=".#" class="py-8 px-7 mt-8 d-flex align-items-center">
+                          <a href="#" class="py-8 px-7 mt-8 d-flex align-items-center">
                             <span class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                             <img src="./assets/images/svgs/icon-account.svg" alt="modernize-img" width="24" height="24" />
                             </span>
@@ -761,958 +746,317 @@
         <div class="container-fluid">
           <!-- start cancelled orders -->
           <h4 class="mb-3">Cancelled Orders</h4>
-          <div class="table-responsive pt-2 pb-5">
-            <table id="multi_col_order" class="table table-striped table-bordered display text-nowrap">
-              <thead>
-                <tr>
-                  <th>SL</th>
-                  <th>Order ID</th>
-                  <th>Order Date</th>
-                  <th>Customer Info</th>
-                  <th>Branch</th>
-                  <th>Total Price</th>
-                  <th>Status</th>
-                  <th class="text-end">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>ORD-20250502-339</td>
-                  <td>2025-05-02</td>
-                  <td>Rahim Khan 
-                    <br>
-                    <a href="mailto:abcd@gmail.com">rahim.khan88@sample.net</a>
-                  </td>
-                  <td>Uttara</td>
-                  <td>3800</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>ORD-20250430-221</td>
-                  <td>2025-05-01</td>
-                  <td>
-                    Aminul Islam 
-                    <br>
-                    <a href="abcde@gmail.com">
-                    amin.i@service.info
-                    </a>
-                  </td>
-                  <td>Motijheel</td>
-                  <td>4500</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>ORD-20250428-187</td>
-                  <td>2025-04-29</td>
-                  <td>
-                    Zahid Hasan 
-                    <br />
-                    <a href="mailto:abcd">zahid.h@provider.co</a>
-                  </td>
-                  <td>Wari</td>
-                  <td>3150</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>ORD-20250426-524</td>
-                  <td>2025-04-27</td>
-                  <td>Sohel Rana <br>
-                    <a href="mailto:abcde@gmail.com">sohel.rana@sample.net</a>
-                  </td>
-                  <td>Badda</td>
-                  <td>4120</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>ORD-20250424-080</td>
-                  <td>2025-04-25</td>
-                  <td>Masud Karim <br /> <a href="mailto:masud.k@service.info">masud.k@service.info</a></td>
-                  <td>Gazipur</td>
-                  <td>3670</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>ORD-20250422-516</td>
-                  <td>2025-04-23</td>
-                  <td>Faisal Rahman <br /> <a href="mailto:faisal.r@provider.co">faisal.r@provider.co</a></td>
-                  <td>Tongi</td>
-                  <td>4310</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>ORD-20250420-872</td>
-                  <td>2025-04-21</td>
-                  <td>Imran Khan <br /> <a href="mailto:imran.k@sample.net">imran.k@sample.net</a></td>
-                  <td>Khilkhet</td>
-                  <td>3950</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>ORD-20250418-208</td>
-                  <td>2025-04-19</td>
-                  <td>Rafi Islam <br /> <a href="mailto:rafi.i@service.info">rafi.i@service.info</a></td>
-                  <td>Gazipur</td>
-                  <td>3290</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>ORD-20250416-644</td>
-                  <td>2025-04-17</td>
-                  <td>Arif Hossain <br /> <a href="mailto:arif.h@provider.co">arif.h@provider.co</a></td>
-                  <td>Tejgaon</td>
-                  <td>4010</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>ORD-20250414-080</td>
-                  <td>2025-04-15</td>
-                  <td>Tarikul Islam <br /> <a href="mailto:tarikul.i@sample.net">tarikul.i@sample.net</a></td>
-                  <td>Badda</td>
-                  <td>3740</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>11</td>
-                  <td>ORD-20250412-516</td>
-                  <td>2025-04-13</td>
-                  <td>Fardin Rahman <br /> <a href="mailto:fardin.r@service.info">fardin.r@service.info</a></td>
-                  <td>Savar</td>
-                  <td>3470</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>ORD-20250410-872</td>
-                  <td>2025-04-11</td>
-                  <td>Zayed Hossain <br /> <a href="mailto:zayed.h@provider.co">zayed.h@provider.co</a></td>
-                  <td>Uttara</td>
-                  <td>4250</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td>ORD-20250408-208</td>
-                  <td>2025-04-09</td>
-                  <td>Iftekhar Karim <br /> <a href="mailto:iftekhar.k@sample.net">iftekhar.k@sample.net</a></td>
-                  <td>Banani</td>
-                  <td>3510</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td>ORD-20250406-555</td>
-                  <td>2025-04-07</td>
-                  <td>Nusrat Jahan <br /> <a href="mailto:nusrat.jahan@email.com">nusrat.jahan@email.com</a></td>
-                  <td>Dhanmondi</td>
-                  <td>1250</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td>ORD-20250404-221</td>
-                  <td>2025-04-05</td>
-                  <td>Rahim Khan <br /> <a href="mailto:rahim.khan88@sample.net">rahim.khan88@sample.net</a></td>
-                  <td>Uttara</td>
-                  <td>3800</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>16</td>
-                  <td>ORD-20250402-876</td>
-                  <td>2025-04-03</td>
-                  <td>Farzana Ahmed <br /> <a href="mailto:farzana.a@domain.org">farzana.a@domain.org</a></td>
-                  <td>Mirpur</td>
-                  <td>560</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>17</td>
-                  <td>ORD-20250401-444</td>
-                  <td>2025-04-02</td>
-                  <td>Salman Hossain <br /> <a href="mailto:salman.h@provider.co">salman.h@provider.co</a></td>
-                  <td>Gulshan</td>
-                  <td>2100</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td>ORD-20250330-555</td>
-                  <td>2025-03-31</td>
-                  <td>Taslima Begum <br /> <a href="mailto:t.begum@work.com">t.begum@work.com</a></td>
-                  <td>Banani</td>
-                  <td>890</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>19</td>
-                  <td>ORD-20250328-187</td>
-                  <td>2025-03-29</td>
-                  <td>Zahid Hasan <br /> <a href="mailto:zahid.h@provider.co">zahid.h@provider.co</a></td>
-                  <td>Wari</td>
-                  <td>3150</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>ORD-20250326-524</td>
-                  <td>2025-03-27</td>
-                  <td>Sohel Rana <br /> <a href="mailto:sohel.rana@sample.net">sohel.rana@sample.net</a></td>
-                  <td>Badda</td>
-                  <td>4120</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>21</td>
-                  <td>ORD-20250501-567</td>
-                  <td>2025-05-01</td>
-                  <td>Ishrat Jahan <br /> <a href="mailto:ishrat.j@email.com">ishrat.j@email.com</a></td>
-                  <td>Mohakhali</td>
-                  <td>920</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>ORD-20250429-912</td>
-                  <td>2025-04-29</td>
-                  <td>Fahim Ahmed <br /> <a href="mailto:fahim.a@sample.net">fahim.a@sample.net</a></td>
-                  <td>Rampura</td>
-                  <td>2870</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>23</td>
-                  <td>ORD-20250427-456</td>
-                  <td>2025-04-27</td>
-                  <td>Naima Begum <br /> <a href="mailto:naima.b@domain.org">naima.b@domain.org</a></td>
-                  <td>Khilgaon</td>
-                  <td>1650</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td>ORD-20250425-123</td>
-                  <td>2025-04-25</td>
-                  <td>Tanvir Hossain <br /> <a href="mailto:tanvir.h@provider.co">tanvir.h@provider.co</a></td>
-                  <td>Paltan</td>
-                  <td>3300</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>25</td>
-                  <td>ORD-20250423-678</td>
-                  <td>2025-04-23</td>
-                  <td>Sabiha Akter <br /> <a href="mailto:sabiha.a@work.com">sabiha.a@work.com</a></td>
-                  <td>Jatrabari</td>
-                  <td>780</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>26</td>
-                  <td>ORD-20250421-234</td>
-                  <td>2025-04-21</td>
-                  <td>Kamrul Hasan <br /> <a href="mailto:kamrul.h@service.info">kamrul.h@service.info</a></td>
-                  <td>Demra</td>
-                  <td>2110</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>27</td>
-                  <td>ORD-20250419-789</td>
-                  <td>2025-04-19</td>
-                  <td>Laila Rahman <br /> <a href="mailto:laila.r@email.com">laila.r@email.com</a></td>
-                  <td>Uttarkhan</td>
-                  <td>1490</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td>ORD-20250417-345</td>
-                  <td>2025-04-17</td>
-                  <td>Zakir Khan <br /> <a href="mailto:zakir.k@sample.net">zakir.k@sample.net</a></td>
-                  <td>Dakshinkhan</td>
-                  <td>3980</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>29</td>
-                  <td>ORD-20250415-890</td>
-                  <td>2025-04-15</td>
-                  <td>Sheuli Begum <br /> <a href="mailto:sheuli.b@domain.org">sheuli.b@domain.org</a></td>
-                  <td>Khilkhet</td>
-                  <td>610</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>ORD-20250413-456</td>
-                  <td>2025-04-13</td>
-                  <td>Rifat Islam <br /> <a href="mailto:rifat.i@provider.co">rifat.i@provider.co</a></td>
-                  <td>বসুন্ধরা</td>
-                  <td>2550</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>31</td>
-                  <td>ORD-20250411-901</td>
-                  <td>2025-04-11</td>
-                  <td>Momena Akter <br /> <a href="mailto:momena.a@work.com">momena.a@work.com</a></td>
-                  <td>বনানী</td>
-                  <td>1720</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>32</td>
-                  <td>ORD-20250409-567</td>
-                  <td>2025-04-09</td>
-                  <td>Imtiaz Karim <br /> <a href="mailto:imtiaz.k@service.info">imtiaz.k@service.info</a></td>
-                  <td>ধানমন্ডি</td>
-                  <td>3190</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>33</td>
-                  <td>ORD-20250407-123</td>
-                  <td>2025-04-07</td>
-                  <td>Nargis Khan <br /> <a href="mailto:nargis.k@email.com">nargis.k@email.com</a></td>
-                  <td>গুলশান</td>
-                  <td>880</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>34</td>
-                  <td>ORD-20250405-678</td>
-                  <td>2025-04-05</td>
-                  <td>Parvez Ahmed <br /> <a href="mailto:parvez.a@sample.net">parvez.a@sample.net</a></td>
-                  <td>মিরপুর</td>
-                  <td>2910</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>35</td>
-                  <td>ORD-20250403-234</td>
-                  <td>2025-04-03</td>
-                  <td>Shabnam Begum <br><a href="mailto:shabnam.b@domain.org">shabnam.b@domain.org</a></td>
-                  <td>উত্তরা</td>
-                  <td>1570</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>36</td>
-                  <td>ORD-20250401-789</td>
-                  <td>2025-04-01</td>
-                  <td>Asif Hossain <br /> <a href="mailto:asif.h@provider.co">asif.h@provider.co</a></td>
-                  <td>মোহাম্মদপুর</td>
-                  <td>3420</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>37</td>
-                  <td>ORD-20250330-345</td>
-                  <td>2025-03-30</td>
-                  <td>Moushumi Akter <br /> <a href="mailto:moushumi.a@work.com">moushumi.a@work.com</a></td>
-                  <td>তেজগাঁও</td>
-                  <td>730</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>38</td>
-                  <td>ORD-20250328-890</td>
-                  <td>2025-03-28</td>
-                  <td>Tareq Khan <br /> <a href="mailto:tareq.k@service.info">tareq.k@service.info</a></td>
-                  <td>যাত্রাবাড়ী</td>
-                  <td>2290</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>39</td>
-                  <td>ORD-20250326-456</td>
-                  <td>2025-03-26</td>
-                  <td>Farhana Rahman <br /> <a href="mailto:farhana.r@email.com">farhana.r@email.com</a></td>
-                  <td>লালবাগ</td>
-                  <td>1810</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>40</td>
-                  <td>ORD-20250324-123</td>
-                  <td>2025-03-24</td>
-                  <td>Nasir Uddin <br /> <a href="mailto:nasir.u@sample.net">nasir.u@sample.net</a></td>
-                  <td>রামপুরা</td>
-                  <td>3650</td>
-                  <td>
-                    <p class="cancelled mb-0">Cancelled</p>
-                  </td>
-                  <td class="text-center d-flex align-item-center gap-2">
-                    <a href="./single-order.html">
-                    <button class="btn btn-outline-primary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-eye"></i>
-                    </button>
-                    </a>
-                    <a href="#">
-                    <button class="btn btn-outline-secondary rounded-circle round-40 fs-5 d-inline-flex align-items-center justify-content-center">
-                    <i class="ti ti-printer"></i>
-                    </button>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive pt-2 pb-5">
+                <table id="multi_col_order" class="table table-borderless table-hover display text-nowrap">
+                  <thead>
+                    <tr>
+                      <th class="bg-info-subtle">SL</th>
+                      <th class="bg-info-subtle">Order ID</th>
+                      <th class="bg-info-subtle">Order Date</th>
+                      <th class="bg-info-subtle text-center">Customer Info</th>
+                      <th class="bg-info-subtle">Branch</th>
+                      <th class="bg-info-subtle">Total Price</th>
+                      <th class="bg-info-subtle">Status</th>
+                      <th class="text-end bg-info-subtle">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>ORD-20250503-951</td>
+                      <td>2025-05-03</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-1.jpg" class="round-48 rounded-circle" alt="user" />
+                          <p class="mb-0">
+                            Rafiq Islam <br /><a href="mailto:rafiq.islam@sample.com">rafiq.islam@sample.com</a>
+                          </p>
+                        </div>
+                      </td>
+                      <td>Gulshan</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2250</p>
+                        <p class="cod mb-0">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td>
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>ORD-20250502-952</td>
+                      <td>2025-05-02</td>
+                      <td>
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="./assets/images/profile/user-2.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Minhaz Rahman <br /><a href="mailto:minhaz.r@demo.net">minhaz.r@demo.net</a></p>
+                        </div>
+                      </td>
+                      <td>Bashundhara</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳1990</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>ORD-20250501-953</td>
+                      <td>2025-05-01</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-3.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Sumaiya Akter <br /><a href="mailto:sumaiya.akter@service.org">sumaiya.akter@service.org</a></p>
+                        </div>
+                      </td>
+                      <td>Tejgaon</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2300</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>ORD-20250430-954</td>
+                      <td>2025-04-30</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-4.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Jannatul Ferdous <br /><a href="mailto:jannatul.fd@webmail.io">jannatul.fd@webmail.io</a></p>
+                        </div>
+                      </td>
+                      <td>Dhanmondi</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳1850</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>ORD-20250429-955</td>
+                      <td>2025-04-29</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-5.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Mahmud Hasan <br /><a href="mailto:mahmud.hasan@bdmail.com">mahmud.hasan@bdmail.com</a></p>
+                        </div>
+                      </td>
+                      <td>Banani</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2120</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>ORD-20250428-956</td>
+                      <td>2025-04-28</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-6.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Nadia Sultana <br /><a href="mailto:nadia.sultana@mailbox.org">nadia.sultana@mailbox.org</a></p>
+                        </div>
+                      </td>
+                      <td>Uttara</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳1980</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>ORD-20250427-957</td>
+                      <td>2025-04-27</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-7.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Kamal Uddin <br /><a href="mailto:kamal.uddin@outlook.com">kamal.uddin@outlook.com</a></p>
+                        </div>
+                      </td>
+                      <td>Mirpur</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2050</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>ORD-20250426-958</td>
+                      <td>2025-04-26</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-8.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Arif Chowdhury <br /><a href="mailto:arif.chowdhury@mailer.biz">arif.chowdhury@mailer.biz</a></p>
+                        </div>
+                      </td>
+                      <td>Mohakhali</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2375</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>ORD-20250425-959</td>
+                      <td>2025-04-25</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-9.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Tahsin Rahman <br /><a href="mailto:tahsin.rahman@ecom.com">tahsin.rahman@ecom.com</a></p>
+                        </div>
+                      </td>
+                      <td>Shantinagar</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2500</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>ORD-20250424-960</td>
+                      <td>2025-04-24</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-10.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Lubaba Zaman <br /><a href="mailto:lubaba.z@fastmail.net">lubaba.z@fastmail.net</a></p>
+                        </div>
+                      </td>
+                      <td>Khilgaon</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2180</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>ORD-20250423-961</td>
+                      <td>2025-04-23</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-11.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Fahim Alam <br /><a href="mailto:fahim.alam@webhost.io">fahim.alam@webhost.io</a></p>
+                        </div>
+                      </td>
+                      <td>Rampura</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2060</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>ORD-20250422-962</td>
+                      <td>2025-04-22</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="./assets/images/profile/user-12.jpg" alt="" class="round-48 rounded-circle">
+                          <p class="mb-0">Tanjina Haque <br /><a href="mailto:tanjina.h@info.bd">tanjina.h@info.bd</a></p>
+                        </div>
+                      </td>
+                      <td>Moghbazar</td>
+                      <td class="text-center">
+                        <p class="mb-1">৳2135</p>
+                        <p class="mb-0 cod">COD</p>
+                      </td>
+                      <td class="text-center">
+                        <p class="cancelled mb-1">Cancelled</p>
+                        <p class="mb-0 text-body-secondary">Home Delivery</p>
+                      </td>
+                      <td class="text-center">
+                        <a href="./single-order.html"><button class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-eye"></i></button></a>
+                        <a href="#"><button class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"><i class="ti ti-printer"></i></button></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <!-- end Multi-column ordering -->
         </div>

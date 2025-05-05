@@ -44184,22 +44184,63 @@ body .connect-sorting-content {
   display: none;
 }
 
+.processing, .cancelled, .pending, .delivered{
+  padding: 2px 4px;
+}
 .processing {
-  color: var(--bs-teal);
+  color: var(--bs-cyan);
+  background-color: var(--bs-info-bg-subtle) !important;
+  border-radius: var(--bs-border-radius-sm) !important;
 }
 
 .cancelled {
   color: var(--bs-danger);
+  background-color: var(--bs-danger-bg-subtle) !important;
+  border-radius: var(--bs-border-radius-sm) !important;
 }
 
+.cod {
+  color: var(--bs-danger);
+}
 .pending {
   color: var(--bs-cyan);
+  background-color: var(--bs-secondary-bg-subtle) !important;
+  border-radius: var(--bs-border-radius-sm) !important;
 }
 
-.shipped {
-  color: var(--bs-warning);
-}
-
-.delivered {
+.delivered{
   color: var(--bs-success);
+  background-color: var(--bs-success-bg-subtle) !important;
+  border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.paid {
+  color: var(--bs-success);
+}
+.btn-secondary-extended {
+  background-color: #49beff;
+  color: #fff;
+  border: 1px solid #49beff;
+}
+
+.btn-secondary-extended:hover{
+  background-color: treansparent !important;
+  color: #49beff;
+  border: 1px solid #49beff !important;
+  transition: all 0.2s ease-linear;
+}
+
+.table-responsive .dataTables_wrapper .dataTables_filter input{
+  padding: 10px 12px;
+  outline-color: var(--bs-info) !important;
+  outline-offset: 0px;
+  width: 16rem;
+}
+
+.filter-input{
+  margin-top: 8px;
+}
+
+.table tr td {
+  vertical-align: middle;
 }

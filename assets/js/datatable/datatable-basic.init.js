@@ -113,3 +113,12 @@ $("#lang_opt").DataTable({
     infoFiltered: "(filtered from _MAX_ total records)",
   },
 });
+
+/*--------------------------------------*/
+/*-------- Placeholder------------------*/
+/*--------------------------------------*/
+
+const dataTablesFilter = document.getElementById('multi_col_order_filter')
+const inputField = dataTablesFilter.querySelector('input');
+inputField.setAttribute('placeholder', "Enter search...")
+inputField.classList.add('filter-input');
