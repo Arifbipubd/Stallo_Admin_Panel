@@ -44203,8 +44203,8 @@ body .connect-sorting-content {
   color: var(--bs-danger);
 }
 .pending {
-  color: var(--bs-cyan);
-  background-color: var(--bs-secondary-bg-subtle) !important;
+  color: var(--bs-warning);
+  background-color: var(--bs-warning-bg-subtle) !important;
   border-radius: var(--bs-border-radius-sm) !important;
 }
 
