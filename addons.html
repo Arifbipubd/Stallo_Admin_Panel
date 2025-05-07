@@ -19,7 +19,7 @@
     />
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Processing orders</title>
+    <title>Addons</title>
     <!-- Owl Carousel  -->
     <link
       rel="stylesheet"
@@ -138,7 +138,7 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="" class="sidebar-link">
+                    <a href="./processing-orders.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -208,7 +208,7 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="./addons.html" class="sidebar-link">
+                    <a href="" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -306,7 +306,6 @@
                 <img
                   src="./assets/images/profile/user-1.jpg"
                   class="rounded-circle"
-                  width="40"
                   height="40"
                   alt="stallo-img"
                 />
@@ -1003,13 +1002,13 @@
                 <li class="nav-item d-none d-xl-block">
                   <a href="./index.html" class="text-nowrap nav-link">
                     <img
-                      src="./assets/images/logos/logo.svg"
+                      src="./assets/images/logos/admin-logo.png"
                       class="dark-logo"
                       width="180"
                       alt="stallo-img"
                     />
                     <img
-                      src="./assets/images/logos/dark-logo.png"
+                      src="./assets/images/logos/admin-logo-dark.png"
                       class="light-logo"
                       width="180"
                       alt="stallo-img"
@@ -1421,566 +1420,449 @@
         <!------------------------------->
         <div class="body-wrapper">
           <div class="container-fluid">
-            <!-- start processing orders -->
-            <h4 class="mb-3">Processing Orders</h4>
-            <div class="card">
-              <div class="card-body">
-                <div class="table-responsive pt-2 pb-5">
-                  <table
-                    id="multi_col_order"
-                    class="table table-borderless table-hover display text-nowrap"
-                  >
-                    <thead>
-                      <tr>
-                        <th class="bg-info-subtle">SL</th>
-                        <th class="bg-info-subtle">Order ID</th>
-                        <th class="bg-info-subtle">Order Date</th>
-                        <th class="bg-info-subtle text-center">
-                          Customer Info
-                        </th>
-                        <th class="bg-info-subtle">Branch</th>
-                        <th class="bg-info-subtle">Total Price</th>
-                        <th class="bg-info-subtle">Status</th>
-                        <th class="text-end bg-info-subtle">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>ORD-20250501-905</td>
-                        <td>2025-05-01</td>
-                        <td class="">
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-10.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Salman Hossain <br /><a
-                                href="mailto:salman.h@provider.co"
-                                >salman.h@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Gulshan</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2100</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td class="">
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>ORD-20250502-911</td>
-                        <td>2025-05-02</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-3.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Nadia Islam <br /><a
-                                href="mailto:nadia.i@provider.co"
-                                >nadia.i@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Banani</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 3200</p>
-                          <p class="cod fs-2 mb-0">COD</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 text-body-secondary">Store Pickup</p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>ORD-20250430-892</td>
-                        <td>2025-04-30</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-7.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Tanvir Rahman <br /><a
-                                href="mailto:tanvir.r@provider.co"
-                                >tanvir.r@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Uttara</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 1450</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>ORD-20250501-888</td>
-                        <td>2025-05-01</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-4.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Jannatul Mawa <br /><a
-                                href="mailto:j.mawa@provider.co"
-                                >j.mawa@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Mirpur</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2750</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="delivered mb-1">Handover</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>ORD-20250502-922</td>
-                        <td>2025-05-02</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-1.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Faisal Mahmud <br /><a
-                                href="mailto:faisal.m@provider.co"
-                                >faisal.m@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Dhanmondi</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 1980</p>
-                          <p class="cod fs-2 mb-0">COD</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 text-body-secondary">Store Pickup</p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>ORD-20250429-874</td>
-                        <td>2025-04-29</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-5.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Minhaz Uddin <br /><a
-                                href="mailto:minhaz.u@provider.co"
-                                >minhaz.u@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Mohakhali</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2400</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="delivered mb-1">Handover</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>ORD-20250503-935</td>
-                        <td>2025-05-03</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-8.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Rafiq Hasan <br /><a
-                                href="mailto:rafiq.h@provider.co"
-                                >rafiq.h@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Bashundhara</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 3100</p>
-                          <p class="cod fs-2 mb-0">COD</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 text-body-secondary">Store Pickup</p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>ORD-20250428-869</td>
-                        <td>2025-04-28</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-11.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Shamima Akter <br /><a
-                                href="mailto:shamima.a@provider.co"
-                                >shamima.a@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Wari</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2600</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>ORD-20250501-917</td>
-                        <td>2025-05-01</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-2.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Rumana Jahan <br /><a
-                                href="mailto:rumana.j@provider.co"
-                                >rumana.j@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Tejgaon</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 1890</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>ORD-20250502-927</td>
-                        <td>2025-05-02</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-9.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Sabbir Khan <br /><a
-                                href="mailto:sabbir.k@provider.co"
-                                >sabbir.k@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Malibagh</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2990</p>
-                          <p class="cod fs-2 mb-0">COD</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="delivered mb-1">Handover</p>
-                          <p class="mb-0 text-body-secondary">Store Pickup</p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>11</td>
-                        <td>ORD-20250427-863</td>
-                        <td>2025-04-27</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-6.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Hasan Mahmud <br /><a
-                                href="mailto:hasan.m@provider.co"
-                                >hasan.m@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Shantinagar</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 3500</p>
-                          <p class="paid fs-2 mb-0">Paid</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 fs-2 text-body-secondary">
-                            Home Delivery
-                          </p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>12</td>
-                        <td>ORD-20250503-938</td>
-                        <td>2025-05-03</td>
-                        <td>
-                          <div class="d-flex align-items-center gap-3">
-                            <img
-                              src="./assets/images/profile/user-10.jpg"
-                              class="round-48 rounded-circle"
-                              alt="user"
-                            />
-                            <p class="mb-0">
-                              Noman Kabir <br /><a
-                                href="mailto:noman.k@provider.co"
-                                >noman.k@provider.co</a
-                              >
-                            </p>
-                          </div>
-                        </td>
-                        <td>Rampura</td>
-                        <td class="text-center">
-                          <p class="mb-1">৳ 2230</p>
-                          <p class="cod fs-2 mb-0">COD</p>
-                        </td>
-                        <td class="text-center">
-                          <p class="processing mb-1">Confirmed</p>
-                          <p class="mb-0 text-body-secondary">Store Pickup</p>
-                        </td>
-                        <td>
-                          <a href="./single-order.html"
-                            ><button
-                              class="btn btn-outline-primary me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-eye"></i></button
-                          ></a>
-                          <a href="#"
-                            ><button
-                              class="btn btn-secondary-extended me-2 round-40 fs-5 d-inline-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-printer"></i></button
-                          ></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <!-- start Category List -->
+            <h4 class="mb-3">Category List</h4>
+            <div class="row g-4">
+              <div class="col-lg-5 col-xl-4">
+                <div class="card">
+                  <div class="card-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          id="Name"
+                          name="name"
+                          placeholder="Enter Food Name..."
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input
+                          type="number"
+                          id="price"
+                          name="price"
+                          placeholder="Enter Price..."
+                          class="form-control"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="branch" class="form-label">Branch</label>
+                        <select class="form-select" id="bracnh">
+                          <option value="">Select Branch</option>
+                          <option value="dhanmondi">Dhanmondi</option>
+                          <option value="gulshan">Gulshan</option>
+                          <option value="bashundhara">Bashundhara</option>
+                        </select>
+                      </div>
+                      <div class="mb-4">
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Select Status</option>
+                          <option value="available">Available</option>
+                          <option value="unavailable">Unavailable</option>
+                        </select>
+                      </div>
+                      <div class="">
+                        <button
+                          class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                        >
+                          <i class="ti ti-location"></i>
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7 col-xl-8">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="table-responsive pt-2 pb-5">
+                      <table
+                        id="multi_col_order"
+                        class="table table-borderless table-hover display text-nowrap"
+                      >
+                        <thead>
+                          <tr>
+                            <th class="bg-info-subtle">SL</th>
+                            <th class="bg-info-subtle">Food Info</th>
+                            <th class="bg-info-subtle">Price</th>
+                            <th class="bg-info-subtle">Branch</th>
+                            <th class="bg-info-subtle text-center">Status</th>
+                            <th class="bg-info-subtle text-end">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td class="">Grilled Fish</td>
+                            <td>৳ 250</td>
+                            <td>Gulshan</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status1"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td class="">Spicy Chicken Wrap</td>
+                            <td>৳ 300</td>
+                            <td>Banani</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status2"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td class="">Beef Burger</td>
+                            <td>৳ 400</td>
+                            <td>Mohammadpur</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status3"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td class="">Chicken Kebab</td>
+                            <td>৳ 200</td>
+                            <td>Shahbagh</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status4"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td class="">Vegetable Pizza</td>
+                            <td>৳ 350</td>
+                            <td>Tejgaon</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status5"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td class="">Cheese Sandwich</td>
+                            <td>৳ 150</td>
+                            <td>Uttara</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status6"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td class="">Fish Curry</td>
+                            <td>৳ 280</td>
+                            <td>Banglamotor</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status7"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td class="">Falafel Wrap</td>
+                            <td>৳ 220</td>
+                            <td>Malibagh</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status8"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td class="">Chicken Biryani</td>
+                            <td>৳ 450</td>
+                            <td>Banani</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status9"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td class="">Spaghetti</td>
+                            <td>৳ 320</td>
+                            <td>Gulshan</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status10"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>11</td>
+                            <td class="">Cheese Fries</td>
+                            <td>৳ 180</td>
+                            <td>Mirpur</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status11"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td class="">Pasta</td>
+                            <td>৳ 350</td>
+                            <td>Khilgaon</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status12"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>13</td>
+                            <td class="">Paneer Tikka</td>
+                            <td>৳ 280</td>
+                            <td>Motijheel</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status13"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>14</td>
+                            <td class="">Chicken Shawarma</td>
+                            <td>৳ 400</td>
+                            <td>Jatrabari</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status14"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>15</td>
+                            <td class="">Egg Roll</td>
+                            <td>৳ 150</td>
+                            <td>Gulshan</td>
+                            <td class="text-center">
+                              <div class="form-switch">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="status15"
+                                />
+                              </div>
+                            </td>
+                            <td class="text-end">
+                              <button class="btn btn-outline-primary me-2">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                              <button class="btn btn-danger">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- end Multi-column ordering -->
+            <!-- end delivered order -->
           </div>
         </div>
         <script>
@@ -1989,19 +1871,19 @@
           }
         </script>
       </div>
+      <div class="dark-transparent sidebartoggler"></div>
+      <script src="./assets/js/vendor.min.js"></script>
+      <!-- Import Js Files -->
+      <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
+      <script src="./assets/js/theme/app.init.js"></script>
+      <script src="./assets/js/theme/theme.js"></script>
+      <script src="./assets/js/theme/app.min.js"></script>
+      <script src="./assets/js/theme/sidebarmenu.js"></script>
+      <!-- solar icons -->
+      <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+      <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+      <script src="./assets/js/datatable/datatable-basic.init.js"></script>
     </div>
-    <div class="dark-transparent sidebartoggler"></div>
-    <script src="./assets/js/vendor.min.js"></script>
-    <!-- Import Js Files -->
-    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
-    <script src="./assets/js/theme/app.init.js"></script>
-    <script src="./assets/js/theme/theme.js"></script>
-    <script src="./assets/js/theme/app.min.js"></script>
-    <script src="./assets/js/theme/sidebarmenu.js"></script>
-    <!-- solar icons -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="./assets/js/datatable/datatable-basic.init.js"></script>
   </body>
 </html>

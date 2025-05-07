@@ -1,65 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical">
+<html
+  lang="en"
+  dir="ltr"
+  data-bs-theme="light"
+  data-color-theme="Blue_Theme"
+  data-layout="vertical"
+>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon icon-->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./assets/images/logos/favicon.png"
+    />
 
-  <!-- Favicon icon-->
-  <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.png" />
+    <!-- Core Css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
-  <!-- Core Css -->
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Login</title>
+  </head>
 
-  <title>Login</title>
-</head>
-
-<body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <img src="./assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
-  </div>
-  <div id="main-wrapper" class="auth-customizer-none">
-    <div class="position-relative overflow-hidden radial-gradient min-vh-100 w-100">
-      <div class="position-relative z-index-5">
-        <div class="row">
-          <div class="col-xl-7 col-xxl-8">
-            <a href="./index.html" class="text-nowrap logo-img d-block px-4 py-9 w-100">
-              <img src="./assets/images/logos/logo.svg" class="dark-logo img-fluid" alt="Logo-light" style="max-width: 10.875rem;" />
-            </a>
-            <div class="d-none d-xl-flex align-items-center justify-content-center h-n80">
-              <img src="./assets/images/hero-img/stallo-login.png" alt="modernize-img" class="img-fluid" width="500">
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <img
+        src="./assets/images/logos/favicon.png"
+        alt="loader"
+        class="lds-ripple img-fluid"
+      />
+    </div>
+    <div id="main-wrapper" class="auth-customizer-none">
+      <div
+        class="position-relative overflow-hidden radial-gradient min-vh-100 w-100"
+      >
+        <div class="position-relative z-index-5">
+          <div class="row">
+            <div class="col-xl-7 col-xxl-8">
+              <a
+                href="./index.html"
+                class="text-nowrap logo-img d-block px-4 py-9 w-100"
+              >
+                <img
+                  src="./assets/images/logos/logo.svg"
+                  class="dark-logo img-fluid"
+                  alt="Logo-light"
+                  style="max-width: 10.875rem"
+                />
+              </a>
+              <div
+                class="d-none d-xl-flex align-items-center justify-content-center h-n80"
+              >
+                <img
+                  src="./assets/images/hero-img/stallo-login.png"
+                  alt="stallo-img"
+                  class="img-fluid"
+                  width="500"
+                />
+              </div>
             </div>
-          </div>
-          <div class="col-xl-5 col-xxl-4">
-            <div class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4">
-              <div class="auth-max-width col-sm-8 col-md-6 col-xl-7 px-4">
-                <div class="brand-logo" style="max-width: 22rem;">
-                  <img src="./assets/images/logos/logo.svg" alt="Logo-Dark" class="mb-4 dark-logo img-fluid" />
-                </div>
-                <h2 class="mb-7 fs-7 fw-bolder text-center">Welcome to Stallo Admin</h2>
-                <form>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email">
+            <div class="col-xl-5 col-xxl-4">
+              <div
+                class="authentication-login min-vh-100 bg-body row justify-content-center align-items-center p-4"
+              >
+                <div class="auth-max-width col-sm-8 col-md-6 col-xl-7 px-4">
+                  <div class="brand-logo" style="max-width: 22rem">
+                    <img
+                      src="./assets/images/logos/logo.svg"
+                      alt="Logo-Dark"
+                      class="mb-4 dark-logo img-fluid"
+                    />
                   </div>
-                  <div class="mb-4">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" aria-describedby="password">
-                  </div>
-                  <div class="d-flex align-items-center justify-content-between mb-4">
-                    <div class="form-check">
-                      <input class="form-check-input primary" type="checkbox" value="" id="rememberMe">
-                      <label class="form-check-label text-dark fs-3" for="rememberMe">
-                        Remember Me
-                      </label>
+                  <h2 class="mb-7 fs-7 fw-bolder text-center">
+                    Welcome to Stallo Admin
+                  </h2>
+                  <form>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        aria-describedby="email"
+                      />
                     </div>
-                    <a class="text-primary fw-medium fs-3" href="./forget-password.html">Forgot Password ?</a>
-                  </div>
-                  <a href="./index.html" class="btn btn-primary w-100 py-8 mb-4 rounded-2">Sign In</a>
-                </form>
+                    <div class="mb-4">
+                      <label for="password" class="form-label">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        aria-describedby="password"
+                      />
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-4"
+                    >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input primary"
+                          type="checkbox"
+                          value=""
+                          id="rememberMe"
+                        />
+                        <label
+                          class="form-check-label text-dark fs-3"
+                          for="rememberMe"
+                        >
+                          Remember Me
+                        </label>
+                      </div>
+                      <a
+                        class="text-primary fw-medium fs-3"
+                        href="./forget-password.html"
+                        >Forgot Password ?</a
+                      >
+                    </div>
+                    <a
+                      href="./index.html"
+                      class="btn btn-primary w-100 py-8 mb-4 rounded-2"
+                      >Sign In</a
+                    >
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -67,19 +134,18 @@
       </div>
     </div>
     <script>
-  function handleColorTheme(e) {
-    document.documentElement.setAttribute("data-color-theme", e);
-  }
-</script>
-  <!-- Import Js Files -->
-  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
-  <script src="../assets/js/theme/app.init.js"></script>
-  <script src="../assets/js/theme/theme.js"></script>
-  <script src="../assets/js/theme/app.min.js"></script>
+      function handleColorTheme(e) {
+        document.documentElement.setAttribute("data-color-theme", e);
+      }
+    </script>
+    <!-- Import Js Files -->
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="../assets/js/theme/app.init.js"></script>
+    <script src="../assets/js/theme/theme.js"></script>
+    <script src="../assets/js/theme/app.min.js"></script>
 
-  <!-- solar icons -->
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-</body>
-
+    <!-- solar icons -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  </body>
 </html>
