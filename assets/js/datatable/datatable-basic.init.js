@@ -33,8 +33,8 @@ $("#multi_col_order").DataTable({
       orderData: [1, 0],
     },
     {
-      targets: [4],
-      orderData: [4, 0],
+      targets: [3],
+      orderData: [3, 0],
     },
   ],
 });
