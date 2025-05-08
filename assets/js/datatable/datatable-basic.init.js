@@ -37,6 +37,12 @@ $("#multi_col_order").DataTable({
       orderData: [3, 0],
     },
   ],
+  ...($("#multi_col_order").hasClass("reorder-table") ? {
+    pageLength: 5,
+    lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
+  }
+    : {} //  Empty object if the class is not present, so it does not override other settings
+  )
 });
 
 /****************************************
@@ -114,9 +120,15 @@ $("#lang_opt").DataTable({
   },
 });
 
+$(".reordered-table").DataTable({
+  pageLength: 5,
+  lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
+})
+
 /*--------------------------------------*/
 /*-------- Placeholder------------------*/
 /*--------------------------------------*/
+
 
 const dataTablesFilter = document.getElementById('multi_col_order_filter')
 const inputField = dataTablesFilter.querySelector('input');
