@@ -25,10 +25,7 @@
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
+
   </head>
   <body>
     <div
@@ -233,7 +230,7 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="#" aria-expanded="false">
+                <a class="sidebar-link" href="./all-employees.html" aria-expanded="false">
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -246,8 +243,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="#"
-                  id="get-url"
+                  href="./all-customers.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -314,17 +310,19 @@
                 <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
                 <span class="fs-2">Designer</span>
               </div>
-              <button
-                class="border-0 bg-transparent text-primary ms-auto"
-                tabindex="0"
-                type="button"
-                aria-label="logout"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="logout"
-              >
-                <i class="ti ti-power fs-6"></i>
-              </button>
+              <a href="./login.html">
+                <button
+                  class="border-0 bg-transparent text-primary ms-auto"
+                  tabindex="0"
+                  type="button"
+                  aria-label="logout"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-title="logout"
+                >
+                  <i class="ti ti-power fs-6"></i>
+                </button>
+              </a>
             </div>
           </div>
           <!-- ---------------------------------- -->
@@ -1430,9 +1428,9 @@
               <div class="col-auto">
                 <a href="./add-foods.html">
                   <button
-                    class="btn btn-primary gap-2 btn-lg d-inline-flex align-items-center justify-items-center"
+                    class="btn btn-outline-primary gap-2 d-inline-flex align-items-center justify-items-center"
                   >
-                    <i class="ti ti-plus fs-3"></i>
+                    <i class="ti ti-plus fs-4"></i>
                     Add Food
                   </button>
                 </a>
@@ -1440,7 +1438,7 @@
             </div>
             <div class="card">
               <div class="card-body">
-                <div class="table-responsive pt-2 pb-5">
+                <div class="table-responsive pb-5">
                   <table
                     id="multi_col_order"
                     class="table table-borderless table-hover display text-nowrap"
@@ -1452,7 +1450,7 @@
                         <th class="bg-info-subtle">Category</th>
                         <th class="bg-info-subtle">Branch</th>
                         <th class="bg-info-subtle">Price</th>
-                        <th class="bg-info-subtle text-center">Status</th>
+                        <th class="bg-info-subtle text-center">Availability</th>
                         <th class="bg-info-subtle text-end">Action</th>
                       </tr>
                     </thead>
@@ -1473,14 +1471,7 @@
                         <td>Gulshan</td>
                         <td>৳ 250</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status1"
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1507,15 +1498,7 @@
                         <td>Banani</td>
                         <td>৳ 380</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status2"
-                              checked
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1542,14 +1525,7 @@
                         <td>Dhanmondi</td>
                         <td>৳ 320</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status3"
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1576,15 +1552,7 @@
                         <td>Uttara</td>
                         <td>৳ 450</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status4"
-                              checked
-                            />
-                          </div>
+                          <span class="unavailable">Unavailable</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1611,14 +1579,7 @@
                         <td>Mirpur</td>
                         <td>৳ 280</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status5"
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1645,15 +1606,7 @@
                         <td>Gulshan</td>
                         <td>৳ 350</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status6"
-                              checked
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1680,14 +1633,7 @@
                         <td>Banani</td>
                         <td>৳ 300</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status7"
-                            />
-                          </div>
+                          <span class="unavailable">Unavailable</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1714,15 +1660,7 @@
                         <td>Dhanmondi</td>
                         <td>৳ 420</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status8"
-                              checked
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1749,14 +1687,7 @@
                         <td>Uttara</td>
                         <td>৳ 220</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status9"
-                            />
-                          </div>
+                          <span class="unavailable">Unavailable</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
@@ -1783,15 +1714,7 @@
                         <td>Mirpur</td>
                         <td>৳ 400</td>
                         <td class="text-center">
-                          <div class="form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="status10"
-                              checked
-                            />
-                          </div>
+                          <span class="available">Available</span>
                         </td>
                         <td class="text-end">
                           <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">

@@ -19,10 +19,15 @@
     />
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Single order</title>
-    
+    <title>Add Addons</title>
   </head>
   <body>
+    <div
+      class="toast toast-onload align-items-center text-bg-primary border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    ></div>
     <!-- Preloader -->
     <div class="preloader">
       <img
@@ -219,7 +224,11 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="./all-employees.html" aria-expanded="false">
+                <a
+                  class="sidebar-link"
+                  href="./all-employees.html"
+                  aria-expanded="false"
+                >
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -245,7 +254,7 @@
                 </a>
               </li>
               <!-- ---------------------------------- -->
-              <!-- Help and Support -->
+              <!-- Help and support -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
                 <a
@@ -291,7 +300,6 @@
                 <img
                   src="./assets/images/profile/user-1.jpg"
                   class="rounded-circle"
-                  width="40"
                   height="40"
                   alt="stallo-img"
                 />
@@ -697,6 +705,36 @@
                               </div>
                             </a>
                           </div>
+                          <div class="d-grid py-4 px-7 pt-8">
+                            <div
+                              class="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 p-4 mb-9"
+                            >
+                              <div class="row">
+                                <div class="col-6">
+                                  <h5 class="fs-4 mb-3 fw-semibold">
+                                    Unlimited Access
+                                  </h5>
+                                  <button class="btn btn-primary">
+                                    Upgrade
+                                  </button>
+                                </div>
+                                <div class="col-6">
+                                  <div class="m-n4 unlimited-img">
+                                    <img
+                                      src="./assets/images/backgrounds/unlimited-bg.png"
+                                      alt="stallo-img"
+                                      class="w-100"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="./login.html"
+                              class="btn btn-outline-primary"
+                              >Log Out</a
+                            >
+                          </div>
                         </div>
                       </div>
                     </li>
@@ -873,6 +911,29 @@
                               class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center"
                             >
                               <img
+                                src="./assets/images/svgs/icon-dd-date.svg"
+                                alt="stallo-img"
+                                class="img-fluid"
+                                width="24"
+                                height="24"
+                              />
+                            </div>
+                            <div>
+                              <h6 class="mb-1 bg-hover-primary">
+                                Calendar App
+                              </h6>
+                              <span class="fs-2 d-block text-muted"
+                                >Get dates</span
+                              >
+                            </div>
+                          </a>
+                        </li>
+                        <li class="sidebar-item py-2">
+                          <a href="#" class="d-flex align-items-center">
+                            <div
+                              class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center"
+                            >
+                              <img
                                 src="./assets/images/svgs/icon-dd-lifebuoy.svg"
                                 alt="stallo-img"
                                 class="img-fluid"
@@ -915,30 +976,6 @@
                         </li>
                       </ul>
                     </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="#" aria-expanded="false">
-                        <span>
-                          <i class="ti ti-message-dots"></i>
-                        </span>
-                        <span class="hide-menu">Chat</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="" aria-expanded="false">
-                        <span>
-                          <i class="ti ti-calendar"></i>
-                        </span>
-                        <span class="hide-menu">Calendar</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="#" aria-expanded="false">
-                        <span>
-                          <i class="ti ti-mail"></i>
-                        </span>
-                        <span class="hide-menu">Email</span>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </nav>
@@ -961,13 +998,13 @@
                 <li class="nav-item d-none d-xl-block">
                   <a href="./index.html" class="text-nowrap nav-link">
                     <img
-                      src="./assets/images/logos/logo.svg"
+                      src="./assets/images/logos/admin-logo.png"
                       class="dark-logo"
                       width="180"
                       alt="stallo-img"
                     />
                     <img
-                      src="./assets/images/logos/dark-logo.png"
+                      src="./assets/images/logos/admin-logo-dark.png"
                       class="light-logo"
                       width="180"
                       alt="stallo-img"
@@ -1374,366 +1411,159 @@
           </div>
         </header>
         <!--  Header End -->
+        <!------------------------------->
+        <!------MAIN Content-->
+        <!------------------------------->
         <div class="body-wrapper">
           <div class="container-fluid pt-3 pb-5">
-            <div
-              class="row justify-content-between align-items-center g-3 mb-3"
-            >
-              <div class="col-auto">
-                <h4 class="">Order Details</h4>
-              </div>
-              <div class="col-auto">
-                <button
-                  class="btn bg-info-subtle rounded-circle round d-inline-flex justify-content-center align-items-center me-2"
-                >
-                  <i class="ti ti-chevron-left"></i>
-                </button>
-                <button
-                  class="btn bg-info-subtle rounded-circle round d-inline-flex justify-content-center align-items-center"
-                >
-                  <i class="ti ti-chevron-right"></i>
-                </button>
-              </div>
-            </div>
-            <div class="row g-3">
-              <div class="col-12 col-xl-8">
-                <div class="card">
-                  <div class="card-body">
-                    <div
-                      class="row align-items-center justify-content-between g-2 mb-3"
-                    >
-                      <div class="col-auto">
-                        <h5>
-                          Order Id:
-                          <span class="ms-sm-2 text-nowrap"
-                            >#ORD-20250502-781</span
-                          >
+            <!-- start Add addons -->
+            <h4 class="mb-3">Add Addons</h4>
+            <form>
+              <div class="row justify-content-center g-3">
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <h5 class="mb-3 d-flex align-items-center">
+                          <iconify-icon
+                            class="fs-6 me-2"
+                            icon="entypo:info"
+                          ></iconify-icon>
+                          Food Overview
                         </h5>
-                        <p class="fs-2 mb-0">
-                          Placed Ordered date:
-                          <span class="text-black fw-bold"
-                            >01/05/2025 10:15am</span
-                          >
-                        </p>
+                        <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
+                        <label for="name" class="form-label fs-4">Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          class="form-control"
+                          placeholder="Enter addons name.."
+                        />
                       </div>
-                      <div class="col-auto">
-                        <button
-                          class="btn btn-secondary d-inline-flex align-items-center justify-content-center gap-2 mb-3 mb-sm-0"
+                      <div>
+                        <label for="description" class="form-label fs-4"
+                          >Description</label
                         >
-                          <i class="ti ti-printer"></i>
-                          Print Invoice
-                        </button>
+                        <textarea
+                          name="description"
+                          id="description"
+                          rows="7"
+                          class="form-control"
+                          placeholder="Enter addons description..."
+                        ></textarea>
                       </div>
-                    </div>
-                    <div class="row g-3 mb-5">
-                      <div class="col-md-6">
-                        <p class="mb-2">
-                          Shop:
-                          <span class="text-black fw-bold"
-                            >BBQ Chicken, Dhaka</span
-                          >
-                        </p>
-                        <!-- <button class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2">
-                        <i class="ti ti-map-pin"></i>
-                        Show on map
-                      </button> -->
-                      </div>
-                      <div class="col-md-6 d-flex justify-content-md-end">
-                        <table>
-                          <tbody>
-                            <tr>
-                              <th style="min-width: 10rem"></th>
-                              <th style="min-width: 6rem"></th>
-                            </tr>
-                            <tr>
-                              <td class="pb-1">Order Type:</td>
-                              <td class="text-end pb-1">Processing</td>
-                            </tr>
-                            <tr>
-                              <td class="pb-1">status:</td>
-                              <td class="text-end pb-1">
-                                <span
-                                  class="badge bg-success-subtle text-info ms-2"
-                                  >Pending</span
-                                >
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="pb-1">Order Method:</td>
-                              <td class="text-end pb-1 text-nowrap">
-                                Cash On Delivery
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="pb-1">Payment Status:</td>
-                              <td class="text-end pb-1">
-                                <span class="ms-2 pending">Pending</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="">Coupon:</td>
-                              <td class="text-end">
-                                <button
-                                  class="btn btn-outline-success d-inline-flex align-items-center"
-                                >
-                                  <i class="ti ti-pencil-plus"></i>
-                                </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <div class="table-responsive mb-3">
-                      <table class="table display">
-                        <thead class="bg-primary-subtle">
-                          <th style="min-width: 5rem">SL No</th>
-                          <th style="min-width: 12rem">Item Details</th>
-                          <th style="min-width: 8rem">Addons</th>
-                          <th style="min-width: 8rem">Price</th>
-                          <th class="text-end" style="min-width: 8rem">
-                            Discount
-                          </th>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="pt-3">1</td>
-                            <td class="d-flex align-items-center gap-2 pt-3">
-                              <img
-                                src="./assets/images/products/s2.jpg"
-                                alt="product"
-                                class="object-fit-cover round-75 rounded-2"
-                              />
-                              <div class="fs-2">
-                                <p class="mb-1 fw-bold text-black">Sushi</p>
-                                <p class="mb-1">
-                                  <span class="text-black fw-bold">Size:</span>
-                                  <span class="ms-1">Full platter</span>
-                                </p>
-                                <p class="mb-0">
-                                  <span class="fw-bold text-black"
-                                    >Quantity:</span
-                                  >
-                                  <span class="ms-1">1</span>
-                                </p>
-                              </div>
-                            </td>
-                            <td></td>
-                            <td>$25.00</td>
-                            <td class="text-end">$0.00</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                      <table class="">
-                        <tbody>
-                          <tr>
-                            <th style="min-width: 8rem"></th>
-                            <th style="min-width: 6rem"></th>
-                          </tr>
-                          <tr>
-                            <td>Addon Price:</td>
-                            <td class="text-end fw-bold">$0.00</td>
-                          </tr>
-                          <tr>
-                            <td>SubTotal:</td>
-                            <td class="text-end fw-bold">$25.00</td>
-                          </tr>
-                          <tr>
-                            <td>Discount:</td>
-                            <td class="text-end fw-bold">$0.00</td>
-                          </tr>
-                          <tr>
-                            <td>Vat/tax:</td>
-                            <td class="text-end">+$1.70</td>
-                          </tr>
-                          <tr>
-                            <td>Delivery charge:</td>
-                            <td class="text-end">+$2.00</td>
-                          </tr>
-                          <tr class="border-bottom">
-                            <td class="pb-2">Coupon Discount:</td>
-                            <td class="text-end pb-2">$0.00</td>
-                          </tr>
-                          <tr>
-                            <td class="pt-2 fs-5 fw-bold">Total</td>
-                            <td class="pt-2 fs-5 fw-bolder text-end">$28.70</td>
-                          </tr>
-                        </tbody>
-                      </table>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12 col-xl-4">
-                <div class="row g-3">
-                  <div class="col-md-6 col-xl-12">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="mb-3">
-                          <label for="order-status" class="form-label"
-                            >Change Order status</label
-                          >
-                          <select id="order-status" class="form-select">
-                            <option value="">Select an option</option>
-                            <option value="processing">Processing</option>
-                            <option value="pending">Pending</option>
-                            <option value="shipped">Shipped</option>
-                            <option value="delivered">Delivered</option>
-                            <option value="cancelled">Cancelled</option>
-                          </select>
-                        </div>
-                        <button
-                          class="btn btn-info d-inline-flex justify-content-center align-items-center w-100"
-                        >
-                          <i class="ti ti-location me-2"></i>
-                          Update
-                        </button>
-                      </div>
-                    </div>
-                    <!-- <div class="card">
+                <div class="col-md-6">
+                  <div class="card h-100">
                     <div class="card-body">
-                      <h5 class="mb-3">Restaurant Info</h5>
-                      <div class="row g-3 mb-3">
-                        <div class="col-auto">
-                          <img 
-                            src="./assets/images/profile/user-5.jpg" 
-                            alt="user" 
-                            class="img-fluid round-54 rounded-circle"
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-2"
+                          icon="hugeicons:image-01"
+                        ></iconify-icon>
+                        Feature Image
+                      </h5>
+                      <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
+                      <label for="fileInput" class="form-label"
+                        >Upload Image</label
+                      >
+                      <div
+                        class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
+                      >
+                        <div class="upload-box text-center px-3" id="drop-area">
+                          <span id="placeholder">Drop or Select Image</span>
+                          <input
+                            type="file"
+                            class="upload-input"
+                            id="fileInput"
+                            accept="image/*"
+                          />
+                          <button
+                            id="removeBtn"
+                            type="button"
+                            class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+                            style="display: none"
+                          >
+                            <i class="ti ti-x"></i>
+                          </button>
+                          <img
+                            id="previewImage"
+                            src=""
+                            alt="file uploaded image"
+                            style="display: none"
                           />
                         </div>
-                        <div class="col-12 col-md-auto">
-                          <table class="table">
-                            <tbody>
-                              <tr>
-                                <td class="ps-0 py-1 text-nowrap">
-                                  <i class="ti ti-user me-1"></i>
-                                  Name
-                                </td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">BBQ Chicken</td>
-                              </tr>
-                              <tr>
-                                <td class="ps-0 py-1 text-nowrap">
-                                  <i class="ti ti-mail me-1"></i>
-                                  Email
-                                </td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">bbq*********.com</td>
-                              </tr>
-                              <tr>
-                                <td class="ps-0 py-1 text-nowrap">
-                                  <i class="ti ti-phone me-1"></i>
-                                  Phone
-                                </td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">+8801**********</td>
-                              </tr>
-                              <tr>
-                                <td class="ps-0 py-1 text-nowrap">
-                                  <i class="ti ti-map-pin me-1"></i>
-                                  Address
-                                </td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">**********</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div> -->
-                  </div>
-                  <div class="col-md-6 col-xl-12">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="mb-3">Customer Details</h5>
-                        <div class="row g-3 mb-3">
-                          <div class="col-auto">
-                            <img
-                              src="./assets/images/profile/user-1.jpg"
-                              alt="user"
-                              class="img-fluid round-110 rounded-24"
-                            />
-                          </div>
-                          <div class="col-12 col-md-auto">
-                            <table class="table table-borderless">
-                              <tbody>
-                                <tr>
-                                  <td class="ps-0 py-1">
-                                    <i class="ti ti-user me-1"></i>
-                                    Name
-                                  </td>
-                                  <td class="py-1">:</td>
-                                  <td class="py-1">Jane Doe</td>
-                                </tr>
-                                <tr>
-                                  <td class="ps-0 py-1">
-                                    <i class="ti ti-mail me-1"></i>
-                                    Email
-                                  </td>
-                                  <td class="py-1">:</td>
-                                  <td class="py-1">jane*********.com</td>
-                                </tr>
-                                <tr>
-                                  <td class="ps-0 py-1">
-                                    <i class="ti ti-phone me-1"></i>
-                                    Phone
-                                  </td>
-                                  <td class="py-1">:</td>
-                                  <td class="py-1">+8801**********</td>
-                                </tr>
-                                <tr>
-                                  <td class="ps-0 py-1">
-                                    <i class="ti ti-map-pin me-1"></i>
-                                    Address
-                                  </td>
-                                  <td class="py-1">:</td>
-                                  <td class="py-1">**********</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                        <div>
-                          <h5>Delivery Info</h5>
-                          <table class="table table-borderless mb-0">
-                            <tbody>
-                              <tr>
-                                <td class="py-1 ps-0">Address</td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">********</td>
-                              </tr>
-                              <tr>
-                                <td class="py-1 ps-0">Road No.</td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">****</td>
-                              </tr>
-                              <tr>
-                                <td class="py-1 ps-0">Building No.</td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">****</td>
-                              </tr>
-                              <tr>
-                                <td class="py-1 ps-0">District</td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">****</td>
-                              </tr>
-                              <tr>
-                                <td class="py-1 ps-0">Postal Code</td>
-                                <td class="py-1">:</td>
-                                <td class="py-1">****</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-12">
+                  <div class="card h-100">
+                    <div class="card-body row g-3">
+                      <div class="col-12">
+                        <h5 class="mb-3 d-flex align-items-center">
+                          <iconify-icon
+                            class="fs-7 me-2"
+                            icon="iconamoon:category-thin"
+                          ></iconify-icon>
+                          Food Category, Pricing & Stock
+                        </h5>
+                        <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="category" class="form-label fs-4"
+                          >Category</label
+                        >
+                        <select
+                          name="category"
+                          id="category"
+                          class="form-select"
+                        >
+                          <option value="">Select Category</option>
+                          <option value="chinese">Chinese</option>
+                          <option value="italian">Italian</option>
+                          <option value="spanish">Spanish</option>
+                          <option value="bengali">Bengali</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="price" class="form-label fs-4">Price</label>
+                        <input
+                          type="number"
+                          name="price"
+                          id="price"
+                          class="form-control"
+                          placeholder="Enter price..."
+                        />
+                      </div>
+                      <div class="col-md-4">
+                        <label for="availability" class="form-label fs-4"
+                          >Availability</label
+                        >
+                        <select class="form-select" id="availability">
+                          <option value="">Select Availability</option>
+                          <option value="available">Available</option>
+                          <option value="unavailable">Unavailable</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7 col-md-5 mt-5">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-primary w-100 d-inline-flex justify-content-center align-items-center gap-2"
+                  >
+                    <i class="ti ti-location"></i>
+                    Add
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
+            <!-- end add addons -->
           </div>
         </div>
         <script>
@@ -1752,6 +1582,8 @@
     <script src="./assets/js/theme/theme.js"></script>
     <script src="./assets/js/theme/app.min.js"></script>
     <script src="./assets/js/theme/sidebarmenu.js"></script>
+
+    <script src="./assets/js/theme/fileUpdloader.js"></script>
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   </body>
