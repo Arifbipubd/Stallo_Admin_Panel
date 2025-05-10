@@ -22,7 +22,7 @@ $("#default_order").DataTable({
 /****************************************
  *       Multi-column Order Table      *
  ****************************************/
-$("#multi_col_order").DataTable({
+const table = $("#multi_col_order").DataTable({
   columnDefs: [
     {
       targets: [0],
@@ -45,6 +45,9 @@ $("#multi_col_order").DataTable({
   )
 });
 
+const wrapper = $('<div class="dt-top-controls"></div>');
+  wrapper.append($('#multi_col_order_length')).append($('#multi_col_order_filter'));
+  $('#multi_col_order_wrapper').prepend(wrapper);
 /****************************************
  *       Complex header Table          *
  ****************************************/

@@ -25,10 +25,7 @@
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
+
   </head>
   <body>
     <div
@@ -233,7 +230,7 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="#" aria-expanded="false">
+                <a class="sidebar-link" href="./all-employees.html" aria-expanded="false">
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -246,8 +243,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="#"
-                  id="get-url"
+                  href="./all-customers.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -315,17 +311,19 @@
                 <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
                 <span class="fs-2">Designer</span>
               </div>
-              <button
-                class="border-0 bg-transparent text-primary ms-auto"
-                tabindex="0"
-                type="button"
-                aria-label="logout"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="logout"
-              >
-                <i class="ti ti-power fs-6"></i>
-              </button>
+              <a href="./login.html">
+                <button
+                  class="border-0 bg-transparent text-primary ms-auto"
+                  tabindex="0"
+                  type="button"
+                  aria-label="logout"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-title="logout"
+                >
+                  <i class="ti ti-power fs-6"></i>
+                </button>
+              </a>
             </div>
           </div>
           <!-- ---------------------------------- -->
@@ -1425,7 +1423,7 @@
             <h4 class="mb-3">Pending Orders</h4>
             <div class="card">
               <div class="card-body">
-                <div class="table-responsive pt-2 pb-5">
+                <div class="table-responsive pb-5">
                   <table
                     id="multi_col_order"
                     class="table table-borderless table-hover display text-nowrap"

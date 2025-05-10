@@ -20,6 +20,10 @@
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Add Food</title>
+    <link
+      rel="stylesheet"
+      href="../assets/libs/select2/dist/css/select2.min.css"
+    />
   </head>
   <body>
     <div
@@ -224,7 +228,11 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="#" aria-expanded="false">
+                <a
+                  class="sidebar-link"
+                  href="./all-employees.html"
+                  aria-expanded="false"
+                >
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -237,8 +245,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="#"
-                  id="get-url"
+                  href="./all-customers.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -305,17 +312,19 @@
                 <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
                 <span class="fs-2">Designer</span>
               </div>
-              <button
-                class="border-0 bg-transparent text-primary ms-auto"
-                tabindex="0"
-                type="button"
-                aria-label="logout"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="logout"
-              >
-                <i class="ti ti-power fs-6"></i>
-              </button>
+              <a href="./login.html">
+                <button
+                  class="border-0 bg-transparent text-primary ms-auto"
+                  tabindex="0"
+                  type="button"
+                  aria-label="logout"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-title="logout"
+                >
+                  <i class="ti ti-power fs-6"></i>
+                </button>
+              </a>
             </div>
           </div>
           <!-- ---------------------------------- -->
@@ -1410,63 +1419,112 @@
         <!------MAIN Content-->
         <!------------------------------->
         <div class="body-wrapper">
-          <div class="container-fluid">
+          <div class="container-fluid pt-3 pb-5">
             <!-- start Add foods -->
-            <div class="row justify-content-center">
-              <div class="col-12 col-sm-11 col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="mb-4">Add Food</h3>
-                    <form action="" class="row g-4 justify-content-center">
-                      <div class="col-lg-6 col-xl-4">
+            <h4 class="mb-3">Add Food</h4>
+            <form>
+              <div class="row justify-content-center g-3">
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-2"
+                          icon="entypo:info"
+                        ></iconify-icon>
+                        Food Overview
+                      </h5>
+                      <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
+                      <div class="mb-3">
                         <label for="name" class="form-label fs-4">Name</label>
                         <input
                           type="text"
                           name="name"
                           id="name"
-                          class="form-control form-control-lg"
+                          class="form-control"
                           placeholder="Enter food name.."
                         />
                       </div>
-                      <div class="col-lg-6 col-xl-4">
-                        <label for="image" class="form-label fs-4">Image</label>
-                        <input
-                          type="file"
-                          name="image"
-                          id="image"
-                          class="form-control form-control-lg "
-                        />
-                      </div>
-                      <div class="col-lg-6 col-xl-4">
+                      <div>
                         <label for="description" class="form-label fs-4"
                           >Description</label
                         >
                         <textarea
                           name="description"
                           id="description"
-                          rows="1"
-                          class="form-control form-control-lg"
+                          rows="7"
+                          class="form-control"
                           placeholder="Enter food description..."
                         ></textarea>
                       </div>
-                      <div class="col-lg-6 col-xl-4">
-                        <label for="branch" class="form-label fs-4">Branch</label>
-                        <select name="branch" id="branch" class="form-select form-select-lg">
-                          <option value="">Select Branch</option>
-                          <option value="banani">Banani</option>
-                          <option value="bashundhara">Bashundhara</option>
-                          <option value="gulshan">Gulshan</option>
-                          <option value="badda">Badda</option>
-                        </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-2"
+                          icon="hugeicons:image-01"
+                        ></iconify-icon>
+                        Feature Image
+                      </h5>
+                      <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
+                      <label for="fileInput" class="form-label"
+                        >Upload Image</label
+                      >
+                      <div
+                        class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
+                      >
+                        <div class="upload-box text-center px-3" id="drop-area">
+                          <span id="placeholder">Drop or Select Image</span>
+                          <input
+                            type="file"
+                            class="upload-input"
+                            id="fileInput"
+                            accept="image/*"
+                          />
+                          <button
+                            id="removeBtn"
+                            type="button"
+                            class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2"
+                            style="display: none"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                          <img
+                            id="previewImage"
+                            src=""
+                            alt="file uploaded image"
+                            style="display: none"
+                          />
+                        </div>
                       </div>
-                      <div class="col-lg-6 col-xl-4">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card h-100">
+                    <div class="card-body row g-3">
+                      <div class="col-12">
+                        <h5 class="mb-3 d-flex align-items-center">
+                          <iconify-icon
+                            class="fs-7 me-2"
+                            icon="iconamoon:category-thin"
+                          ></iconify-icon>
+                          Inventory Insights
+                        </h5>
+                        <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
+                      </div>
+                      <div class="col-md-4">
                         <label for="category" class="form-label fs-4"
                           >Category</label
                         >
                         <select
                           name="category"
                           id="category"
-                          class="form-select form-select-lg"
+                          class="form-select"
                         >
                           <option value="">Select Category</option>
                           <option value="chinese">Chinese</option>
@@ -1475,14 +1533,14 @@
                           <option value="bengali">Bengali</option>
                         </select>
                       </div>
-                      <div class="col-lg-6 col-xl-4 mb-4">
+                      <div class="col-md-4">
                         <label for="placementCategory" class="form-label fs-4"
                           >Placement Category</label
                         >
                         <select
                           name="placementCategory"
                           id="placementCategory"
-                          class="form-select form-select-lg"
+                          class="form-select"
                         >
                           <option value="">Select Placement Category</option>
                           <option value="featured">Featured / Top Picks</option>
@@ -1495,17 +1553,122 @@
                           <option value="specific_dish">Specific Dish</option>
                         </select>
                       </div>
-                      <div class="col-lg-5">
-                        <button class="btn btn-primary btn-lg d-inline-flex justify-content-center align-items-center gap-2 w-100">
-                          <i class="ti ti-location"></i>
-                          Submit 
-                        </button>
+                      <div class="col-md-4">
+                        <label for="availability" class="form-label fs-4"
+                          >Availability</label
+                        >
+                        <select
+                          class="form-select"
+                          id="availability"
+                        >
+                          <option value="">Select Availability</option>
+                          <option value="available">Available</option>
+                          <option value="unavailable">Unavailable</option>
+                        </select>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-1"
+                          icon="mdi:bangladeshi-taka"
+                        ></iconify-icon>
+                        Pricing Structure
+                      </h5>
+                      <hr class="mt-2 mx-n7 border-t-gray-300" />
+                      <div class="mb-3">
+                        <label for="price" class="form-label fs-4">Price</label>
+                        <input
+                          type="number"
+                          name="price"
+                          id="price"
+                          class="form-control"
+                          placeholder="Enter price..."
+                        />
+                      </div>
+                      <div class="">
+                        <label for="discountPrice" class="form-label fs-4"
+                          >Discount Price</label
+                        >
+                        <input
+                          type="number"
+                          name="discountPrice"
+                          id="discountPrice"
+                          class="form-control"
+                          placeholder="Enter discount price..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-7 me-2"
+                          icon="tabler:copy-plus"
+                        ></iconify-icon>
+                        Enhancements & Extras
+                      </h5>
+                      <hr class="mt-2 mx-n7 border-t-gray-300" />
+                      <div>
+                        <label for="addons" class="form-label fs-4"
+                          >Addons</label
+                        >
+                        <select
+                          name="addons"
+                          id="addons"
+                          class="select2 addons-select form-control"
+                          multiple="multiple"
+                        >
+                          <option value="">Select Addons</option>
+                          <option value="extra-cheese">Extra Cheese</option>
+                          <option value="add-beacon">Add Bacon</option>
+                          <option value="add-mushroom">Add Mushroom</option>
+                          <option value="extra-sauce">Extra Sauce</option>
+                          <option value="add-jalapenos">Add Jalapenos</option>
+                          <option value="add-pickles">Add Pickles</option>
+                          <option value="side-of-fries">Side of Fries</option>
+                          <option value="side-salad">Side Salad</option>
+                          <option value="add-extra-patty">Add Extra Patty</option>
+                          <option value="substitute-bun">Substitute Bun</option>
+                          <option value="add-fried-egg">Add Fried Egg</option>
+                          <option value="extra-topping">Extra Topping</option>
+                          <option value="making-it-a-combo">Make it a Combo</option>
+                          <option value="add-protein">Add Protein</option>
+                          <option value="side-of-rice">Side of Rice</option>
+                        </select>
+                      </div>
+                      <div id="addon-custom-input" style="display: none">
+                        <div class="row g-2 mt-3 mb-2">
+                          <div class="col-6">
+                            <h6 class="mb-0">Addon Name</h6>
+                          </div>
+                          <div class="col-6">
+                            <h6 class="mb-0">New Price</h6>
+                          </div>
+                        </div>
+                        <div id="addons-input"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7 col-md-5 mt-5">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-primary w-100 d-inline-flex justify-content-center align-items-center gap-2"
+                  >
+                    <i class="ti ti-location"></i>
+                    Add
+                  </button>
+                </div>
               </div>
-            </div>
+            </form>
             <!-- end add foods -->
           </div>
         </div>
@@ -1525,7 +1688,15 @@
     <script src="./assets/js/theme/theme.js"></script>
     <script src="./assets/js/theme/app.min.js"></script>
     <script src="./assets/js/theme/sidebarmenu.js"></script>
+
+    <!--Custom File Uploader-->
+    <script src="./assets/js/theme/fileUpdloader.js"></script>
+
+    <!-- <script src="./assets/js/theme/advance-select-handler.js"></script> -->
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="../assets/js/forms/select2.init.js"></script>
   </body>
 </html>

@@ -25,10 +25,7 @@
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="./assets/libs/owl.carousel/dist/assets/owl.carousel.min.css"
-    />
+
   </head>
   <body>
     <div
@@ -233,7 +230,11 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="#" aria-expanded="false">
+                <a
+                  class="sidebar-link"
+                  href="./all-employees.html"
+                  aria-expanded="false"
+                >
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -246,8 +247,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="#"
-                  id="get-url"
+                  href="./all-customers.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -314,17 +314,19 @@
                 <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
                 <span class="fs-2">Designer</span>
               </div>
-              <button
-                class="border-0 bg-transparent text-primary ms-auto"
-                tabindex="0"
-                type="button"
-                aria-label="logout"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="logout"
-              >
-                <i class="ti ti-power fs-6"></i>
-              </button>
+              <a href="./login.html">
+                <button
+                  class="border-0 bg-transparent text-primary ms-auto"
+                  tabindex="0"
+                  type="button"
+                  aria-label="logout"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-title="logout"
+                >
+                  <i class="ti ti-power fs-6"></i>
+                </button>
+              </a>
             </div>
           </div>
           <!-- ---------------------------------- -->
@@ -1421,21 +1423,46 @@
         <div class="body-wrapper">
           <div class="container-fluid">
             <!-- start Category List -->
-            <h4 class="mb-3">Category List</h4>
             <div class="row g-4">
               <div class="col-lg-5 col-xl-4">
                 <div class="card">
                   <div class="card-body">
+                    <h4 class="mb-4">Add Category</h4>
                     <form>
                       <div class="mb-3">
-                        <label for="image" class="form-label">Image</label>
-                        <input
-                          type="file"
-                          id="image"
-                          name="image"
-                          accept="image/*"
-                          class="form-control"
-                        />
+                        <label for="fileInput" class="form-label"
+                          >Upload Image</label
+                        >
+                        <div
+                          class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
+                        >
+                          <div
+                            class="upload-box text-center px-3"
+                            id="drop-area"
+                          >
+                            <span id="placeholder">Drop or Select Image</span>
+                            <input
+                              type="file"
+                              class="upload-input"
+                              id="fileInput"
+                              accept="image/*"
+                            />
+                            <button
+                              id="removeBtn"
+                              type="button"
+                              class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+                              style="display: none"
+                            >
+                              <i class="ti ti-x"></i>
+                            </button>
+                            <img
+                              id="previewImage"
+                              src=""
+                              alt="file uploaded image"
+                              style="display: none"
+                            />
+                          </div>
+                        </div>
                       </div>
                       <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
@@ -1448,19 +1475,21 @@
                         />
                       </div>
                       <div class="mb-4">
-                        <label for="status" class="form-label">Status</label>
-                        <select class="form-select" id="status">
-                          <option value="">Select Status</option>
+                        <label for="availability" class="form-label"
+                          >Availability</label
+                        >
+                        <select class="form-select" id="availability">
+                          <option value="">Select Availability</option>
                           <option value="available">Available</option>
                           <option value="unavailable">Unavailable</option>
                         </select>
                       </div>
                       <div class="">
                         <button
-                          class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                          class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
                         >
                           <i class="ti ti-location"></i>
-                          Submit
+                          Add
                         </button>
                       </div>
                     </form>
@@ -1470,7 +1499,8 @@
               <div class="col-lg-7 col-xl-8">
                 <div class="card">
                   <div class="card-body">
-                    <div class="table-responsive page-length-none pt-2 pb-5">
+                    <h4 class="mb-4">Category List</h4>
+                    <div class="table-responsive page-length-none pb-5">
                       <table
                         id="multi_col_order"
                         class="table table-borderless table-hover display text-nowrap reorder-table"
@@ -1479,7 +1509,9 @@
                           <tr>
                             <th class="bg-info-subtle">SL</th>
                             <th class="bg-info-subtle">Food Info</th>
-                            <th class="bg-info-subtle text-center">Status</th>
+                            <th class="bg-info-subtle text-center">
+                              Availability
+                            </th>
                             <th class="bg-info-subtle text-end">Action</th>
                           </tr>
                         </thead>
@@ -1496,24 +1528,18 @@
                                 <span>Spanish</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status1"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="available">Available</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1530,24 +1556,18 @@
                                 <span>Chinese</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status2"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="available">Available</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1564,24 +1584,18 @@
                                 <span>Indian</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status3"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="available">Available</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1598,24 +1612,18 @@
                                 <span>Mexican</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status4"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="unavailable">Unavailable</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1632,24 +1640,18 @@
                                 <span>Italian</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status5"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="available">Available</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1666,24 +1668,18 @@
                                 <span>American</span>
                               </div>
                             </td>
-                            <td class="">
-                              <div
-                                class="d-flex justify-content-center form-switch"
-                              >
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status6"
-                                  checked
-                                />
-                              </div>
+                            <td class="text-center">
+                              <span class="available">Available</span>
                             </td>
                             <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-edit"></i>
                               </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                              <button
+                                class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              >
                                 <i class="ti ti-trash"></i>
                               </button>
                             </td>
@@ -1713,6 +1709,9 @@
       <script src="./assets/js/theme/theme.js"></script>
       <script src="./assets/js/theme/app.min.js"></script>
       <script src="./assets/js/theme/sidebarmenu.js"></script>
+
+      <!--Custom File Uploader-->
+      <script src="./assets/js/theme/fileUpdloader.js"></script>
       <!-- solar icons -->
       <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
       <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>

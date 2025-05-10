@@ -20,7 +20,7 @@
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Addons</title>
-    <!-- Owl Carousel  -->
+    
     <link
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
@@ -229,7 +229,11 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="#" aria-expanded="false">
+                <a
+                  class="sidebar-link"
+                  href="./all-employees.html"
+                  aria-expanded="false"
+                >
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -242,8 +246,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link"
-                  href="#"
-                  id="get-url"
+                  href="./all-customers.html"
                   aria-expanded="false"
                 >
                   <span>
@@ -310,17 +313,19 @@
                 <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
                 <span class="fs-2">Designer</span>
               </div>
-              <button
-                class="border-0 bg-transparent text-primary ms-auto"
-                tabindex="0"
-                type="button"
-                aria-label="logout"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="logout"
-              >
-                <i class="ti ti-power fs-6"></i>
-              </button>
+              <a href="./login.html">
+                <button
+                  class="border-0 bg-transparent text-primary ms-auto"
+                  tabindex="0"
+                  type="button"
+                  aria-label="logout"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  data-bs-title="logout"
+                >
+                  <i class="ti ti-power fs-6"></i>
+                </button>
+              </a>
             </div>
           </div>
           <!-- ---------------------------------- -->
@@ -1417,233 +1422,229 @@
         <div class="body-wrapper">
           <div class="container-fluid">
             <!-- start addons List -->
-            <h4 class="mb-3">Addons List</h4>
-            <div class="row g-4">
-              <div class="col-lg-5 col-xl-4">
-                <div class="card">
-                  <div class="card-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          id="Name"
-                          name="name"
-                          placeholder="Enter Food Name..."
-                          class="form-control"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="price" class="form-label">Price</label>
-                        <input
-                          type="number"
-                          id="price"
-                          name="price"
-                          placeholder="Enter Price..."
-                          class="form-control"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="branch" class="form-label">Branch</label>
-                        <select class="form-select" id="bracnh">
-                          <option value="">Select Branch</option>
-                          <option value="dhanmondi">Dhanmondi</option>
-                          <option value="gulshan">Gulshan</option>
-                          <option value="bashundhara">Bashundhara</option>
-                        </select>
-                      </div>
-                      <div class="mb-4">
-                        <label for="status" class="form-label">Status</label>
-                        <select class="form-select" id="status">
-                          <option value="">Select Status</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
-                        </select>
-                      </div>
-                      <div class="">
-                        <button
-                          class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
-                        >
-                          <i class="ti ti-location"></i>
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            <div class="row g-3 mb-3 justify-content-between align-items-center">
+              <div class="col-auto">
+                <h4 class="mb-0">Addons List</h4>
               </div>
-              <div class="col-lg-7 col-xl-8">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="table-responsive page-length-none pt-2 pb-5">
-                      <table
-                        id="multi_col_order"
-                        class="table table-borderless table-hover display text-nowrap reorder-table"
-                        data-page-length='5'
-                      >
-                        <thead>
-                          <tr>
-                            <th class="bg-info-subtle">SL</th>
-                            <th class="bg-info-subtle">Food Info</th>
-                            <th class="bg-info-subtle">Price</th>
-                            <th class="bg-info-subtle">Branch</th>
-                            <th class="bg-info-subtle text-center">Status</th>
-                            <th class="bg-info-subtle text-end">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td class="">Grilled Fish</td>
-                            <td>৳ 250</td>
-                            <td>Gulshan</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status1"
-                                  checked
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td class="">Spicy Chicken Wrap</td>
-                            <td>৳ 300</td>
-                            <td>Banani</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status2"
-                                  checked
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td class="">Beef Burger</td>
-                            <td>৳ 400</td>
-                            <td>Mohammadpur</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status3"
-                                  checked
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td class="">Chicken Kebab</td>
-                            <td>৳ 200</td>
-                            <td>Shahbagh</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status4"
-                                  checked
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td class="">Vegetable Pizza</td>
-                            <td>৳ 350</td>
-                            <td>Tejgaon</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status5"
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td class="">Cheese Sandwich</td>
-                            <td>৳ 150</td>
-                            <td>Uttara</td>
-                            <td class="text-center">
-                              <div class="form-switch">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="status6"
-                                />
-                              </div>
-                            </td>
-                            <td class="text-end">
-                              <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                              <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+              <div class="col-auto">
+                <a href="./add-addons.html">
+                  <button
+                    class="btn btn-outline-primary gap-2 d-inline-flex align-items-center justify-items-center"
+                  >
+                    <i class="ti ti-plus fs-4"></i>
+                    Add Addons
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive page-length-none pt-2 pb-5">
+                  <table
+                    id="multi_col_order"
+                    class="table table-borderless table-hover display text-nowrap reorder-table"
+                    data-page-length="5"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="bg-info-subtle">SL</th>
+                        <th class="bg-info-subtle">Food Info</th>
+                        <th class="bg-info-subtle">Price</th>
+                        <th class="bg-info-subtle">Branch</th>
+                        <th class="bg-info-subtle">Category</th>
+                        <th class="bg-info-subtle text-center">Availability</th>
+                        <th class="bg-info-subtle text-end">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s11.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Grilled Fish</span>
+                          </div>
+                        </td>
+                        <td>৳ 250</td>
+                        <td>Gulshan</td>
+                        <td>Bengali</td>
+                        <td class="text-center">
+                          <span class="available">Available</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s10.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Spicy Chicken Wrap</span>
+                          </div>
+                        </td>
+                        <td>৳ 300</td>
+                        <td>Banani</td>
+                        <td>Spanish</td>
+                        <td class="text-center">
+                          <span class="available">Available</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s6.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Beef Burger</span>
+                          </div>
+                        </td>
+                        <td>৳ 400</td>
+                        <td>Mohammadpur</td>
+                        <td>Italian</td>
+                        <td class="text-center">
+                          <span class="unavailable">Unavailable</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s1.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Chicken Kebab</span>
+                          </div>
+                        </td>
+                        <td>৳ 200</td>
+                        <td>Shahbagh</td>
+                        <td>Indian</td>
+                        <td class="text-center">
+                          <span class="available">Available</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s5.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Vegetable Pizza</span>
+                          </div>
+                        </td>
+                        <td>৳ 350</td>
+                        <td>Tejgaon</td>
+                        <td>Chinese</td>
+                        <td class="text-center">
+                          <span class="available">Available</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td class="">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/products/s3.jpg"
+                              alt="food"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Cheese Sandwich</span>
+                          </div>
+                        </td>
+                        <td>৳ 150</td>
+                        <td>Uttara</td>
+                        <td>Thai</td>
+                        <td class="text-center">
+                          <span class="mb-0 unavailable">Unavailable</span>
+                        </td>
+                        <td class="text-end">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-edit"></i>
+                          </button>
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                          >
+                            <i class="ti ti-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

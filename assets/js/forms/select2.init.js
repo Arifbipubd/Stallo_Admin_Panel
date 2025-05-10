@@ -275,121 +275,7 @@ $("#select2-with-tokenizer").select2({
   tokenSeparators: [",", " "],
 });
 
-//
-// RTL support
-//
-$("#select2-rtl-multiple").select2({
-  placeholder: "RTL Select",
-  dir: "rtl",
-});
 
-//
-// Language Files
-//
-$("#select2-transliteration-multiple").select2({
-  placeholder: "Type 'aero'",
-});
-
-//
-// Color Options
-//
-
-//
-// Background Color
-//
-$(".select2-with-bg").each(function (i, obj) {
-  var variation = "",
-    textVariation = "",
-    textColor = "";
-  var color = $(this).data("bgcolor");
-  variation = $(this).data("bgcolor-variation");
-  textVariation = $(this).data("text-variation");
-  textColor = $(this).data("text-color");
-  if (textVariation !== "") {
-    textVariation = " " + textVariation;
-  }
-  if (variation !== "") {
-    variation = " bg-" + variation;
-  }
-  var className =
-    "bg-" +
-    color +
-    variation +
-    " " +
-    textColor +
-    textVariation +
-    " border-" +
-    color;
-
-  $(this).select2({
-    containerCssClass: className,
-  });
-});
-
-//
-// Menu Background Color
-//
-$(".select2-with-menu-bg").each(function (i, obj) {
-  var variation = "",
-    textVariation = "",
-    textColor = "";
-  var color = $(this).data("bgcolor");
-  variation = $(this).data("bgcolor-variation");
-  textVariation = $(this).data("text-variation");
-  textColor = $(this).data("text-color");
-  if (variation !== "") {
-    variation = " bg-" + variation;
-  }
-  if (textVariation !== "") {
-    textVariation = " " + textVariation;
-  }
-  var className =
-    "bg-" +
-    color +
-    variation +
-    " " +
-    textColor +
-    textVariation +
-    " border-" +
-    color;
-
-  $(this).select2({
-    dropdownCssClass: className,
-  });
-});
-
-//
-// Full Background Color
-//
-$(".select2-with-full-bg").each(function (i, obj) {
-  var variation = "",
-    textVariation = "",
-    textColor = "";
-  var color = $(this).data("bgcolor");
-  variation = $(this).data("bgcolor-variation");
-  textVariation = $(this).data("text-variation");
-  textColor = $(this).data("text-color");
-  if (variation !== "") {
-    variation = " bg-" + variation;
-  }
-  if (textVariation !== "") {
-    textVariation = " " + textVariation;
-  }
-  var className =
-    "bg-" +
-    color +
-    variation +
-    " " +
-    textColor +
-    textVariation +
-    " border-" +
-    color;
-
-  $(this).select2({
-    containerCssClass: className,
-    dropdownCssClass: className,
-  });
-});
 
 $("select[data-text-color]").each(function (i, obj) {
   var text = $(this).data("text-color"),
@@ -404,28 +290,61 @@ $("select[data-text-color]").each(function (i, obj) {
     .addClass(text + textVariation);
 });
 
-//
-// Border Color
-//
-$(".select2-with-border").each(function (i, obj) {
-  var variation = "",
-    textVariation = "",
-    textColor = "";
-  var color = $(this).data("border-color");
-  textVariation = $(this).data("text-variation");
-  variation = $(this).data("border-variation");
-  textColor = $(this).data("text-color");
-  if (textVariation !== "") {
-    textVariation = " " + textVariation;
-  }
-  if (variation !== "") {
-    variation = " border-" + variation;
+
+
+//Custom input handler
+
+const selectedAddons = [];
+const $addonSelect = $('.addons-select');
+const $addonInputs = $('#addons-input');
+const $addonContainer = $('#addon-custom-input');
+
+$addonSelect.select2({
+  placeholder: "Select addons",
+  allowClear: true
+});
+
+$addonSelect.on('select2:select', function (e) {
+  const addonId = e.params.data.id;
+  const addonText = e.params.data.text;
+
+  $addonContainer.css('display', 'block');;
+
+  if (!selectedAddons.includes(addonId)) {
+    selectedAddons.push(addonId);
+
+    const inputGroup = $(`
+            <div class="row g-2 mb-2" data-addon="${addonId}">
+              <div class="col-6">
+                <input type="text" class="form-control" value="${addonText}" readonly>
+              </div>
+              <div class="col-6">
+                <div class="input-group">
+                  <span class="input-group-text">৳</span>
+                  <input type="number" class="form-control addon-price" id="addon-price" placeholder="Enter price...">
+                </div>
+              </div>
+            </div>
+          `);
+
+    $addonInputs.append(inputGroup);
   }
 
-  var className =
-    "border-" + color + " " + variation + " " + textColor + textVariation;
+  if (selectedAddons.length === 0) {
+    $addonContainer.css('display', 'none');
+  }
 
-  $(this).select2({
-    containerCssClass: className,
-  });
+});
+
+$addonSelect.on('select2:unselect', function (e) {
+  const addonId = e.params.data.id;
+  const index = selectedAddons.indexOf(addonId);
+
+  if (index !== -1) {
+    selectedAddons.splice(index, 1);
+    $addonInputs.find(`[data-addon="${addonId}"]`).remove();
+  }
+  if (selectedAddons.length === 0) {
+    $addonContainer.css('display', 'none');
+  }
 });
