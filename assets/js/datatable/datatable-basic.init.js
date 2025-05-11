@@ -37,12 +37,17 @@ const table = $("#multi_col_order").DataTable({
       orderData: [3, 0],
     },
   ],
+  // Multi page pagination fixing
   ...($("#multi_col_order").hasClass("reorder-table") ? {
     pageLength: 5,
     lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
   }
     : {} //  Empty object if the class is not present, so it does not override other settings
   )
+});
+
+table.on('draw', function () {
+  $('[data-bs-toggle="tooltip"]').tooltip();
 });
 
 const wrapper = $('<div class="dt-top-controls"></div>');

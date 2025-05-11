@@ -19,7 +19,12 @@
     />
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Add Addons</title>
+    <title>All Customers</title>
+    <!-- Owl Carousel  -->
+    <link
+      rel="stylesheet"
+      href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
+    />
   </head>
   <body>
     <div
@@ -224,11 +229,7 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a
-                  class="sidebar-link"
-                  href="./all-employees.html"
-                  aria-expanded="false"
-                >
+                <a class="sidebar-link" href="./all-employees.html" aria-expanded="false">
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -239,11 +240,7 @@
               <!-- Customer -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a
-                  class="sidebar-link"
-                  href="./all-customers.html"
-                  aria-expanded="false"
-                >
+                <a class="sidebar-link" href="" aria-expanded="false">
                   <span>
                     <iconify-icon
                       class="fs-7"
@@ -1415,155 +1412,407 @@
         <!------MAIN Content-->
         <!------------------------------->
         <div class="body-wrapper">
-          <div class="container-fluid pt-3 pb-5">
-            <!-- start Add addons -->
-            <h4 class="mb-3">Add Addons</h4>
-            <form>
-              <div class="row justify-content-center g-3">
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <div class="mb-3">
-                        <h5 class="mb-3 d-flex align-items-center">
-                          <iconify-icon
-                            class="fs-6 me-2"
-                            icon="entypo:info"
-                          ></iconify-icon>
-                          Food Overview
-                        </h5>
-                        <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                        <label for="name" class="form-label fs-4">Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          class="form-control"
-                          placeholder="Enter addons name.."
-                        />
-                      </div>
-                      <div>
-                        <label for="description" class="form-label fs-4"
-                          >Description</label
-                        >
-                        <textarea
-                          name="description"
-                          id="description"
-                          rows="7"
-                          class="form-control"
-                          placeholder="Enter addons description..."
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="mb-3 d-flex align-items-center">
-                        <iconify-icon
-                          class="fs-6 me-2"
-                          icon="hugeicons:image-01"
-                        ></iconify-icon>
-                        Feature Image
-                      </h5>
-                      <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                      <label for="fileInput" class="form-label"
-                        >Upload Image</label
-                      >
-                      <div
-                        class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
-                      >
-                        <div class="upload-box text-center px-3" id="drop-area">
-                          <span id="placeholder">Drop or Select Image</span>
-                          <input
-                            type="file"
-                            class="upload-input"
-                            id="fileInput"
-                            accept="image/*"
-                          />
-                          <button
-                            id="removeBtn"
-                            type="button"
-                            class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2"
-                            style="display: none"
-                          >
-                            <i class="ti ti-trash"></i>
-                          </button>
-                          <img
-                            id="previewImage"
-                            src=""
-                            alt="file uploaded image"
-                            style="display: none"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="card h-100">
-                    <div class="card-body row g-3">
-                      <div class="col-12">
-                        <h5 class="mb-3 d-flex align-items-center">
-                          <iconify-icon
-                            class="fs-7 me-2"
-                            icon="iconamoon:category-thin"
-                          ></iconify-icon>
-                          Food Category, Pricing & Stock
-                        </h5>
-                        <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
-                      </div>
-                      <div class="col-md-4">
-                        <label for="category" class="form-label fs-4"
-                          >Category</label
-                        >
-                        <select
-                          name="category"
-                          id="category"
-                          class="form-select"
-                        >
-                          <option value="">Select Category</option>
-                          <option value="chinese">Chinese</option>
-                          <option value="italian">Italian</option>
-                          <option value="spanish">Spanish</option>
-                          <option value="bengali">Bengali</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4">
-                        <label for="price" class="form-label fs-4">Price</label>
-                        <input
-                          type="number"
-                          name="price"
-                          id="price"
-                          class="form-control input-spin-none"
-                          placeholder="Enter price..."
-                        />
-                      </div>
-                      <div class="col-md-4">
-                        <label for="availability" class="form-label fs-4"
-                          >Availability</label
-                        >
-                        <select class="form-select" id="availability">
-                          <option value="">Select Availability</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-7 col-md-5 mt-5">
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-inline-flex justify-content-center align-items-center gap-2"
+          <div class="container-fluid">
+            <!-- start All foods List -->
+            <h4 class="mb-3">All Customers</h4>
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive pb-5">
+                  <table
+                    id="multi_col_order"
+                    class="table table-borderless table-hover display text-nowrap"
                   >
-                    <i class="ti ti-location"></i>
-                    Add
-                  </button>
+                    <thead>
+                      <tr>
+                        <th class="bg-info-subtle">SL</th>
+                        <th class="bg-info-subtle">Name</th>
+                        <th class="bg-info-subtle">Customer Info</th>
+                        <th class="bg-info-subtle text-center">Total order</th>
+                        <th class="bg-info-subtle text-center">
+                          Total Order Amount
+                        </th>
+                        <th class="bg-info-subtle text-end">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-1.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Sadia Afrin</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:sadia.afrin@example.com"
+                            >sadia.afrin@example.com</a
+                          ><br />
+                          <a href="tel:+8801712345678">+880171234567</a>
+                        </td>
+                        <td class="text-center">5</td>
+                        <td class="text-center">৳ 2,500</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-2.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Emily White</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:emily.white@example.com"
+                            >emily.white@example.com</a
+                          ><br />
+                          <a href="tel:+8801987654321">+8801987654321</a>
+                        </td>
+                        <td class="text-center">12</td>
+                        <td class="text-center">৳ 6,800</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-3.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>John Smith</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:john.smith@example.com"
+                            >john.smith@example.com</a
+                          ><br />
+                          <a href="tel:+8801811223344">+8801811223344</a>
+                        </td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">৳ 4,200</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-4.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Ayesha Khan</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:ayesha.khan@example.com"
+                            >ayesha.khan@example.com</a
+                          ><br />
+                          <a href="tel:+8801622334455">+8801622334455</a>
+                        </td>
+                        <td class="text-center">20</td>
+                        <td class="text-center">৳ 11,500</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-5.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>David Lee</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:david.lee@example.com"
+                            >david.lee@example.com</a
+                          ><br />
+                          <a href="tel:+8801555667788">+8801555667788</a>
+                        </td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">৳ 1,750</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-6.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Priya Sharma</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:priya.sharma@example.com"
+                            >priya.sharma@example.com</a
+                          ><br />
+                          <a href="tel:+8801777889900">+8801777889900</a>
+                        </td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">৳ 8,200</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-7.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Michael Brown</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:michael.brown@example.com"
+                            >michael.brown@example.com</a
+                          ><br />
+                          <a href="tel:+8801999001122">8801999001122</a>
+                        </td>
+                        <td class="text-center">9</td>
+                        <td class="text-center">৳ 5,100</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-8.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Olivia Wilson</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:olivia.wilson@example.com"
+                            >olivia.wilson@example.com</a
+                          ><br />
+                          <a href="tel:+8801888112233">+8801888112233</a>
+                        </td>
+                        <td class="text-center">7</td>
+                        <td class="text-center">৳ 3,950</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-9.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Ethan Garcia</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:ethan.garcia@example.com"
+                            >ethan.garcia@example.com</a
+                          ><br />
+                          <a href="tel:+8801666223344">+8801666223344</a>
+                        </td>
+                        <td class="text-center">11</td>
+                        <td class="text-center">৳ 6,300</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-10.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Sofia Rodriguez</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:sofia.rodriguez@example.com"
+                            >sofia.rodriguez@example.com</a
+                          ><br />
+                          <a href="tel:+8801555334455">+8801555334455</a>
+                        </td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">৳ 3,400</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-11.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Jackson Davis</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:jackson.davis@example.com"
+                            >jackson.davis@example.com</a
+                          ><br />
+                          <a href="tel:+8801777445566">+8801777445566</a>
+                        </td>
+                        <td class="text-center">14</td>
+                        <td class="text-center">৳ 7,900</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i>
+                            </button>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td class="text-center">
+                          <div class="d-flex align-items-center gap-2">
+                            <img
+                              src="./assets/images/profile/user-1.jpg"
+                              alt="employee"
+                              class="rounded-circle round-48"
+                            />
+                            <span>Nusrat Jahan</span>
+                          </div>
+                        </td>
+                        <td>
+                          <a href="mailto:nusrat.jahan@example.com">Email</a
+                          ><br />
+                          <a href="tel:+8801300123456">Phone</a>
+                        </td>
+                        <td class="text-center">10</td>
+                        <td class="text-center">৳ 5,600</td>
+                        <td class="text-end">
+                          <a href="./single-customer.html"
+                            ><button
+                              class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                              data-bs-toggle="tooltip"
+                              title="View"
+                            >
+                              <i class="ti ti-eye"></i></button
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </form>
-            <!-- end add addons -->
+            </div>
+            <!-- end all foods -->
           </div>
         </div>
         <script>
@@ -1572,19 +1821,19 @@
           }
         </script>
       </div>
+      <div class="dark-transparent sidebartoggler"></div>
+      <script src="./assets/js/vendor.min.js"></script>
+      <!-- Import Js Files -->
+      <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
+      <script src="./assets/js/theme/app.init.js"></script>
+      <script src="./assets/js/theme/theme.js"></script>
+      <script src="./assets/js/theme/app.min.js"></script>
+      <script src="./assets/js/theme/sidebarmenu.js"></script>
+      <!-- solar icons -->
+      <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+      <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+      <script src="./assets/js/datatable/datatable-basic.init.js"></script>
     </div>
-    <div class="dark-transparent sidebartoggler"></div>
-    <script src="./assets/js/vendor.min.js"></script>
-    <!-- Import Js Files -->
-    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/libs/simplebar/dist/simplebar.min.js"></script>
-    <script src="./assets/js/theme/app.init.js"></script>
-    <script src="./assets/js/theme/theme.js"></script>
-    <script src="./assets/js/theme/app.min.js"></script>
-    <script src="./assets/js/theme/sidebarmenu.js"></script>
-
-    <script src="./assets/js/theme/fileUpdloader.js"></script>
-    <!-- solar icons -->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   </body>
 </html>

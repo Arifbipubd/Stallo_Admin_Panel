@@ -199,13 +199,13 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="./addons.html" class="sidebar-link">
+                    <a href="./all-addons.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
                         <i class="ti ti-circle"></i>
                       </div>
-                      <span class="hide-menu">Addons</span>
+                      <span class="hide-menu">All Addons</span>
                     </a>
                   </li>
                   <li class="sidebar-item">
@@ -1417,39 +1417,59 @@
         <div class="body-wrapper">
           <div class="container-fluid">
             <!-- start Add Employee -->
-            <div class="row justify-content-center">
+            <div class="row g-3 justify-content-center">
               <div class="col-md-6">
                 <div class="card h-100">
                   <div class="card-body">
+                    <h5 class="mb-3 d-flex align-items-center">
+                      <iconify-icon
+                        class="fs-6 me-2"
+                        icon="entypo:info"
+                      ></iconify-icon>
+                      General Information
+                    </h5>
+                    <hr class="mx-n7 mb-4 border-t-gray-300" />
                     <div class="mb-3">
                       <label for="name" class="form-label fs-4">Name</label>
                       <input
                         type="text"
                         name="name"
                         id="name"
-                        class="form-control form-control-lg"
+                        class="form-control"
                         placeholder="Enter employee name.."
                       />
                     </div>
                     <div class="mb-3">
-                      <label for="phone" class="form-label fs-4">Phone</label>
+                      <label for="phone" class="form-label">Phone</label>
                       <input
                         type="text"
                         name="phone"
                         id="phone"
-                        class="form-control form-control-lg"
+                        class="form-control"
                         placeholder="Enter phone no.."
                       />
                     </div>
-                    <div>
-                      <label for="email" class="form-label fs-4">Email</label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="form-control form-control-lg"
-                        placeholder="Enter email address.."
-                      />
+                    <div class="mb-3">
+                      <label for="role" class="form-label">Role</label>
+                      <select name="role" id="role" class="form-select">
+                        <option value="">Select Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="HR">HR</option>
+                        <option value="software-developer">
+                          Software Developer
+                        </option>
+                        <option value="marketer">Marketer</option>
+                      </select>
+                    </div>
+                    <div class="status">
+                      <label for="status" class="form-label">Status</label>
+                      <select name="status" id="status" class="form-select">
+                        <option value="">Select Status</option>
+                        <option value="active">Active</option>
+                        <option value="pending">Pending</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="fulltime">Full Time</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -1457,6 +1477,14 @@
               <div class="col-md-6">
                 <div class="card h-100">
                   <div class="card-body">
+                    <h5 class="mb-3 d-flex align-items-center">
+                      <iconify-icon
+                        class="fs-6 me-2"
+                        icon="hugeicons:image-01"
+                      ></iconify-icon>
+                      Feature Image
+                    </h5>
+                    <hr class="mx-n7 mb-4 border-t-gray-300" />
                     <label for="fileInput" class="form-label"
                       >Upload Image</label
                     >
@@ -1490,114 +1518,66 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-md-6">
+              <div class="col-12">
                 <div class="card">
                   <div class="card-body">
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-11 col-md-8 col-xl-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="mb-4">Add Employee</h3>
-                    <form action="" class="row g-4 justify-content-center">
-                      <div class="col-xl-4"></div>
-                      <div class="col-xl-4">
-                        <label for="image" class="form-label fs-4">Image</label>
+                    <h5 class="mb-3 d-flex align-items-center">
+                      <iconify-icon
+                        class="fs-7 me-2"
+                        icon="si:lock-line"
+                      ></iconify-icon>
+                      Account Information
+                    </h5>
+                    <hr class="mx-n7 mb-4 border-t-gray-300" />
+                    <div class="row g-3">
+                      <div class="col-md-4">
+                        <label for="email" class="form-label">Email</label>
                         <input
-                          type="file"
-                          name="image"
-                          id="image"
-                          class="form-control form-control-lg"
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="form-control"
+                          placeholder="Enter email address.."
                         />
                       </div>
-                      <div class="col-xl-4"></div>
-                      <div class="col-xl-4"></div>
-                      <div class="col-xl-4">
-                        <label for="branch" class="form-label fs-4"
-                          >Branch</label
-                        >
-                        <select
-                          name="branch"
-                          id="branch"
-                          class="form-select form-select-lg"
-                        >
-                          <option value="">Select Branch</option>
-                          <option value="banani">Banani</option>
-                          <option value="bashundhara">Bashundhara</option>
-                          <option value="gulshan">Gulshan</option>
-                          <option value="badda">Badda</option>
-                        </select>
-                      </div>
-                      <div class="col-xl-4">
-                        <label for="role" class="form-label fs-4">Role</label>
-                        <select
-                          name="role"
-                          id="role"
-                          class="form-select form-select-lg"
-                        >
-                          <option value="">Select Role</option>
-                          <option value="admin">Admin</option>
-                          <option value="management">Management</option>
-                          <option value="sellsman">Sells man</option>
-                          <option value="developer">Developer</option>
-                        </select>
-                      </div>
-                      <div class="col-xl-4">
-                        <label for="password" class="form-label fs-4"
+                      <div class="col-md-4">
+                        <label for="password" class="form-label"
                           >Password</label
                         >
                         <input
                           type="password"
                           name="password"
                           id="password"
-                          class="form-control form-control-lg"
-                          placeholder="Enter password..."
+                          class="form-control"
+                          placeholder="Enter password.."
                         />
                       </div>
-                      <div class="col-xl-4">
-                        <label for="confirmPassword" class="form-label fs-4"
+                      <div class="col-md-4">
+                        <label for="confirmPassword" class="form-label"
                           >Confirm Password</label
                         >
                         <input
                           type="password"
                           name="confirmPassword"
                           id="confirmPassword"
-                          class="form-control form-control-lg"
-                          placeholder="Enter password..."
+                          class="form-control"
+                          placeholder="Enter confirm password.."
                         />
                       </div>
-                      <div class="col-xl-4 mb-4">
-                        <label for="status" class="form-label fs-4"
-                          >Status</label
-                        >
-                        <select
-                          name="status"
-                          id="status"
-                          class="form-select form-select-lg"
-                        >
-                          <option value="">Select Status</option>
-                          <option value="fullTime">Full time</option>
-                          <option value="active">Active</option>
-                          <option value="inactive">Inactive</option>
-                          <option value="pending">Pending</option>
-                        </select>
-                      </div>
-                      <div class="col-xl-5">
-                        <button
-                          class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
-                        >
-                          <i class="ti ti-location"></i>
-                          Submit
-                        </button>
-                      </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
-              </div> -->
-            <!-- </div> -->
-            <!-- end add foods -->
+              </div>
+              <div class="col-12 col-md-7 col-lg-5">
+                <button
+                  class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                >
+                  <i class="ti ti-location"></i>
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- end add employee -->
           </div>
         </div>
         <script>

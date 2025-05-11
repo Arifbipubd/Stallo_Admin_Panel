@@ -25,7 +25,6 @@
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
     />
-
   </head>
   <body>
     <div
@@ -205,13 +204,13 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="./addons.html" class="sidebar-link">
+                    <a href="./all-addons.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
                         <i class="ti ti-circle"></i>
                       </div>
-                      <span class="hide-menu">Addons</span>
+                      <span class="hide-menu">All Addons</span>
                     </a>
                   </li>
                   <li class="sidebar-item">
@@ -1440,16 +1439,16 @@
                         />
                       </div>
                       <div class="mb-4">
-                        <label for="availability" class="form-label">Availability</label>
-                        <select class="form-select" id="availability">
-                          <option value="">Select Availability</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
+                        <label for="status" class="form-label">Status</label>
+                        <select class="form-select" id="status">
+                          <option value="">Select Status</option>
+                          <option value="available">Active</option>
+                          <option value="unavailable">Inactive</option>
                         </select>
                       </div>
                       <div class="">
                         <button
-                          class="btn btn-outline-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                          class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
                         >
                           <i class="ti ti-location"></i>
                           Add
@@ -1472,7 +1471,7 @@
                           <tr>
                             <th class="bg-info-subtle">SL</th>
                             <th class="bg-info-subtle">Food Info</th>
-                            <th class="bg-info-subtle text-center">Availability</th>
+                            <th class="bg-info-subtle text-center">Status</th>
                             <th class="bg-info-subtle text-end">Action</th>
                           </tr>
                         </thead>
@@ -1481,16 +1480,20 @@
                             <td>1</td>
                             <td class="">Featured / Top Picks</td>
                             <td class="text-center">
-                              <span class="unavailable">Unavailable</span>
+                              <span class="unavailable">Inactive</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>
@@ -1500,16 +1503,20 @@
                             <td>2</td>
                             <td class="">New Arrivals</td>
                             <td class="text-center">
-                              <span class="available">Available</span>
+                              <span class="available">Active</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>
@@ -1519,16 +1526,20 @@
                             <td>3</td>
                             <td class="">New Arrivals</td>
                             <td class="text-center">
-                              <span class="available">Available</span>
+                              <span class="available">Active</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>
@@ -1538,16 +1549,20 @@
                             <td>4</td>
                             <td class="">Top Rated</td>
                             <td class="text-center">
-                              <span class="available">Available</span>
+                              <span class="available">Active</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>
@@ -1557,16 +1572,20 @@
                             <td>5</td>
                             <td class="">Hot Deals</td>
                             <td class="text-center">
-                              <span class="available">Available</span>
+                              <span class="available">Active</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>
@@ -1576,16 +1595,20 @@
                             <td>6</td>
                             <td class="">Fast Delivery</td>
                             <td class="text-center">
-                              <span class="unavailable">Unavailable</span>
+                              <span class="unavailable">Inactive</span>
                             </td>
                             <td class="text-end">
                               <button
                                 class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Edit"
                               >
                                 <i class="ti ti-edit"></i>
                               </button>
                               <button
                                 class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                data-bs-toggle="tooltip"
+                                title="Delete"
                               >
                                 <i class="ti ti-trash"></i>
                               </button>

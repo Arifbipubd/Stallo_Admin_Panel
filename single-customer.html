@@ -17,17 +17,17 @@
       type="image/png"
       href="./assets/images/logos/favicon.png"
     />
+
+    <link
+      rel="stylesheet"
+      href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
+    />
+
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Add Addons</title>
+    <title>Customer Details</title>
   </head>
   <body>
-    <div
-      class="toast toast-onload align-items-center text-bg-primary border-0"
-      role="alert"
-      aria-live="assertive"
-      aria-atomic="true"
-    ></div>
     <!-- Preloader -->
     <div class="preloader">
       <img
@@ -254,7 +254,7 @@
                 </a>
               </li>
               <!-- ---------------------------------- -->
-              <!-- Help and support -->
+              <!-- Help and Support -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
                 <a
@@ -300,6 +300,7 @@
                 <img
                   src="./assets/images/profile/user-1.jpg"
                   class="rounded-circle"
+                  width="40"
                   height="40"
                   alt="stallo-img"
                 />
@@ -705,36 +706,6 @@
                               </div>
                             </a>
                           </div>
-                          <div class="d-grid py-4 px-7 pt-8">
-                            <div
-                              class="upgrade-plan bg-primary-subtle position-relative overflow-hidden rounded-4 p-4 mb-9"
-                            >
-                              <div class="row">
-                                <div class="col-6">
-                                  <h5 class="fs-4 mb-3 fw-semibold">
-                                    Unlimited Access
-                                  </h5>
-                                  <button class="btn btn-primary">
-                                    Upgrade
-                                  </button>
-                                </div>
-                                <div class="col-6">
-                                  <div class="m-n4 unlimited-img">
-                                    <img
-                                      src="./assets/images/backgrounds/unlimited-bg.png"
-                                      alt="stallo-img"
-                                      class="w-100"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <a
-                              href="./login.html"
-                              class="btn btn-outline-primary"
-                              >Log Out</a
-                            >
-                          </div>
                         </div>
                       </div>
                     </li>
@@ -911,29 +882,6 @@
                               class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center"
                             >
                               <img
-                                src="./assets/images/svgs/icon-dd-date.svg"
-                                alt="stallo-img"
-                                class="img-fluid"
-                                width="24"
-                                height="24"
-                              />
-                            </div>
-                            <div>
-                              <h6 class="mb-1 bg-hover-primary">
-                                Calendar App
-                              </h6>
-                              <span class="fs-2 d-block text-muted"
-                                >Get dates</span
-                              >
-                            </div>
-                          </a>
-                        </li>
-                        <li class="sidebar-item py-2">
-                          <a href="#" class="d-flex align-items-center">
-                            <div
-                              class="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center"
-                            >
-                              <img
                                 src="./assets/images/svgs/icon-dd-lifebuoy.svg"
                                 alt="stallo-img"
                                 class="img-fluid"
@@ -976,6 +924,30 @@
                         </li>
                       </ul>
                     </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#" aria-expanded="false">
+                        <span>
+                          <i class="ti ti-message-dots"></i>
+                        </span>
+                        <span class="hide-menu">Chat</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="" aria-expanded="false">
+                        <span>
+                          <i class="ti ti-calendar"></i>
+                        </span>
+                        <span class="hide-menu">Calendar</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#" aria-expanded="false">
+                        <span>
+                          <i class="ti ti-mail"></i>
+                        </span>
+                        <span class="hide-menu">Email</span>
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </nav>
@@ -998,13 +970,13 @@
                 <li class="nav-item d-none d-xl-block">
                   <a href="./index.html" class="text-nowrap nav-link">
                     <img
-                      src="./assets/images/logos/admin-logo.png"
+                      src="./assets/images/logos/logo.svg"
                       class="dark-logo"
                       width="180"
                       alt="stallo-img"
                     />
                     <img
-                      src="./assets/images/logos/admin-logo-dark.png"
+                      src="./assets/images/logos/dark-logo.png"
                       class="light-logo"
                       width="180"
                       alt="stallo-img"
@@ -1411,159 +1383,340 @@
           </div>
         </header>
         <!--  Header End -->
-        <!------------------------------->
-        <!------MAIN Content-->
-        <!------------------------------->
         <div class="body-wrapper">
           <div class="container-fluid pt-3 pb-5">
-            <!-- start Add addons -->
-            <h4 class="mb-3">Add Addons</h4>
-            <form>
-              <div class="row justify-content-center g-3">
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <div class="mb-3">
-                        <h5 class="mb-3 d-flex align-items-center">
-                          <iconify-icon
-                            class="fs-6 me-2"
-                            icon="entypo:info"
-                          ></iconify-icon>
-                          Food Overview
-                        </h5>
-                        <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                        <label for="name" class="form-label fs-4">Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          class="form-control"
-                          placeholder="Enter addons name.."
-                        />
-                      </div>
-                      <div>
-                        <label for="description" class="form-label fs-4"
-                          >Description</label
-                        >
-                        <textarea
-                          name="description"
-                          id="description"
-                          rows="7"
-                          class="form-control"
-                          placeholder="Enter addons description..."
-                        ></textarea>
-                      </div>
+            <div
+              class="row justify-content-between align-items-center g-3 mb-3"
+            >
+              <div class="col-auto">
+                <h4 class="">Customer Details</h4>
+                <p class="mb-0 d-flex align-items-center">
+                  <i class="ti ti-calendar me-2"></i>
+                  Joined at:&nbsp;
+                  <span class="me-2">17 dec 2024 12:08 am</span>
+                </p>
+              </div>
+              <div class="col-auto">
+                <button
+                  class="btn bg-info-subtle rounded-circle round-32 d-inline-flex justify-content-center align-items-center me-2"
+                  data-bs-toggle="tooltip"
+                  title="Previous"
+                >
+                  <i class="ti ti-chevron-left"></i>
+                </button>
+                <button
+                  class="btn bg-info-subtle rounded-circle round-32 d-inline-flex justify-content-center align-items-center"
+                  data-bs-toggle="tooltip"
+                  title="Next"
+                >
+                  <i class="ti ti-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="row g-3 mb-4">
+              <div class="col-12 col-md-6">
+                <div class="card bg-success-subtle shadow-sm">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <h5 class="mb-0">Total Order</h5>
+                      <iconify-icon class="fs-9" icon="icon-park-outline:order">
+                      </iconify-icon>
+                    </div>
+                    <p class="mb-0">14</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card bg-info-subtle shadow-sm">
+                  <div class="card-body">
+                    <div
+                      class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                      <h5 class="mb-0">Total Order Amount</h5>
+                      <iconify-icon class="fs-9" icon="mdi:bangladeshi-taka">
+                      </iconify-icon>
+                    </div>
+                    <p class="mb-0">7,900</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-3">Order History</h5>
+                    <div class="table-responsive pb-4">
+                      <table
+                        id="multi_col_order"
+                        class="table table-borderless table-hover reorder-table"
+                      >
+                        <thead>
+                          <tr>
+                            <th class="bg-info-subtle text-nowrap">SL</th>
+                            <th class="bg-info-subtle text-nowrap">Order ID</th>
+                            <th class="bg-info-subtle text-nowrap">Total Price</th>
+                            <th class="bg-info-subtle text-center text-nowrap">Status</th>
+                            <th class="bg-info-subtle text-end text-nowrap">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>#1001</td>
+                            <td>৳ 550.00</td>
+                            <td class="text-center">
+                              <span class="mb-0 delivered">Delivered</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>#1002</td>
+                            <td>৳ 1250.50</td>
+                            <td class="text-center">
+                              <span class="mb-0 processing">Processing</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>#1003</td>
+                            <td>৳ 300.00</td>
+                            <td class="text-center">
+                              <span class="mb-0 pending">Pending</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>#1004</td>
+                            <td>৳ 2100.75</td>
+                            <td class="text-center">
+                              <span class="mb-0 cancelled">Cancelled</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>#1005</td>
+                            <td>৳ 750.20</td>
+                            <td class="text-center">
+                              <span class="mb-0 delivered">Delivered</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>#1006</td>
+                            <td>৳ 150.99</td>
+                            <td class="text-center">
+                              <span class="mb-0 processing">Processing</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>#1007</td>
+                            <td>৳ 990.00</td>
+                            <td class="text-center">
+                              <span class="mb-0 pending">Pending</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>#1008</td>
+                            <td>৳ 4500.00</td>
+                            <td class="text-center">
+                              <span class="mb-0 delivered">Delivered</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>9</td>
+                            <td>#1009</td>
+                            <td>৳ 880.50</td>
+                            <td class="text-center">
+                              <span class="mb-0 processing">Processing</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td>#1010</td>
+                            <td>৳ 175.00</td>
+                            <td class="text-center">
+                              <span class="mb-0 cancelled">Cancelled</span>
+                            </td>
+                            <td class="text-end">
+                              <a href="#">
+                                <button
+                                  class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                                  data-bs-toggle="tooltip"
+                                  title="View"
+                                >
+                                  <i class="ti ti-eye"></i>
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="mb-3 d-flex align-items-center">
-                        <iconify-icon
-                          class="fs-6 me-2"
-                          icon="hugeicons:image-01"
-                        ></iconify-icon>
-                        Feature Image
-                      </h5>
-                      <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                      <label for="fileInput" class="form-label"
-                        >Upload Image</label
-                      >
-                      <div
-                        class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
-                      >
-                        <div class="upload-box text-center px-3" id="drop-area">
-                          <span id="placeholder">Drop or Select Image</span>
-                          <input
-                            type="file"
-                            class="upload-input"
-                            id="fileInput"
-                            accept="image/*"
-                          />
-                          <button
-                            id="removeBtn"
-                            type="button"
-                            class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2"
-                            style="display: none"
-                          >
-                            <i class="ti ti-trash"></i>
-                          </button>
+              </div>
+              <div class="col-lg-4">
+                <div class="row g-3">
+                  <div class="col-md-6 col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="mb-2">Sadia Afrin</h5>
+                        <hr class="mx-n7 mb-4 border-t-gray-300" />
+                        <div class="d-flex align-items-center gap-3">
                           <img
-                            id="previewImage"
-                            src=""
-                            alt="file uploaded image"
-                            style="display: none"
+                            src="./assets/images/profile/user-1.jpg"
+                            alt="user"
+                            class="round-75 rounded-circle"
                           />
+                          <div>
+                            <ul class="list-image-none">
+                              <li class="text-nowrap d-flex align-items-center pb-1">
+                                <i class="ti ti-mail fs-4 me-2"></i>
+                                <a
+                                  href="mailto:sadia.afrin@example.com"
+                                  class="fs-2"
+                                  >sadia.afrin@example.com</a
+                                >
+                              </li>
+                              <li class="text-nowrap d-flex align-items-center">
+                                <i class="ti ti-phone-call fs-4 me-2"></i>
+                                <a href="tel:+8801712345678" class="fs-2"
+                                  >+8801712345678</a
+                                >
+                              </li>
+                              <li class="text-nowrap d-flex align-items-center">
+                                <i class="ti ti-shopping-cart fs-4 me-2"></i>
+                                <a href="tel:+8801712345678" class="fs-2"
+                                  >10 orders</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-12">
-                  <div class="card h-100">
-                    <div class="card-body row g-3">
-                      <div class="col-12">
-                        <h5 class="mb-3 d-flex align-items-center">
-                          <iconify-icon
-                            class="fs-7 me-2"
-                            icon="iconamoon:category-thin"
-                          ></iconify-icon>
-                          Food Category, Pricing & Stock
-                        </h5>
-                        <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
-                      </div>
-                      <div class="col-md-4">
-                        <label for="category" class="form-label fs-4"
-                          >Category</label
-                        >
-                        <select
-                          name="category"
-                          id="category"
-                          class="form-select"
-                        >
-                          <option value="">Select Category</option>
-                          <option value="chinese">Chinese</option>
-                          <option value="italian">Italian</option>
-                          <option value="spanish">Spanish</option>
-                          <option value="bengali">Bengali</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4">
-                        <label for="price" class="form-label fs-4">Price</label>
-                        <input
-                          type="number"
-                          name="price"
-                          id="price"
-                          class="form-control input-spin-none"
-                          placeholder="Enter price..."
-                        />
-                      </div>
-                      <div class="col-md-4">
-                        <label for="availability" class="form-label fs-4"
-                          >Availability</label
-                        >
-                        <select class="form-select" id="availability">
-                          <option value="">Select Availability</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
-                        </select>
+                  <div class="col-md-6 col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="mb-2">Customer Address</h5>
+                        <hr class="mx-n7 mb-4 border-t-gray-300">
+                        <p class="mb-1">
+                          Bashundhara R/A, Dhaka
+                        </p>
+                        <p class="mb-1">Road: 12</p>
+                        <p class="mb-1">House No: 3B</p>
+                        <p class="mb-0">Dhaka-1200</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-7 col-md-5 mt-5">
-                  <button
-                    type="submit"
-                    class="btn btn-primary w-100 d-inline-flex justify-content-center align-items-center gap-2"
-                  >
-                    <i class="ti ti-location"></i>
-                    Add
-                  </button>
-                </div>
               </div>
-            </form>
-            <!-- end add addons -->
+            </div>
           </div>
         </div>
         <script>
@@ -1582,9 +1735,9 @@
     <script src="./assets/js/theme/theme.js"></script>
     <script src="./assets/js/theme/app.min.js"></script>
     <script src="./assets/js/theme/sidebarmenu.js"></script>
-
-    <script src="./assets/js/theme/fileUpdloader.js"></script>
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="./assets/js/datatable/datatable-basic.init.js"></script>
   </body>
 </html>
