@@ -25,7 +25,6 @@
       rel="stylesheet"
       href="./assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
     />
-
   </head>
   <body>
     <div
@@ -205,13 +204,13 @@
                     </a>
                   </li>
                   <li class="sidebar-item">
-                    <a href="./addons.html" class="sidebar-link">
+                    <a href="./all-addons.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
                         <i class="ti ti-circle"></i>
                       </div>
-                      <span class="hide-menu">Addons</span>
+                      <span class="hide-menu">All Addons</span>
                     </a>
                   </li>
                   <li class="sidebar-item">
@@ -230,7 +229,11 @@
               <!-- Employee -->
               <!-- ---------------------------------- -->
               <li class="sidebar-item">
-                <a class="sidebar-link" href="./all-employees.html" aria-expanded="false">
+                <a
+                  class="sidebar-link"
+                  href="./all-employees.html"
+                  aria-expanded="false"
+                >
                   <span>
                     <i class="ti ti-users"></i>
                   </span>
@@ -1449,7 +1452,8 @@
                         <th class="bg-info-subtle">Food Info</th>
                         <th class="bg-info-subtle">Category</th>
                         <th class="bg-info-subtle">Branch</th>
-                        <th class="bg-info-subtle">Price</th>
+                        <th class="bg-info-subtle">R.Price</th>
+                        <th class="bg-info-subtle">D.Price</th>
                         <th class="bg-info-subtle text-center">Availability</th>
                         <th class="bg-info-subtle text-end">Action</th>
                       </tr>
@@ -1470,14 +1474,29 @@
                         <td>Seafood</td>
                         <td>Gulshan</td>
                         <td>৳ 250</td>
+                        <td>৳ 220</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                          >
+                            <iconify-icon icon="subway:tick"></iconify-icon>
+                          </span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1497,14 +1516,28 @@
                         <td>Italian</td>
                         <td>Banani</td>
                         <td>৳ 380</td>
+                        <td>৳ 340</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1524,14 +1557,28 @@
                         <td>Chinese</td>
                         <td>Dhanmondi</td>
                         <td>৳ 320</td>
+                        <td>৳ 290</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1551,14 +1598,29 @@
                         <td>Spanish</td>
                         <td>Uttara</td>
                         <td>৳ 450</td>
+                        <td>৳ 400</td>
                         <td class="text-center">
-                          <span class="unavailable">Unavailable</span>
+                          <span
+                            class="unavailable"
+                            data-bs-toggle="tooltip"
+                            title="Unavailable"
+                          >
+                            <iconify-icon icon="maki:cross"></iconify-icon>
+                          </span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1578,14 +1640,28 @@
                         <td>Fast Food</td>
                         <td>Mirpur</td>
                         <td>৳ 280</td>
+                        <td>৳ 250</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1605,14 +1681,28 @@
                         <td>Italian</td>
                         <td>Gulshan</td>
                         <td>৳ 350</td>
+                        <td>৳ 310</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1632,14 +1722,29 @@
                         <td>Chinese</td>
                         <td>Banani</td>
                         <td>৳ 300</td>
+                        <td>৳ 270</td>
                         <td class="text-center">
-                          <span class="unavailable">Unavailable</span>
+                          <span
+                            class="unavailable"
+                            data-bs-toggle="tooltip"
+                            title="Unavailable"
+                          >
+                            <iconify-icon icon="maki:cross"></iconify-icon>
+                          </span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1659,14 +1764,28 @@
                         <td>Spanish</td>
                         <td>Dhanmondi</td>
                         <td>৳ 420</td>
+                        <td>৳ 380</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1686,14 +1805,29 @@
                         <td>Fast Food</td>
                         <td>Uttara</td>
                         <td>৳ 220</td>
+                        <td>৳ 200</td>
                         <td class="text-center">
-                          <span class="unavailable">Unavailable</span>
+                          <span
+                            class="unavailable"
+                            data-bs-toggle="tooltip"
+                            title="Unavailable"
+                          >
+                            <iconify-icon icon="maki:cross"></iconify-icon>
+                          </span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>
@@ -1713,14 +1847,28 @@
                         <td>Italian</td>
                         <td>Mirpur</td>
                         <td>৳ 400</td>
+                        <td>৳ 360</td>
                         <td class="text-center">
-                          <span class="available">Available</span>
+                          <span
+                            class="available"
+                            data-bs-toggle="tooltip"
+                            title="Available"
+                            ><iconify-icon icon="subway:tick"></iconify-icon
+                          ></span>
                         </td>
                         <td class="text-end">
-                          <button class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-outline-primary me-2 round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Edit"
+                          >
                             <i class="ti ti-edit"></i>
                           </button>
-                          <button class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center">
+                          <button
+                            class="btn btn-danger round-32 fs-5 d-inline-flex align-items-center justify-content-center"
+                            data-bs-toggle="tooltip"
+                            title="Delete"
+                          >
                             <i class="ti ti-trash"></i>
                           </button>
                         </td>

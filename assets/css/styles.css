@@ -14683,12 +14683,12 @@
   --bs-muted: #5a6a85;
   --bs-indigo: #6610f2;
   --bs-light-indigo: #ebf3fe;
-  --bs-primary-rgb: 93, 135, 255;
+  --bs-primary-rgb: 255, 91, 5;
   --bs-secondary-rgb: 73, 190, 255;
   --bs-success-rgb: 19, 222, 185;
   --bs-info-rgb: 83, 155, 255;
   --bs-warning-rgb: 255, 174, 31;
-  --bs-danger-rgb: 250, 137, 107;
+  --bs-danger-rgb: 255, 30, 30;
   --bs-light-rgb: 246, 249, 252;
   --bs-dark-rgb: 42, 53, 71;
   --bs-muted-rgb: 90, 106, 133;
@@ -44196,6 +44196,7 @@ body .connect-sorting-content {
 .training,
 .fulltime{
   padding: 3px 4px;
+  font-weight: 500;
   border-radius: var(--bs-border-radius-sm) !important;
 }
 .processing, .onleave {
@@ -44205,6 +44206,7 @@ body .connect-sorting-content {
 
 .cancelled, .unavailable, .inactive {
   color: var(--bs-danger);
+
   background-color: var(--bs-danger-bg-subtle) !important;
 }
 
@@ -44276,6 +44278,10 @@ body .connect-sorting-content {
   min-width: 14rem;
 }
 
+.table-responsive .dataTables_wrapper .dataTables_info {
+  margin-bottom: 14px;
+}
+
 
 .table tr td {
   vertical-align: middle;
@@ -44297,6 +44303,11 @@ body .connect-sorting-content {
   height: 16rem;
   max-height: 16rem;
   border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.category-file-input .uploader-wrapper {
+  height: 10rem;
+  max-height: 10rem;
 }
 .upload-box {
   height: 100%;
@@ -44329,3 +44340,18 @@ body .connect-sorting-content {
 .border-t-gray-300{
   border-color: var(--bs-gray-300)
 }
+
+
+/*-----------------------------------------------
+|   Remove spinner from Input[type="number"]
+-----------------------------------------------*/
+.input-spin-none::-webkit-outer-spin-button,
+.input-spin-none::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-spin-none[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
