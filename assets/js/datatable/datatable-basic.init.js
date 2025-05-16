@@ -37,6 +37,24 @@ const table = $("#multi_col_order").DataTable({
       orderData: [3, 0],
     },
   ],
+
+  // for messages
+  createdRow: function (row, data, dataIndex) {
+    const $messageCell = $(row).find('.message-cell');
+    const fullMessage = $messageCell.text().trim();
+    const wordCount = fullMessage.split(/\s+/).length;
+
+    if (wordCount > 200) {
+      const shortText = fullMessage.split(/\s+/).slice(0, 200).join(' ') + '... ';
+      const $button = $('<button>')
+        .addClass('btn btn-link p-0 m-0 text-primary see-more-btn')
+        .attr('type', 'button')
+        .attr('data-message', fullMessage)
+        .text('See more');
+
+      $messageCell.html('').append(shortText).append($button);
+    }
+  },
   // Multi page pagination fixing
   ...($("#multi_col_order").hasClass("reorder-table") ? {
     pageLength: 5,
@@ -51,8 +69,8 @@ table.on('draw', function () {
 });
 
 const wrapper = $('<div class="dt-top-controls"></div>');
-  wrapper.append($('#multi_col_order_length')).append($('#multi_col_order_filter'));
-  $('#multi_col_order_wrapper').prepend(wrapper);
+wrapper.append($('#multi_col_order_length')).append($('#multi_col_order_filter'));
+$('#multi_col_order_wrapper').prepend(wrapper);
 /****************************************
  *       Complex header Table          *
  ****************************************/
@@ -142,3 +160,12 @@ const dataTablesFilter = document.getElementById('multi_col_order_filter')
 const inputField = dataTablesFilter.querySelector('input');
 inputField.setAttribute('placeholder', "Enter search...")
 inputField.classList.add('filter-input');
+
+
+// Modal open after clicking the see more button
+$(document).on('click', '.see-more-btn', function () {
+  const fullText = $(this).data('message');
+  $('#fullMessageContent').text(fullText);
+  const modal = new bootstrap.Modal(document.getElementById('fullMessageModal'));
+  modal.show();
+});
