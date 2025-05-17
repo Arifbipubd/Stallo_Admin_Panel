@@ -269,7 +269,7 @@
                 </a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="./chat.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -626,7 +626,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -649,7 +649,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1013,7 +1013,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -1036,7 +1036,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1087,7 +1087,7 @@
         <div class="body-wrapper">
           <div class="container-fluid pt-3 pb-5">
             <!-- start Add addons -->
-            <h4 class="mb-3">Add Addons</h4>
+            <h4 class="mb-3">Add New Addon</h4>
             <form>
               <div class="row justify-content-center g-3">
                 <div class="col-md-6">
@@ -1102,7 +1102,7 @@
                           Food Overview
                         </h5>
                         <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                        <label for="name" class="form-label fs-4">Name</label>
+                        <label for="name" class="form-label">Name</label>
                         <input
                           type="text"
                           name="name"
@@ -1112,7 +1112,7 @@
                         />
                       </div>
                       <div>
-                        <label for="description" class="form-label fs-4"
+                        <label for="description" class="form-label"
                           >Description</label
                         >
                         <textarea
@@ -1154,10 +1154,10 @@
                           <button
                             id="removeBtn"
                             type="button"
-                            class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2"
+                            class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
                             style="display: none"
                           >
-                            <i class="ti ti-trash"></i>
+                            <i class="ti ti-x"></i>
                           </button>
                           <img
                             id="previewImage"
@@ -1184,7 +1184,7 @@
                         <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
                       </div>
                       <div class="col-md-4">
-                        <label for="category" class="form-label fs-4"
+                        <label for="category" class="form-label"
                           >Category</label
                         >
                         <select
@@ -1200,17 +1200,19 @@
                         </select>
                       </div>
                       <div class="col-md-4">
-                        <label for="price" class="form-label fs-4">Price</label>
+                        <label for="price" class="form-label">Price</label>
                         <input
                           type="number"
                           name="price"
                           id="price"
                           class="form-control input-spin-none"
                           placeholder="Enter price..."
+                          step="0.01"
+                          min="0"
                         />
                       </div>
                       <div class="col-md-4">
-                        <label for="availability" class="form-label fs-4"
+                        <label for="availability" class="form-label"
                           >Availability</label
                         >
                         <select class="form-select" id="availability">

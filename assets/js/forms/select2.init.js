@@ -321,7 +321,7 @@ $addonSelect.on('select2:select', function (e) {
               <div class="col-6">
                 <div class="input-group">
                   <span class="input-group-text">৳</span>
-                  <input type="number" class="form-control addon-price" id="addon-price" placeholder="Enter price...">
+                  <input type="number" class="form-control input-spin-none addon-price" id="addon-price" placeholder="Enter price...">
                 </div>
               </div>
             </div>

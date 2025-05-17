@@ -274,7 +274,7 @@
                 </a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="./chat.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -631,7 +631,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -654,7 +654,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1016,7 +1016,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -1039,7 +1039,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1092,7 +1092,7 @@
               <div class="col-lg-5 col-xl-4">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="mb-4">Add Category</h4>
+                    <h4 class="mb-4">Add New</h4>
                     <form>
                       <div class="mb-3 category-file-input">
                         <label for="fileInput" class="form-label"
@@ -1115,10 +1115,12 @@
                             <button
                               id="removeBtn"
                               type="button"
-                              class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 me-1 mt-1"
+                              class="btn btn-sm btn-danger position-absolute top-0 end-0 me-1 mt-1"
                               style="display: none"
+                              data-bs-toggle="tooltip"
+                              title="Remove"
                             >
-                              <i class="ti ti-trash"></i>
+                              <i class="ti ti-x"></i>
                             </button>
                             <img
                               id="previewImage"
@@ -1164,7 +1166,7 @@
               <div class="col-lg-7 col-xl-8">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="mb-4">Category List</h4>
+                    <h4 class="mb-4">List of Items</h4>
                     <div class="table-responsive page-length-none pb-5">
                       <table
                         id="multi_col_order"
@@ -1452,6 +1454,7 @@
               id="deleteConfirmationModal"
               tabindex="-1"
               aria-labelledby="deleteConfirmationModal"
+              data-bs-backdrop="static" data-bs-keyboard="false"
             >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

@@ -269,7 +269,7 @@
                 </a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="./chat.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -626,7 +626,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -649,7 +649,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1011,7 +1011,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -1034,7 +1034,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1081,8 +1081,9 @@
         <!------MAIN Content-->
         <!------------------------------->
         <div class="body-wrapper">
-          <div class="container-fluid">
+          <div class="container-fluid pt-3 pb-5">
             <!-- start Add Employee -->
+            <h4 class="mb-3">Add New Employee</h4>
             <div class="row g-3 justify-content-center">
               <div class="col-md-6">
                 <div class="card h-100">
@@ -1132,9 +1133,7 @@
                       <select name="status" id="status" class="form-select">
                         <option value="">Select Status</option>
                         <option value="active">Active</option>
-                        <option value="pending">Pending</option>
                         <option value="inactive">Inactive</option>
-                        <option value="fulltime">Full Time</option>
                       </select>
                     </div>
                   </div>
@@ -1210,25 +1209,36 @@
                         <label for="password" class="form-label"
                           >Password</label
                         >
-                        <input
-                          type="password"
-                          name="password"
-                          id="password"
-                          class="form-control"
-                          placeholder="Enter password.."
-                        />
+                        <div class="input-group password">
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            class="form-control"
+                            placeholder="Enter password.."
+                          />
+                          <span class="input-group-text">
+                            <i class="ti ti-eye-off togglePassword cursor-pointer"></i>
+                          </span>
+                        </div>
                       </div>
                       <div class="col-md-4">
                         <label for="confirmPassword" class="form-label"
                           >Confirm Password</label
                         >
-                        <input
-                          type="password"
-                          name="confirmPassword"
-                          id="confirmPassword"
-                          class="form-control"
-                          placeholder="Enter confirm password.."
-                        />
+                        <div class="input-group password">
+                          <input
+                            type="password"
+                            name="confirmPassword"
+                            id="confirmPassword"
+                            class="form-control"
+                            placeholder="Enter confirm password.."
+                          />
+                          <span class="input-group-text ">
+                            <i class="ti ti-eye-off togglePassword cursor-pointer"></i>
+                          </span>
+                        </div>
+                        <span id="passwordError" class="password-error"></span>
                       </div>
                     </div>
                   </div>
@@ -1265,6 +1275,9 @@
 
     <!--Custom File Uploader-->
     <script src="./assets/js/theme/fileUpdloader.js"></script>
+
+    <!-- Custom Password Validator -->
+    <script src="./assets/js/theme/password-validator.js"></script>
 
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
