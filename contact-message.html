@@ -274,7 +274,7 @@
                 </a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="#!" class="sidebar-link">
+                    <a href="./chat.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -632,7 +632,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -655,7 +655,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1017,7 +1017,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -1040,7 +1040,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1062,10 +1062,8 @@
                                 >
                               </div>
                             </a>
-                            
                           </div>
                           <div class="d-grid py-4 px-7 pt-8">
-                           
                             <a
                               href="./login.html"
                               class="btn btn-outline-primary"
@@ -1090,8 +1088,8 @@
         <!------------------------------->
         <div class="body-wrapper">
           <div class="container-fluid">
-            <!-- start pending orders -->
-            <h4 class="mb-3">Pending Orders</h4>
+            <!-- start contact messages -->
+            <h4 class="mb-3">List of Items</h4>
             <div class="card">
               <div class="card-body">
                 <div class="table-responsive pb-5">
@@ -1284,15 +1282,7 @@
                           Consectetur dapibus. Perferendis velit, dicta natoque
                           felis suscipit iste risus cumque nec dolore optio
                           aenean voluptatum. Cum numquam, blanditiis, hac sequi
-                          imperdiet? Eius faucibus, dignissim voluptatem dolore
-                          corporis, exercitation laboriosam, aliquet velit, ex
-                          beatae do officiis? Molestias repellendus eget
-                          reiciendis, nisl distinctio dis dui labore fugit curae
-                          tempora minima semper, duis purus amet tenetur placeat
-                          viverra lacus fugiat! Cumque exercitationem? Labore.
-                          Nullam quod id, libero suspendisse ea molestie?
-                          Perspiciatis natus, voluptate nullam. Ullamco purus
-                          rem erat quod volutpat consequatur! Imperdiet.
+                          imperdiet? Eius faucibus, dignissim voluptatem dolor.
                         </td>
                         <td class="text-end">
                           <a href="#"
@@ -1416,13 +1406,13 @@
               tabindex="-1"
               aria-labelledby="fullMessageLabel"
               aria-hidden="true"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
             >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h4 class="mb-0">
-                      Message Preview
-                    </h4>
+                    <h4 class="mb-0">Message Preview</h4>
                     <button
                       type="button"
                       class="btn-close"
@@ -1430,14 +1420,13 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div
-                    class="modal-body px-4  text-justify text-break scroll-auto"
-                    id="modalMessageContent"
-                  ></div>
+                  <div class="modal-body py-1 px-3 text-break scroll-auto">
+                    <p class="mb-0 text-justify" id="modalMessageContent"></p>
+                  </div>
                   <div class="modal-footer justify-content-center">
                     <button
                       type="button"
-                      class="btn btn-muted waves-effect text-start"
+                      class="btn close-btn waves-effect text-start"
                       data-bs-dismiss="modal"
                     >
                       Close
@@ -1446,7 +1435,7 @@
                 </div>
               </div>
             </div>
-            <!-- end Pending order -->
+            <!-- end contact message -->
           </div>
         </div>
         <script>

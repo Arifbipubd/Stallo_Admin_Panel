@@ -274,7 +274,7 @@
                 </a>
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="./chat.html" class="sidebar-link">
                       <div
                         class="round-16 d-flex align-items-center justify-content-center"
                       >
@@ -631,7 +631,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -654,7 +654,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1248,7 +1248,7 @@
                           </div>
                           <div class="message-body">
                             <a
-                              href="./settings.html"
+                              href="./profile.html"
                               class="py-8 px-7 mt-8 d-flex align-items-center"
                             >
                               <span
@@ -1271,7 +1271,7 @@
                               </div>
                             </a>
                             <a
-                              href="#"
+                              href="./chat.html"
                               class="py-8 px-7 d-flex align-items-center"
                             >
                               <span
@@ -1324,7 +1324,7 @@
               <div class="col-lg-5 col-xl-4">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="mb-4">Add Placement Category</h4>
+                    <h4 class="mb-4">Add New</h4>
                     <form>
                       <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
@@ -1359,7 +1359,7 @@
               <div class="col-lg-7 col-xl-8">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="mb-4">Placement Category</h4>
+                    <h4 class="mb-4">List of Items</h4>
                     <div class="table-responsive page-length-none pb-5">
                       <table
                         id="multi_col_order"
@@ -1378,7 +1378,15 @@
                             <td>1</td>
                             <td class="">Featured / Top Picks</td>
                             <td class="text-center">
-                              <span class="unavailable">Inactive</span>
+                              <span
+                                class="text-gray-500 fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Inactive"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1407,7 +1415,15 @@
                             <td>2</td>
                             <td class="">New Arrivals</td>
                             <td class="text-center">
-                              <span class="available">Active</span>
+                              <span
+                                class="text-success fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Active"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1436,7 +1452,15 @@
                             <td>3</td>
                             <td class="">New Arrivals</td>
                             <td class="text-center">
-                              <span class="available">Active</span>
+                              <span
+                                class="text-success fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Active"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1465,7 +1489,15 @@
                             <td>4</td>
                             <td class="">Top Rated</td>
                             <td class="text-center">
-                              <span class="available">Active</span>
+                              <span
+                                class="text-success fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Active"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1494,7 +1526,15 @@
                             <td>5</td>
                             <td class="">Hot Deals</td>
                             <td class="text-center">
-                              <span class="available">Active</span>
+                              <span
+                                class="text-success fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Active"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1523,7 +1563,15 @@
                             <td>6</td>
                             <td class="">Fast Delivery</td>
                             <td class="text-center">
-                              <span class="unavailable">Inactive</span>
+                              <span
+                                class="text-gray-500 fs-5"
+                                data-bs-toggle="tooltip"
+                                title="Inactive"
+                              >
+                                <iconify-icon
+                                  icon="fontisto:radio-btn-active"
+                                ></iconify-icon>
+                              </span>
                             </td>
                             <td class="text-end">
                               <div
@@ -1560,6 +1608,8 @@
               id="deleteConfirmationModal"
               tabindex="-1"
               aria-labelledby="deleteConfirmationModal"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
             >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">

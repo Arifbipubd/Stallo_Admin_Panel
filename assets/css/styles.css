@@ -17163,7 +17163,7 @@ progress {
 .form-control:focus {
   color: #5a6a85;
   background-color: transparent;
-  border-color: #aec3ff;
+  border-color: var(--bs-success);
   outline: 0;
   box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(93, 135, 255, 0.25);
 }
@@ -17312,7 +17312,7 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #aec3ff;
+  border-color: var(--bs-success);
   outline: 0;
   box-shadow: unset, 0 0 0 0.25rem rgba(93, 135, 255, 0.25);
 }
@@ -44204,10 +44204,13 @@ body .connect-sorting-content {
   background-color: var(--bs-info-bg-subtle) !important;
 }
 
-.cancelled, .unavailable, .inactive {
+.cancelled, .unavailable {
   color: var(--bs-danger);
-
   background-color: var(--bs-danger-bg-subtle) !important;
+}
+
+.text-gray-500{
+  color: var(--bs-gray-500);
 }
 
 .cod {
@@ -44363,4 +44366,35 @@ body .connect-sorting-content {
   white-space: normal !important;
   word-break: break-word;
   overflow-wrap: break-word !important;
+}
+
+.order-number {
+  color: #006400; /* for green card */
+}
+
+.amount-number {
+  color: #1D4ED8; /* for blue card */
+}
+
+.close-btn {
+  background-color: #0d6efd;
+  color: #fff;
+  border: 1px solid #0d6efd;
+}
+
+.close-btn:hover {
+  background-color: transparent !important;
+  color: #0d6efd;
+  border: 1px solid #0d6efd !important;
+  transition: all 0.2s ease-linear;
+}
+
+.password-error{
+  color: var(--bs-danger);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.text-justify{
+  text-align: justify;
 }
