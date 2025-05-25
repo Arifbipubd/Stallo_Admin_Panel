@@ -17,9 +17,10 @@
       type="image/png"
       href="./assets/images/logos/favicon.png"
     />
+
     <!-- Core Css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Stallo Admin</title>
+    <title>Print Invoice</title>
   </head>
   <body>
     <div
@@ -27,21 +28,7 @@
       role="alert"
       aria-live="assertive"
       aria-atomic="true"
-    >
-      <div class="toast-body hstack align-items-start gap-6">
-        <i class="ti ti-alert-circle fs-6"></i>
-        <div>
-          <h5 class="text-white fs-3 mb-1">Welcome to</h5>
-          <h4 class="mb-0 text-white">Stallo Admin</h4>
-        </div>
-        <button
-          type="button"
-          class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none"
-          data-bs-dismiss="toast"
-          aria-label="Close"
-        ></button>
-      </div>
-    </div>
+    ></div>
     <!-- Preloader -->
     <div class="preloader">
       <img
@@ -366,12 +353,12 @@
               <div class="d-block d-lg-none py-4" style="max-width: 10.875rem">
                 <a href="./index.html" class="text-nowrap logo-img">
                   <img
-                    src="./assets/images/logos/admin-logo-dark.png"
+                    src="./assets/images/logos/dark-logo.png"
                     class="light-logo img-fluid"
                     alt="Logo-Dark"
                   />
                   <img
-                    src="./assets/images/logos/admin-logo.png"
+                    src="./assets/images/logos/logo.svg"
                     class="dark-logo img-fluid"
                     alt="Logo-light"
                   />
@@ -550,7 +537,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -770,7 +757,7 @@
                 >
                   <a
                     href="javascript:void(0)"
-                    class="nav-link round-40 p-1 ps-0 d-flex d-xl-none align-items-center justify-content-center"
+                    class="nav-link round-32 p-1 ps-0 d-flex d-xl-none align-items-center justify-content-center"
                     type="button"
                     data-bs-toggle="offcanvas"
                     data-bs-target="#mobilenavbar"
@@ -935,7 +922,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1092,242 +1079,202 @@
           </div>
         </header>
         <!--  Header End -->
+        <!------------------------------->
+        <!------MAIN Content-->
+        <!------------------------------->
         <div class="body-wrapper">
-          <div class="container-fluid pb-16">
-            <div class="row">
-              <div class="col-lg-8 d-flex align-items-stretch">
-                <div
-                  class="card w-100 bg-primary-subtle overflow-hidden shadow-none"
-                >
-                  <div class="card-body position-relative">
-                    <div class="row">
-                      <div class="col-sm-7">
-                        <div class="d-flex align-items-center mb-7">
-                          <div class="rounded-circle overflow-hidden me-6">
-                            <img
-                              src="./assets/images/profile/user-1.jpg"
-                              alt="stallo-img"
-                              width="40"
-                              height="40"
-                            />
-                          </div>
-                          <h5 class="fw-semibold mb-0 fs-5">
-                            Welcome back Mathew Anderson!
-                          </h5>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <div
-                            class="border-end pe-4 border-muted border-opacity-10"
-                          >
-                            <h3
-                              class="mb-1 fw-semibold fs-8 d-flex align-content-center"
-                            >
-                              $2,340<i
-                                class="ti ti-arrow-up-right fs-5 lh-base text-success"
-                              ></i>
-                            </h3>
-                            <p class="mb-0 text-dark">Today’s Sales</p>
-                          </div>
-                          <div class="ps-4">
-                            <h3
-                              class="mb-1 fw-semibold fs-8 d-flex align-content-center"
-                            >
-                              35%<i
-                                class="ti ti-arrow-up-right fs-5 lh-base text-success"
-                              ></i>
-                            </h3>
-                            <p class="mb-0 text-dark">Overall Performance</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-5">
-                        <div class="welcome-bg-img mb-n7 text-end">
-                          <img
-                            src="./assets/images/backgrounds/welcome-bg.svg"
-                            alt="stallo-img"
-                            class="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div class="container-fluid pt-5 pb-16">
+            <!-- start Printing Invoice -->
+            <div class="row justify-content-center print-invoice">
+              <div class="col-md-12">
+                <div class="text-center">
+                  <input
+                    type="button"
+                    onclick="printDiv('printableArea')"
+                    class="btn text-white btn-primary non-printable print-Div"
+                    value="Proceed If thermal printer is ready."
+                  />
+                  <a
+                    href="#!"
+                    class="btn btn-danger non-printable"
+                    >Back</a
+                  >
                 </div>
-              </div>
-              <div class="col-sm-6 col-lg-2 d-flex align-items-stretch">
-                <div class="card w-100">
-                  <div class="card-body p-4">
-                    <h4 class="fw-semibold">$10,230</h4>
-                    <p class="mb-2 fs-3">Expense</p>
-                    <div id="expense"></div>
+                <hr class="non-printable" />
+
+                <div class="printable-area" id="printableArea">
+                  <div class="">
+                    <img
+                      src="./assets/images/logos/print-invoice.jpg"
+                      class="printable-image"
+                      alt=""
+                    />
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-2 d-flex align-items-stretch">
-                <div class="card w-100">
-                  <div class="card-body p-4">
-                    <h4 class="fw-semibold">$65,432</h4>
-                    <p class="mb-1 fs-3">Sales</p>
-                    <div id="sales" class="sales-chart mx-n2"></div>
+                  <div class="text-center pt-2 mb-3">
+                    <h5 class="printable-1">Stallo Puppets</h5>
+                    <h5 class="text-break printable-2">
+                      House: 00, Road: 00, Test City
+                    </h5>
+                    <h5 class="text-muted">05-05-2025 10:13 pm</h5>
+                    <h5>
+                      <span>Phone</span> <span>:</span>
+                      <span>+880152345234</span>
+                    </h5>
                   </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                <div class="card w-100">
-                  <div class="card-body">
-                    <h4 class="card-title fw-semibold">Revenue Updates</h4>
-                    <p class="card-subtitle mb-4">Overview of Profit</p>
-                    <div class="d-flex align-items-center">
-                      <div class="me-4">
-                        <span
-                          class="round-8 text-bg-primary rounded-circle me-2 d-inline-block"
-                        ></span>
-                        <span class="fs-2">Footware</span>
-                      </div>
-                      <div>
-                        <span
-                          class="round-8 text-bg-secondary rounded-circle me-2 d-inline-block"
-                        ></span>
-                        <span class="fs-2">Fashionware</span>
-                      </div>
-                    </div>
-                    <div id="revenue-chart" class="revenue-chart mx-n3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                <div class="card w-100">
-                  <div class="card-body">
-                    <h4 class="card-title fw-semibold">Sales Overview</h4>
-                    <p class="card-subtitle mb-2">Every Month</p>
-                    <div id="sales-overview" class="mb-4"></div>
+
+                  <h5 class="d-flex justify-content-between gap-2">
+                    <span class=""> Order Type </span>
+                    <span class="">Home Delivery</span>
+                  </h5>
+
+                  <div
+                    class="border border-dashed border-secondary p-2 rounded"
+                  >
+                    <h5 class="d-flex justify-content-between gap-2">
+                      <span class="text-muted"> Order ID </span>
+                      <span class="">139943</span>
+                    </h5>
+
+                    <h5 class="d-flex justify-content-between gap-2">
+                      <span class="text-muted">Customer Name</span>
+                      <span>Sadia Afrin</span>
+                    </h5>
+                    <h5 class="d-flex justify-content-between gap-2">
+                      <span class="text-muted">Phone</span>
+                      <span>+880188534934</span>
+                    </h5>
+
+                    <h5 class="d-flex justify-content-between gap-2 text-break">
+                      <span class="text-muted text-nowrap"
+                        >Delivery Address</span
+                      >
+                      <span class="text-end">Bashudhara R/A</span>
+                    </h5>
                     <div
-                      class="d-flex align-items-center justify-content-between"
+                      class="d-flex gap-2 align-items-center justify-content-end"
+                      style="font-size: 10px"
+                    ></div>
+                  </div>
+
+                  <table
+                    class="table table-borderless table-align-middle mt-1 mb-1"
+                  >
+                    <thead>
+                      <tr>
+                        <th
+                          style="border-bottom: 1px dashed #979797 !important"
+                        >
+                          QTY
+                        </th>
+                        <th
+                          style="border-bottom: 1px dashed #979797 !important"
+                        >
+                          Item
+                        </th>
+                        <th
+                          class="text-right"
+                          style="border-bottom: 1px dashed #979797 !important"
+                        >
+                          Price
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td class="">1x</td>
+                        <td class="text-break">
+                          Kacchi Biriyani <br />
+
+                          <strong>Variation : </strong>
+                          <span class="d-block text-capitalize">
+                            <strong>Size - </strong>
+                          </span>
+                          <span class="d-block text-capitalize">
+                            &nbsp; &nbsp; Small :
+                            <strong>৳ 400.00</strong>
+                          </span>
+                        </td>
+                        <td class="text-end w-28">৳ 800.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="border-bottom-dashed mb-3"></div>
+                  <div class="printable-3">
+                    <div class="px-3">
+                      <dl class="row text-end">
+                        <dt class="col-6 text-start text-muted">Items Price</dt>
+                        <dd class="col-6">৳ 800.00</dd>
+                        <dt class="col-6 text-start text-muted">Addon Cost</dt>
+                        <dd class="col-6">৳ 0.00</dd>
+
+                        <dd class="col-12 border-bottom-dashed mb-2"></dd>
+
+                        <dt class="col-6 text-start fw-medium">Subtotal</dt>
+                        <dd class="col-6 fw-medium">৳ 800.00</dd>
+
+                        <dd class="col-12 border-bottom-dashed mb-2"></dd>
+
+                        <dt class="col-6 text-start text-muted">Discount</dt>
+                        <dd class="col-6">- ৳ 30.00</dd>
+
+                        <dt class="col-6 text-start text-muted">
+                          Coupon discount
+                        </dt>
+                        <dd class="col-6">- ৳ 0.00</dd>
+
+                        <dt class="col-6 text-start text-muted">Vat/tax</dt>
+                        <dd class="col-6">৳ 38.50</dd>
+                        <dt class="col-6 text-start text-muted">
+                          Delivery man tips
+                        </dt>
+                        <dd class="col-6">৳ 0.00</dd>
+                        <dt class="col-6 text-start text-muted">
+                          Delivery charge
+                        </dt>
+                        <dd class="col-6">৳ 583.99</dd>
+                        <dt class="col-6 text-start text-muted">
+                          Service Charge:
+                        </dt>
+                        <dd class="col-6">+ ৳ 10.00</dd>
+
+                        <dd class="col-12 border-bottom-dashed mb-2"></dd>
+
+                        <dt class="col-6 text-start fw-medium fs-20px">
+                          Total
+                        </dt>
+                        <dd class="col-6 fs-20px fw-medium">৳ 1,402.49</dd>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <dd class="col-12 border-bottom-dashed mb-2"></dd>
+
+                  <div class="d-flex flex-row justify-content-between">
+                    <span class="text-capitalize d-flex"
+                      ><span>Paid by</span> <span>:</span>
+                      <span>Cash on delivery</span>
+                    </span>
+                  </div>
+
+                  <dd class="col-12 border-bottom-dashed my-2"></dd>
+
+                  <h5 class="text-center justify-content-center mb-0">
+                    <span class="d-block fw-medium thank-you-text"
+                      >THANK YOU</span
                     >
-                      <div class="d-flex align-items-center">
-                        <div
-                          class="bg-primary-subtle text-primary rounded-2 me-8 p-8 d-flex align-items-center justify-content-center"
-                        >
-                          <i class="ti ti-grid-dots fs-6"></i>
-                        </div>
-                        <div>
-                          <h6 class="fw-semibold text-dark fs-4 mb-0">
-                            $23,450
-                          </h6>
-                          <p class="fs-3 mb-0 fw-normal">Profit</p>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <div
-                          class="bg-secondary-subtle text-secondary rounded-2 me-8 p-8 d-flex align-items-center justify-content-center"
-                        >
-                          <i class="ti ti-grid-dots fs-6"></i>
-                        </div>
-                        <div>
-                          <h6 class="fw-semibold text-dark fs-4 mb-0">
-                            $23,450
-                          </h6>
-                          <p class="fs-3 mb-0 fw-normal">Expance</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="row">
-                  <div class="col-sm-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                      <div class="card-body">
-                        <div
-                          class="p-2 bg-primary-subtle rounded-2 d-inline-block mb-3"
-                        >
-                          <img
-                            src="./assets/images/svgs/icon-cart.svg"
-                            alt="stallo-img"
-                            class="img-fluid"
-                            width="24"
-                            height="24"
-                          />
-                        </div>
-                        <div id="sales-two" class="mb-3 mx-n4"></div>
-                        <h4
-                          class="mb-1 fw-semibold d-flex align-content-center"
-                        >
-                          $16.5k<i
-                            class="ti ti-arrow-up-right fs-5 text-success"
-                          ></i>
-                        </h4>
-                        <p class="mb-0">Sales</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 d-flex align-items-stretch">
-                    <div class="card w-100">
-                      <div class="card-body">
-                        <div
-                          class="p-2 bg-info-subtle rounded-2 d-inline-block mb-3"
-                        >
-                          <img
-                            src="./assets/images/svgs/icon-bar.svg"
-                            alt="stallo-img"
-                            class="img-fluid"
-                            width="24"
-                            height="24"
-                          />
-                        </div>
-                        <div id="growth" class="mb-3"></div>
-                        <h4
-                          class="mb-1 fw-semibold d-flex align-content-center"
-                        >
-                          24%<i
-                            class="ti ti-arrow-up-right fs-5 text-success"
-                          ></i>
-                        </h4>
-                        <p class="mb-0">Growth</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row alig n-items-start">
-                      <div class="col-8">
-                        <h4 class="card-title mb-9 fw-semibold">
-                          Monthly Earnings
-                        </h4>
-                        <div class="d-flex align-items-center mb-3">
-                          <h4 class="fw-semibold mb-0 me-8">$6,820</h4>
-                          <div class="d-flex align-items-center">
-                            <span
-                              class="me-2 rounded-circle bg-success-subtle text-success round-20 d-flex align-items-center justify-content-center"
-                            >
-                              <i class="ti ti-arrow-up-left"></i>
-                            </span>
-                            <p class="text-dark me-1 fs-3 mb-0">+9%</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="d-flex justify-content-end">
-                          <div
-                            class="p-2 bg-primary-subtle rounded-2 d-inline-block"
-                          >
-                            <img
-                              src="./assets/images/svgs/icon-master-card-2.svg"
-                              alt="stallo-img"
-                              class="img-fluid"
-                              width="24"
-                              height="24"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="monthly-earning"></div>
-                  </div>
+                  </h5>
+                  <div class="text-center">For ordering food from Stallo</div>
+
+                  <dd class="col-12 border-bottom-dashed my-2"></dd>
+
+                  <span class="d-block text-center"
+                    >© 2025 Stallo. All right reserved</span
+                  >
                 </div>
               </div>
             </div>
+            <!-- end Printing Invoice -->
           </div>
           <footer class="footer">
             <div class="row g-0 justify-content-between align-items-center">
@@ -1355,6 +1302,7 @@
         </script>
       </div>
     </div>
+
     <div class="dark-transparent sidebartoggler"></div>
     <script src="./assets/js/vendor.min.js"></script>
     <!-- Import Js Files -->
@@ -1366,7 +1314,18 @@
     <script src="./assets/js/theme/sidebarmenu.js"></script>
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="./assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="./assets/js/dashboards/dashboard2.js"></script>
+    <script>
+      function printDiv(divId) {
+        const printContents = document.getElementById(divId).innerHTML;
+        const originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+
+        // Reload scripts/styles if needed
+        window.location.reload();
+      }
+    </script>
   </body>
 </html>

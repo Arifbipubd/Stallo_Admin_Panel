@@ -675,10 +675,8 @@
                                 >
                               </div>
                             </a>
-                            
                           </div>
                           <div class="d-grid py-4 px-7 pt-8">
-                           
                             <a
                               href="./login.html"
                               class="btn btn-outline-primary"
@@ -1062,10 +1060,8 @@
                                 >
                               </div>
                             </a>
-                            
                           </div>
                           <div class="d-grid py-4 px-7 pt-8">
-                           
                             <a
                               href="./login.html"
                               class="btn btn-outline-primary"
@@ -1089,7 +1085,7 @@
         <!------MAIN Content-->
         <!------------------------------->
         <div class="body-wrapper">
-          <div class="container-fluid pt-3 pb-5">
+          <div class="container-fluid pt-3 pb-16">
             <!-- start Add foods -->
             <h4 class="mb-3">Ad New Food</h4>
             <form>
@@ -1210,7 +1206,8 @@
                         <select
                           name="placementCategory"
                           id="placementCategory"
-                          class="form-select"
+                          class="select2 addons-select form-control"
+                          multiple="multiple"
                         >
                           <option value="">Select Placement Category</option>
                           <option value="featured">Featured / Top Picks</option>
@@ -1227,10 +1224,7 @@
                         <label for="availability" class="form-label"
                           >Availability</label
                         >
-                        <select
-                          class="form-select"
-                          id="availability"
-                        >
+                        <select class="form-select" id="availability">
                           <option value="">Select Availability</option>
                           <option value="available">Available</option>
                           <option value="unavailable">Unavailable</option>
@@ -1252,29 +1246,35 @@
                       <hr class="mt-2 mx-n7 border-t-gray-300" />
                       <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input
-                          type="number"
-                          name="price"
-                          id="price"
-                          class="form-control input-spin-none"
-                          placeholder="Enter price..."
-                          step="0.01"
-                          min="0"
-                        />
+                        <div class="input-group">
+                          <span class="input-group-text">৳</span>
+                          <input
+                            type="number"
+                            name="price"
+                            id="price"
+                            class="form-control input-spin-none"
+                            placeholder="Enter price..."
+                            step="0.01"
+                            min="0"
+                          />
+                        </div>
                       </div>
                       <div class="">
                         <label for="discountPrice" class="form-label"
                           >Discount Price</label
                         >
-                        <input
-                          type="number"
-                          name="discountPrice"
-                          id="discountPrice"
-                          class="form-control input-spin-none"
-                          placeholder="Enter discount price..."
-                          step="0.01"
-                          min="0"
-                        />
+                        <div class="input-group">
+                          <div class="input-group-text">৳</div>
+                          <input
+                            type="number"
+                            name="discountPrice"
+                            id="discountPrice"
+                            class="form-control input-spin-none"
+                            placeholder="Enter discount price..."
+                            step="0.01"
+                            min="0"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1291,9 +1291,7 @@
                       </h5>
                       <hr class="mt-2 mx-n7 border-t-gray-300" />
                       <div>
-                        <label for="addons" class="form-label"
-                          >Addons</label
-                        >
+                        <label for="addons" class="form-label">Addons</label>
                         <select
                           name="addons"
                           id="addons"
@@ -1309,11 +1307,15 @@
                           <option value="add-pickles">Add Pickles</option>
                           <option value="side-of-fries">Side of Fries</option>
                           <option value="side-salad">Side Salad</option>
-                          <option value="add-extra-patty">Add Extra Patty</option>
+                          <option value="add-extra-patty">
+                            Add Extra Patty
+                          </option>
                           <option value="substitute-bun">Substitute Bun</option>
                           <option value="add-fried-egg">Add Fried Egg</option>
                           <option value="extra-topping">Extra Topping</option>
-                          <option value="making-it-a-combo">Make it a Combo</option>
+                          <option value="making-it-a-combo">
+                            Make it a Combo
+                          </option>
                           <option value="add-protein">Add Protein</option>
                           <option value="side-of-rice">Side of Rice</option>
                         </select>
@@ -1345,6 +1347,24 @@
             </form>
             <!-- end add foods -->
           </div>
+          <footer class="footer">
+            <div class="row g-0 justify-content-between align-items-center">
+              <div class="col-auto">
+                <p class="mb-0">&copy; 2025 Stallo Admin. All right reserved</p>
+              </div>
+              <div class="col-auto">
+                <p class="mb-0">
+                  Developed by
+                  <a
+                    href="https://evocationit.com/"
+                    target="_blank"
+                    class="evocation-link"
+                    >Evocation IT</a
+                  >
+                </p>
+              </div>
+            </div>
+          </footer>
         </div>
         <script>
           function handleColorTheme(e) {
