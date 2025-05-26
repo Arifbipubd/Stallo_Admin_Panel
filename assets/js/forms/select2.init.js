@@ -291,6 +291,13 @@ $("select[data-text-color]").each(function (i, obj) {
 });
 
 
+// Placement Category on add food
+
+$('#placementCategory').select2({
+  placeholder: "Select Placement Category",
+  allowClear: true
+})
+
 
 //Custom input handler
 
