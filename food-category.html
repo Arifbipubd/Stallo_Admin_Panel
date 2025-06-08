@@ -540,7 +540,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -925,7 +925,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1093,66 +1093,82 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="mb-4">Add New</h4>
-                    <form>
-                      <div class="mb-3 category-file-input">
+                    <form novalidate>
+                      <div class="mb-3 category-file-input form-group">
                         <label for="fileInput" class="form-label"
                           >Upload Image</label
                         >
-                        <div
-                          class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
-                        >
+                        <div class="controls">
                           <div
-                            class="upload-box text-center px-3"
-                            id="drop-area"
+                            class="uploader-wrapper w-100 d-flex justify-content-center align-items-center mb-1 form-control border-1"
                           >
-                            <span id="placeholder">Drop or Select Image</span>
-                            <input
-                              type="file"
-                              class="upload-input"
-                              id="fileInput"
-                              accept="image/*"
-                            />
-                            <button
-                              id="removeBtn"
-                              type="button"
-                              class="btn btn-sm btn-danger position-absolute top-0 end-0 me-1 mt-1"
-                              style="display: none"
-                              data-bs-toggle="tooltip"
-                              title="Remove"
+                            <div
+                              class="upload-box text-center px-3"
+                              id="drop-area"
                             >
-                              <i class="ti ti-x"></i>
-                            </button>
-                            <img
-                              id="previewImage"
-                              src=""
-                              alt="file uploaded image"
-                              style="display: none"
-                            />
+                              <span id="placeholder">Drop or Select Image</span>
+                              <input
+                                type="file"
+                                class="upload-input"
+                                id="fileInput"
+                                accept="image/*"
+                                required
+                                data-validation-required-message="File is required."
+                              />
+                              <button
+                                id="removeBtn"
+                                type="button"
+                                class="btn btn-sm btn-danger position-absolute top-0 end-0 me-1 mt-1"
+                                style="display: none"
+                                data-bs-toggle="tooltip"
+                                title="Remove"
+                              >
+                                <i class="ti ti-x"></i>
+                              </button>
+                              <img
+                                id="previewImage"
+                                src=""
+                                alt="file uploaded image"
+                                style="display: none"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="mb-3">
+                      <div class="mb-3 form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Enter Food Name..."
-                          class="form-control"
-                        />
+                        <div class="controls">
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter food name..."
+                            class="form-control"
+                            required
+                            data-validation-required-message="Food name is required."
+                          />
+                        </div>
                       </div>
-                      <div class="mb-4">
+                      <div class="mb-4 form-group">
                         <label for="availability" class="form-label"
                           >Availability</label
                         >
-                        <select class="form-select" id="availability">
-                          <option value="">Select Availability</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
-                        </select>
+                        <div class="controls">
+                          <select
+                            class="form-select form-control"
+                            id="availability"
+                            required
+                            data-validation-required-message="Availability is required."
+                          >
+                            <option value="">Select Availability</option>
+                            <option value="available">Available</option>
+                            <option value="unavailable">Unavailable</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="">
                         <button
+                          type="submit"
                           class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
                         >
                           <i class="ti ti-location"></i>
@@ -1454,7 +1470,8 @@
               id="deleteConfirmationModal"
               tabindex="-1"
               aria-labelledby="deleteConfirmationModal"
-              data-bs-backdrop="static" data-bs-keyboard="false"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
             >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -1543,6 +1560,10 @@
       <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
       <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
       <script src="./assets/js/datatable/datatable-basic.init.js"></script>
+
+      <!--Form validation-->
+      <script src="../assets/js/extra-libs/jqbootstrapvalidation/validation.js"></script>
+      <script src="./assets/js/forms/custom-validation-init.js"></script>
     </div>
   </body>
 </html>

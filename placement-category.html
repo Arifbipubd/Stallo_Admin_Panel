@@ -540,7 +540,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1157,7 +1157,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1325,27 +1325,39 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="mb-4">Add New</h4>
-                    <form>
-                      <div class="mb-3">
+                    <form novalidate>
+                      <div class="mb-3 form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="Enter Placement Category..."
-                          class="form-control"
-                        />
+                        <div class="controls">
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter Placement Category..."
+                            class="form-control"
+                            required
+                            data-validation-required-message="Placement category is required."
+                          />
+                        </div>
                       </div>
-                      <div class="mb-4">
+                      <div class="mb-4 form-group">
                         <label for="status" class="form-label">Status</label>
-                        <select class="form-select" id="status">
-                          <option value="">Select Status</option>
-                          <option value="available">Active</option>
-                          <option value="unavailable">Inactive</option>
-                        </select>
+                        <div class="controls">
+                          <select
+                            class="form-select form-control"
+                            id="status"
+                            required
+                            data-validation-required-message="Status is required."
+                          >
+                            <option value="">Select Status</option>
+                            <option value="available">Active</option>
+                            <option value="unavailable">Inactive</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="">
                         <button
+                          type="submit"
                           class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
                         >
                           <i class="ti ti-location"></i>
@@ -1695,6 +1707,10 @@
       <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
       <script src="./assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
       <script src="./assets/js/datatable/datatable-basic.init.js"></script>
+
+      <!--Form validation-->
+      <script src="../assets/js/extra-libs/jqbootstrapvalidation/validation.js"></script>
+      <script src="./assets/js/forms/custom-validation-init.js"></script>
     </div>
   </body>
 </html>

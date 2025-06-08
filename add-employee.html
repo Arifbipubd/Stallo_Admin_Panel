@@ -535,7 +535,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -920,7 +920,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1084,179 +1084,237 @@
           <div class="container-fluid pb-16">
             <!-- start Add Employee -->
             <h4 class="mb-3">Add New Employee</h4>
-            <div class="row g-3 justify-content-center">
-              <div class="col-md-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h5 class="mb-3 d-flex align-items-center">
-                      <iconify-icon
-                        class="fs-6 me-2"
-                        icon="entypo:info"
-                      ></iconify-icon>
-                      General Information
-                    </h5>
-                    <hr class="mx-n7 mb-4 border-t-gray-300" />
-                    <div class="mb-3">
-                      <label for="name" class="form-label fs-4">Name</label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        class="form-control"
-                        placeholder="Enter employee name.."
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        class="form-control"
-                        placeholder="Enter phone no.."
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="role" class="form-label">Role</label>
-                      <select name="role" id="role" class="form-select">
-                        <option value="">Select Role</option>
-                        <option value="Admin">Admin</option>
-                        <option value="HR">HR</option>
-                        <option value="software-developer">
-                          Software Developer
-                        </option>
-                        <option value="marketer">Marketer</option>
-                      </select>
-                    </div>
-                    <div class="status">
-                      <label for="status" class="form-label">Status</label>
-                      <select name="status" id="status" class="form-select">
-                        <option value="">Select Status</option>
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h5 class="mb-3 d-flex align-items-center">
-                      <iconify-icon
-                        class="fs-6 me-2"
-                        icon="hugeicons:image-01"
-                      ></iconify-icon>
-                      Feature Image
-                    </h5>
-                    <hr class="mx-n7 mb-4 border-t-gray-300" />
-                    <label for="fileInput" class="form-label"
-                      >Upload Image</label
-                    >
-                    <div
-                      class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
-                    >
-                      <div class="upload-box text-center px-3" id="drop-area">
-                        <span id="placeholder">Drop or Select Image</span>
-                        <input
-                          type="file"
-                          class="upload-input"
-                          id="fileInput"
-                          accept="image/*"
-                        />
-                        <button
-                          id="removeBtn"
-                          type="button"
-                          class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
-                          style="display: none"
-                        >
-                          <i class="ti ti-x"></i>
-                        </button>
-                        <img
-                          id="previewImage"
-                          src=""
-                          alt="file uploaded image"
-                          style="display: none"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="mb-3 d-flex align-items-center">
-                      <iconify-icon
-                        class="fs-7 me-2"
-                        icon="si:lock-line"
-                      ></iconify-icon>
-                      Account Information
-                    </h5>
-                    <hr class="mx-n7 mb-4 border-t-gray-300" />
-                    <div class="row g-3">
-                      <div class="col-md-4">
-                        <label for="email" class="form-label">Email</label>
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          class="form-control"
-                          placeholder="Enter email address.."
-                        />
-                      </div>
-                      <div class="col-md-4">
-                        <label for="password" class="form-label"
-                          >Password</label
-                        >
-                        <div class="input-group password">
+            <form novalidate>
+              <div class="row g-3 justify-content-center">
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-2"
+                          icon="entypo:info"
+                        ></iconify-icon>
+                        General Information
+                      </h5>
+                      <hr class="mx-n7 mb-4 border-t-gray-300" />
+                      <div class="mb-3 form-group">
+                        <label for="name" class="form-label fs-4">Name</label>
+                        <div class="controls">
                           <input
-                            type="password"
-                            name="password"
-                            id="password"
+                            type="text"
+                            name="name"
+                            id="name"
                             class="form-control"
-                            placeholder="Enter password.."
+                            placeholder="Enter employee name.."
+                            required
+                            data-validation-required-message="Name is required."
                           />
-                          <span class="input-group-text">
-                            <i
-                              class="ti ti-eye-off togglePassword cursor-pointer"
-                            ></i>
-                          </span>
                         </div>
                       </div>
-                      <div class="col-md-4">
-                        <label for="confirmPassword" class="form-label"
-                          >Confirm Password</label
-                        >
-                        <div class="input-group password">
+                      <div class="mb-3 form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <div class="controls">
                           <input
-                            type="password"
-                            name="confirmPassword"
-                            id="confirmPassword"
+                            type="text"
+                            name="phone"
+                            id="phone"
                             class="form-control"
-                            placeholder="Enter confirm password.."
+                            placeholder="Enter phone no.."
+                            required
+                            data-validation-required-message="Phone no is required."
                           />
-                          <span class="input-group-text">
-                            <i
-                              class="ti ti-eye-off togglePassword cursor-pointer"
-                            ></i>
-                          </span>
                         </div>
-                        <span id="passwordError" class="password-error"></span>
+                      </div>
+                      <div class="mb-3 form-group">
+                        <label for="role" class="form-label">Role</label>
+                        <div class="controls">
+                          <select
+                            name="role"
+                            id="role"
+                            class="form-select form-control"
+                            required
+                            data-validation-required-message="Role is required."
+                          >
+                            <option value="">Select Role</option>
+                            <option value="Admin">Admin</option>
+                            <option value="HR">HR</option>
+                            <option value="software-developer">
+                              Software Developer
+                            </option>
+                            <option value="marketer">Marketer</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="status form-group">
+                        <label for="status" class="form-label">Status</label>
+                        <div class="controls">
+                          <select
+                            name="status"
+                            id="status"
+                            class="form-select form-control"
+                            required
+                            data-validation-required-message="Status is required."
+                          >
+                            <option value="">Select Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-6 me-2"
+                          icon="hugeicons:image-01"
+                        ></iconify-icon>
+                        Feature Image
+                      </h5>
+                      <hr class="mx-n7 mb-4 border-t-gray-300" />
+                      <div class="form-group">
+                        <label for="fileInput" class="form-label"
+                          >Upload Image</label
+                        >
+                        <div class="controls">
+                          <div
+                            class="uploader-wrapper w-100 d-flex justify-content-center align-items-center mb-1 form-control border-1"
+                          >
+                            <div
+                              class="upload-box text-center px-3"
+                              id="drop-area"
+                            >
+                              <span id="placeholder">Drop or Select Image</span>
+                              <input
+                                type="file"
+                                class="upload-input"
+                                id="fileInput"
+                                accept="image/*"
+                                required
+                                data-validation-required-message="File is required."
+                              />
+                              <button
+                                id="removeBtn"
+                                type="button"
+                                class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+                                style="display: none"
+                              >
+                                <i class="ti ti-x"></i>
+                              </button>
+                              <img
+                                id="previewImage"
+                                src=""
+                                alt="file uploaded image"
+                                style="display: none"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="mb-3 d-flex align-items-center">
+                        <iconify-icon
+                          class="fs-7 me-2"
+                          icon="si:lock-line"
+                        ></iconify-icon>
+                        Account Information
+                      </h5>
+                      <hr class="mx-n7 mb-4 border-t-gray-300" />
+                      <div class="row g-3">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="controls">
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Enter email address.."
+                                required
+                                data-validation-required-message="Email is required."
+                                d
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="password" class="form-label"
+                              >Password</label
+                            >
+                            <div class="controls">
+                              <div class="input-group password">
+                                <input
+                                  type="password"
+                                  name="password"
+                                  id="password"
+                                  class="form-control border-end-0"
+                                  placeholder="Enter password.."
+                                  required
+                                  data-validation-required-message="Password is required."
+                                />
+                                <button class="btn btn-muted" type="button">
+                                  <i
+                                    class="ti ti-eye-off togglePassword cursor-pointer"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="confirmPassword" class="form-label"
+                              >Confirm Password</label
+                            >
+                            <div class="controls">
+                              <div class="input-group password">
+                                <input
+                                  type="password"
+                                  name="confirmPassword"
+                                  id="confirmPassword"
+                                  class="form-control border-end-0"
+                                  placeholder="Enter confirm password.."
+                                  required
+                                  data-validation-required-message="Password is required."
+                                />
+                                <button class="btn btn-muted" type="button">
+                                  <i
+                                    class="ti ti-eye-off togglePassword cursor-pointer"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
+                            <span
+                              id="passwordError"
+                              class="password-error"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7 col-md-5 col-lg-4 mt-5">
+                  <button
+                    class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                    type="submit"
+                  >
+                    <i class="ti ti-location"></i>
+                    Add
+                  </button>
+                </div>
               </div>
-              <div class="col-7 col-md-5 col-lg-4 mt-5">
-                <button
-                  class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
-                >
-                  <i class="ti ti-location"></i>
-                  Add
-                </button>
-              </div>
-            </div>
+            </form>
             <!-- end add employee -->
           </div>
           <footer class="footer">
@@ -1300,6 +1358,10 @@
 
     <!-- Custom Password Validator -->
     <script src="./assets/js/theme/password-validator.js"></script>
+
+    <!--Form validation-->
+    <script src="../assets/js/extra-libs/jqbootstrapvalidation/validation.js"></script>
+    <script src="./assets/js/forms/custom-validation-init.js"></script>
 
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>

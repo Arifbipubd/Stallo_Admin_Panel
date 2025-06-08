@@ -530,7 +530,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -915,7 +915,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1119,126 +1119,171 @@
                         id="user-info"
                         role="tabpanel"
                       >
-                        <div class="mb-3">
-                          <label for="name" class="form-label">Name</label>
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            class="form-control"
-                            placeholder="Enter name..."
-                            value="Mathew Anderson"
-                          />
-                        </div>
-                        <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            class="form-control"
-                            placeholder="Enter email"
-                            value="info@stallo.com"
-                          />
-                        </div>
-                        <div class="mb-5">
-                          <label for="phone" class="form-label">Phone</label>
-                          <input
-                            type="text"
-                            name="phone"
-                            id="phone"
-                            class="form-control"
-                            placeholder="Enter Phone number"
-                            value="019223234234"
-                          />
-                        </div>
-                        <div class="row justify-content-sm-end">
-                          <div class="col-sm-4">
-                            <button
-                              class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
-                            >
-                              <i class="ti ti-location"></i>
-                              Update
-                            </button>
+                        <form novalidate>
+                          <div class="mb-3 form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <div class="controls">
+                              <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                value="Mathew Anderson"
+                                class="form-control"
+                                placeholder="Enter name..."
+                                required
+                                data-validation-required-message="Name is required."
+                              />
+                            </div>
                           </div>
-                        </div>
+                          <div class="mb-3 form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="controls">
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                value="info@stallo.com"
+                                class="form-control"
+                                placeholder="Enter email"
+                                required
+                                data-validation-required-message="Email is required."
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-5 form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <div class="controls">
+                              <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                class="form-control"
+                                placeholder="Enter Phone number"
+                                value="019223234234"
+                                required
+                                data-validation-required-message="Phone number is required."
+                              />
+                            </div>
+                          </div>
+                          <div class="row justify-content-sm-end">
+                            <div class="col-sm-4">
+                              <button
+                                type="submit"
+                                class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                              >
+                                <i class="ti ti-location"></i>
+                                Update
+                              </button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                       <div class="tab-pane" id="passwords" role="tabpanel">
-                        <div class="mb-3">
-                          <label for="oldPassword" class="form-label"
-                            >Old password</label
-                          >
-                          <div class="input-group password">
-                            <input
-                              type="password"
-                              name="oldPassword"
-                              id="oldPassword"
-                              class="form-control"
-                              placeholder="Enter old password..."
-                              value=""
-                            />
-                            <span class="input-group-text">
-                              <i
-                                class="ti ti-eye-off togglePassword cursor-pointer"
-                              ></i>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="password" class="form-label"
-                            >New password</label
-                          >
-                          <div class="input-group password">
-                            <input
-                              type="password"
-                              name="password"
-                              id="password"
-                              class="form-control"
-                              placeholder="Enter new password..."
-                              value=""
-                            />
-                            <span class="input-group-text">
-                              <i
-                                class="ti ti-eye-off togglePassword cursor-pointer"
-                              ></i>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="mb-5">
-                          <label for="confirmPassword" class="form-label"
-                            >Confirm password</label
-                          >
-                          <div class="input-group password">
-                            <input
-                              type="password"
-                              name="confirmPassword"
-                              id="confirmPassword"
-                              class="form-control"
-                              placeholder="Enter password again..."
-                              value=""
-                            />
-                            <span class="input-group-text">
-                              <i
-                                class="ti ti-eye-off togglePassword cursor-pointer"
-                              ></i>
-                            </span>
-                          </div>
-                          <span
-                            id="passwordError"
-                            class="password-error"
-                          ></span>
-                        </div>
-
-                        <div class="row justify-content-sm-end">
-                          <div class="col-sm-4">
-                            <button
-                              class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                        <form novalidate>
+                          <div class="mb-3 form-group">
+                            <label for="oldPassword" class="form-label"
+                              >Old password</label
                             >
-                              <i class="ti ti-location"></i>
-                              Update
-                            </button>
+                            <div class="controls">
+                              <div
+                                class="password position-relative"
+                              >
+                                <input
+                                  type="password"
+                                  name="oldPassword"
+                                  id="oldPassword"
+                                  value=""
+                                  class="form-control pe-5"
+                                  placeholder="Enter old password..."
+                                  required
+                                  data-validation-required-message="Old password is required."
+                                />
+                                <button
+                                  type="button"
+                                  class="btn position-absolute top-50 translate-middle-y z-3"
+                                  style="right: 2px"
+                                >
+                                  <i
+                                    class="ti ti-eye-off togglePassword cursor-pointer"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                          <div class="mb-3 form-group">
+                            <label for="password" class="form-label"
+                              >New password</label
+                            >
+                            <div class="controls">
+                              <div
+                                class="password position-relative"
+                              >
+                                <input
+                                  type="password"
+                                  name="password"
+                                  id="password"
+                                  class="form-control pe-5"
+                                  placeholder="Enter new password..."
+                                  value=""
+                                  required
+                                  data-validation-required-message="New Password is required."
+                                />
+                                <button
+                                  type="button"
+                                  class="btn position-absolute top-50 translate-middle-y z-3"
+                                  style="right: 2px"
+                                >
+                                  <i
+                                    class="ti ti-eye-off togglePassword cursor-pointer"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mb-5 form-group">
+                            <label for="confirmPassword" class="form-label"
+                              >Confirm password</label
+                            >
+                            <div class="controls">
+                              <div class="password position-relative">
+                                <input
+                                  type="password"
+                                  name="confirmPassword"
+                                  id="confirmPassword"
+                                  value=""
+                                  class="form-control pe-5"
+                                  placeholder="Enter password again..."
+                                  required
+                                  data-validation-required-message="Password is required."
+                                />
+                                <button
+                                  type="button"
+                                  class="btn position-absolute top-50 translate-middle-y z-3"
+                                  style="right: 2px"
+                                >
+                                  <i
+                                    class="ti ti-eye-off togglePassword cursor-pointer"
+                                  ></i>
+                                </button>
+                              </div>
+                            </div>
+                            <span
+                              id="passwordError"
+                              class="password-error"
+                            ></span>
+                          </div>
+
+                          <div class="row justify-content-sm-end">
+                            <div class="col-sm-4">
+                              <button
+                                class="btn btn-primary d-inline-flex justify-content-center align-items-center gap-2 w-100"
+                              >
+                                <i class="ti ti-location"></i>
+                                Update
+                              </button>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -1284,6 +1329,10 @@
 
     <!-- Confirm Password Script -->
     <script src="./assets/js/theme/password-validator.js"></script>
+
+    <!--Form validation-->
+    <script src="../assets/js/extra-libs/jqbootstrapvalidation/validation.js"></script>
+    <script src="./assets/js/forms/custom-validation-init.js"></script>
 
     <!-- solar icons -->
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>

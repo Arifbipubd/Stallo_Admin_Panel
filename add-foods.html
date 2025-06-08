@@ -539,7 +539,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -924,7 +924,7 @@
                                 John received payment
                               </h6>
                               <span class="fs-2 d-block text-body-secondary"
-                                >$230 deducted from account</span
+                                >৳230 deducted from account</span
                               >
                             </div>
                           </a>
@@ -1088,7 +1088,7 @@
           <div class="container-fluid pt-3 pb-16">
             <!-- start Add foods -->
             <h4 class="mb-3">Ad New Food</h4>
-            <form>
+            <form novalidate>
               <div class="row justify-content-center g-3">
                 <div class="col-md-6">
                   <div class="card h-100">
@@ -1101,27 +1101,35 @@
                         Food Overview
                       </h5>
                       <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                      <div class="mb-3">
+                      <div class="mb-3 form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          class="form-control"
-                          placeholder="Enter food name.."
-                        />
+                        <div class="controls">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            class="form-control"
+                            placeholder="Enter food name.."
+                            required
+                            data-validation-required-message="Food name is required."
+                          />
+                        </div>
                       </div>
-                      <div>
+                      <div class="form-group">
                         <label for="description" class="form-label"
                           >Description</label
                         >
-                        <textarea
-                          name="description"
-                          id="description"
-                          rows="7"
-                          class="form-control"
-                          placeholder="Enter food description..."
-                        ></textarea>
+                        <div class="controls">
+                          <textarea
+                            name="description"
+                            id="description"
+                            rows="7"
+                            class="form-control"
+                            placeholder="Enter food description..."
+                            required
+                            data-validation-required-message="Description is required."
+                          ></textarea>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1137,34 +1145,43 @@
                         Feature Image
                       </h5>
                       <hr class="mt-2 mb-4 mx-n7 border-t-gray-300" />
-                      <label for="fileInput" class="form-label"
-                        >Upload Image</label
-                      >
-                      <div
-                        class="uploader-wrapper w-100 d-flex justify-content-center align-items-center"
-                      >
-                        <div class="upload-box text-center px-3" id="drop-area">
-                          <span id="placeholder">Drop or Select Image</span>
-                          <input
-                            type="file"
-                            class="upload-input"
-                            id="fileInput"
-                            accept="image/*"
-                          />
-                          <button
-                            id="removeBtn"
-                            type="button"
-                            class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
-                            style="display: none"
+                      <div class="form-group">
+                        <label for="fileInput" class="form-label"
+                          >Upload Image</label
+                        >
+                        <div class="controls">
+                          <div
+                            class="uploader-wrapper w-100 d-flex justify-content-center align-items-center mb-1 form-control border-1"
                           >
-                            <i class="ti ti-x"></i>
-                          </button>
-                          <img
-                            id="previewImage"
-                            src=""
-                            alt="file uploaded image"
-                            style="display: none"
-                          />
+                            <div
+                              class="upload-box text-center px-3"
+                              id="drop-area"
+                            >
+                              <span id="placeholder">Drop or Select Image</span>
+                              <input
+                                type="file"
+                                class="upload-input"
+                                id="fileInput"
+                                accept="image/*"
+                                required
+                                data-validation-required-message="File is required."
+                              />
+                              <button
+                                id="removeBtn"
+                                type="button"
+                                class="btn btn-sm btn-danger position-absolute top-0 end-0 m-2"
+                                style="display: none"
+                              >
+                                <i class="ti ti-x"></i>
+                              </button>
+                              <img
+                                id="previewImage"
+                                src=""
+                                alt="file uploaded image"
+                                style="display: none"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1184,50 +1201,79 @@
                         <hr class="mt-2 mb-1 mx-n7 border-t-gray-300" />
                       </div>
                       <div class="col-md-4">
-                        <label for="category" class="form-label"
-                          >Category</label
-                        >
-                        <select
-                          name="category"
-                          id="category"
-                          class="form-select"
-                        >
-                          <option value="">Select Category</option>
-                          <option value="chinese">Chinese</option>
-                          <option value="italian">Italian</option>
-                          <option value="spanish">Spanish</option>
-                          <option value="bengali">Bengali</option>
-                        </select>
+                        <div class="form-group">
+                          <label for="category" class="form-label"
+                            >Category</label
+                          >
+                          <div class="controls">
+                            <select
+                              name="category"
+                              id="category"
+                              class="form-select form-control"
+                              required
+                              data-validation-required-message="Category is required."
+                            >
+                              <option value="">Select Category</option>
+                              <option value="chinese">Chinese</option>
+                              <option value="italian">Italian</option>
+                              <option value="spanish">Spanish</option>
+                              <option value="bengali">Bengali</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                       <div class="col-md-4">
-                        <label for="placementCategory" class="form-label"
-                          >Placement Category</label
-                        >
-                        <select
-                          name="placementCategory"
-                          id="placementCategory"
-                          class="select2 form-control"
-                          multiple="multiple"
-                        >
-                          <option value="featured">Featured / Top Picks</option>
-                          <option value="cuisine">Cuisine Type</option>
-                          <option value="nearby">Nearby</option>
-                          <option value="promotions">Promotions / Deals</option>
-                          <option value="top_rated">Top Rated</option>
-                          <option value="fast_delivery">Fast Delivery</option>
-                          <option value="new_arrivals">New Arrivals</option>
-                          <option value="specific_dish">Specific Dish</option>
-                        </select>
+                        <div class="form-group">
+                          <label for="placementCategory" class="form-label"
+                            >Placement Category</label
+                          >
+                          <div class="controls">
+                            <select
+                              name="placementCategory"
+                              id="placementCategory"
+                              class="select2 form-control"
+                              multiple="multiple"
+                              required
+                              data-validation-required-message="Placement category is required."
+                            >
+                              <option value="featured">
+                                Featured / Top Picks
+                              </option>
+                              <option value="cuisine">Cuisine Type</option>
+                              <option value="nearby">Nearby</option>
+                              <option value="promotions">
+                                Promotions / Deals
+                              </option>
+                              <option value="top_rated">Top Rated</option>
+                              <option value="fast_delivery">
+                                Fast Delivery
+                              </option>
+                              <option value="new_arrivals">New Arrivals</option>
+                              <option value="specific_dish">
+                                Specific Dish
+                              </option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                       <div class="col-md-4">
-                        <label for="availability" class="form-label"
-                          >Availability</label
-                        >
-                        <select class="form-select" id="availability">
-                          <option value="">Select Availability</option>
-                          <option value="available">Available</option>
-                          <option value="unavailable">Unavailable</option>
-                        </select>
+                        <div class="form-group">
+                          <label for="availability" class="form-label"
+                            >Availability</label
+                          >
+                          <div class="controls">
+                            <select
+                              class="form-select form-control"
+                              id="availability"
+                              required
+                              data-validation-required-message="Availability is required."
+                            >
+                              <option value="">Select Availability</option>
+                              <option value="available">Available</option>
+                              <option value="unavailable">Unavailable</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1243,36 +1289,44 @@
                         Pricing Structure
                       </h5>
                       <hr class="mt-2 mx-n7 border-t-gray-300" />
-                      <div class="mb-3">
+                      <div class="mb-3 form-group">
                         <label for="price" class="form-label">Price</label>
-                        <div class="input-group">
-                          <span class="input-group-text">৳</span>
-                          <input
-                            type="number"
-                            name="price"
-                            id="price"
-                            class="form-control input-spin-none"
-                            placeholder="Enter price..."
-                            step="0.01"
-                            min="0"
-                          />
+                        <div class="controls">
+                          <div class="input-group">
+                            <button class="btn btn-muted" disabled>৳</button>
+                            <input
+                              type="number"
+                              name="price"
+                              id="price"
+                              class="form-control input-spin-none border-start-0"
+                              placeholder="Enter price..."
+                              step="0.01"
+                              min="0"
+                              required
+                              data-validation-required-message="Price is required."
+                            />
+                          </div>
                         </div>
                       </div>
-                      <div class="">
+                      <div class="form-group">
                         <label for="discountPrice" class="form-label"
                           >Discount Price</label
                         >
-                        <div class="input-group">
-                          <div class="input-group-text">৳</div>
-                          <input
-                            type="number"
-                            name="discountPrice"
-                            id="discountPrice"
-                            class="form-control input-spin-none"
-                            placeholder="Enter discount price..."
-                            step="0.01"
-                            min="0"
-                          />
+                        <div class="controls">
+                          <div class="input-group">
+                            <button class="btn btn-muted" disabled>৳</button>
+                            <input
+                              type="number"
+                              name="discountPrice"
+                              id="discountPrice"
+                              class="form-control input-spin-none border-start-0"
+                              placeholder="Enter discount price..."
+                              step="0.01"
+                              min="0"
+                              required
+                              data-validation-required-message="Discount price is required."
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1289,35 +1343,39 @@
                         Enhancements & Extras
                       </h5>
                       <hr class="mt-2 mx-n7 border-t-gray-300" />
-                      <div>
+                      <div class="form-group">
                         <label for="addons" class="form-label">Addons</label>
-                        <select
-                          name="addons"
-                          id="addons"
-                          class="select2 addons-select form-control"
-                          multiple="multiple"
-                        >
-                          <option value="">Select Addons</option>
-                          <option value="extra-cheese">Extra Cheese</option>
-                          <option value="add-beacon">Add Bacon</option>
-                          <option value="add-mushroom">Add Mushroom</option>
-                          <option value="extra-sauce">Extra Sauce</option>
-                          <option value="add-jalapenos">Add Jalapenos</option>
-                          <option value="add-pickles">Add Pickles</option>
-                          <option value="side-of-fries">Side of Fries</option>
-                          <option value="side-salad">Side Salad</option>
-                          <option value="add-extra-patty">
-                            Add Extra Patty
-                          </option>
-                          <option value="substitute-bun">Substitute Bun</option>
-                          <option value="add-fried-egg">Add Fried Egg</option>
-                          <option value="extra-topping">Extra Topping</option>
-                          <option value="making-it-a-combo">
-                            Make it a Combo
-                          </option>
-                          <option value="add-protein">Add Protein</option>
-                          <option value="side-of-rice">Side of Rice</option>
-                        </select>
+                        <div class="controls">
+                          <select
+                            name="addons"
+                            id="addons"
+                            class="select2 addons-select form-control"
+                            multiple="multiple"
+                          >
+                            <option value="">Select Addons</option>
+                            <option value="extra-cheese">Extra Cheese</option>
+                            <option value="add-beacon">Add Bacon</option>
+                            <option value="add-mushroom">Add Mushroom</option>
+                            <option value="extra-sauce">Extra Sauce</option>
+                            <option value="add-jalapenos">Add Jalapenos</option>
+                            <option value="add-pickles">Add Pickles</option>
+                            <option value="side-of-fries">Side of Fries</option>
+                            <option value="side-salad">Side Salad</option>
+                            <option value="add-extra-patty">
+                              Add Extra Patty
+                            </option>
+                            <option value="substitute-bun">
+                              Substitute Bun
+                            </option>
+                            <option value="add-fried-egg">Add Fried Egg</option>
+                            <option value="extra-topping">Extra Topping</option>
+                            <option value="making-it-a-combo">
+                              Make it a Combo
+                            </option>
+                            <option value="add-protein">Add Protein</option>
+                            <option value="side-of-rice">Side of Rice</option>
+                          </select>
+                        </div>
                       </div>
                       <div id="addon-custom-input" style="display: none">
                         <div class="row g-2 mt-3 mb-2">
@@ -1391,5 +1449,11 @@
     <script src="../assets/libs/select2/dist/js/select2.full.min.js"></script>
     <script src="../assets/libs/select2/dist/js/select2.min.js"></script>
     <script src="../assets/js/forms/select2.init.js"></script>
+
+    <!--Form validation-->
+    <script src="../assets/js/extra-libs/jqbootstrapvalidation/validation.js"></script>
+    <script src="./assets/js/forms/custom-validation-init.js"></script>
   </body>
 </html>
+
+

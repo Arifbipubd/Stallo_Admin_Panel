@@ -321,19 +321,38 @@ $addonSelect.on('select2:select', function (e) {
     selectedAddons.push(addonId);
 
     const inputGroup = $(`
-            <div class="row g-2 mb-2" data-addon="${addonId}">
-              <div class="col-6">
-                <input type="text" class="form-control" value="${addonText}" readonly>
-              </div>
-              <div class="col-6">
-                <div class="input-group">
-                  <span class="input-group-text">৳</span>
-                  <input type="number" class="form-control input-spin-none addon-price" id="addon-price" placeholder="Enter price...">
-                </div>
+      <div class="row g-2 mb-2" data-addon="${addonId}">
+        <div class="col-6">
+          <div class="">
+            <input 
+              type="text" 
+              value="${addonText}" 
+              name="addonsName" 
+              class="form-control" 
+              placeholder="Enter addons name"
+              disabled
+              style="border: 1px solid #dfe5ef"
+            >
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <div class="controls">
+              <div class="input-group">
+                <span class="input-group-text">৳</span>
+                <input 
+                  type="number" 
+                  class="form-control input-spin-none addon-price" 
+                  id="addon-price-${addonId}" 
+                  placeholder="Enter price..."
+                  style="border: 1px solid #dfe5ef"
+                >
               </div>
             </div>
-          `);
-
+          </div>
+        </div>
+      </div>
+    `);
     $addonInputs.append(inputGroup);
   }
 
